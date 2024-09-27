@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Yatra One';
+    src: url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+}
+@font-face {
+    font-family: 'Eagle Lake';
+    src: url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Yatra One';
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Eagle Lake';
+}
+p {
+    
+}
