@@ -48,28 +48,55 @@
         Most web-based exploits will work on other Chromium based browsers
         </p>
         <br>
+
         <hr>
         <details style="display:none;" id="ExploitSearchContainer">
             <summary><b id="ExploitSearch">Exploit Finder (WIP)</b></summary>
             <form id="ExploitSearch-Form">
                 <label for="ExploitSearch-Version">Chrome OS Version</label><br>
-                <input type="text" id="ExploitSearch-Version" placeholder="112"><br>
+                <input type="text" id="ExploitSearch-Version" placeholder="112" type="number"><br>
                 <label>Exploit Type</label>
                 <ul id="ExploitSearch-ExploitType">
-                    <li value="web">Web Based <input type="checkbox"></li>
-                    <li value="os">OS Based <input type="checkbox"></li>
-                    <li value="proxy">Proxy Based <input type="checkbox"></li>
+                    <li class="esterm" value="web">Web Based <input type="checkbox" checked=true></li>
+                    <li class="esterm" value="os">OS Based <input type="checkbox" checked=true></li>
+                    <li class="esterm" value="proxy">Proxy Based <input type="checkbox" checked=true></li>
+                    <li class="esterm" value="hardware">Hardware Based <input type="checkbox"></li>
                 </ul>
                 <label>Requirements</label>
                 <ul>
-                    <li value="powerwash">Powerwash <input type="checkbox"></li>
-                    <li value="devtools">Dev Tools <input type="checkbox"></li>
-                    <li value="devtools">Dev Tools <input type="checkbox"></li>
+                    <li class="esterm" value="kiosk">Kiosk <input type="checkbox"></li>
+                    <li class="esterm" value="powerwash">Powerwash <input type="checkbox"></li>
+                    <li class="esterm" value="devtools">Dev Tools <input type="checkbox"></li>
+                    <li class="esterm" value="bookmarklet">Bookmarklet <input type="checkbox"></li>
+                    <li class="esterm" value="flags">chrome://flags <input type="checkbox"></li>
+                    <li class="esterm" value="tablimit">Tab Limit <input type="checkbox"></li>
+                    <li class="esterm" value="goguardian">GoGuardian<input type="checkbox"></li>
+                    <li class="esterm" value="hapara">Hapara <input type="checkbox"></li>
+                    <li class="esterm" value="securely">Securely <input type="checkbox"></li>
+                    <li class="esterm" value="extensionaccess">Extension Access (Ability to install extensions) <input type="checkbox"></li>
+                    <li class="esterm" value="dnssettings">DNS Settings <input type="checkbox"></li>
+                    <li class="esterm" value="iboss">iBoss <input type="checkbox"></li>
+                    <li class="esterm" value="blocksi">Blocksi <input type="checkbox"></li>
+                    <li class="esterm" value="network">chrome://network <input type="checkbox"></li>
+                    <li class="esterm" value="screwdriver">Screwdriver<input type="checkbox"></li>
+                    <li class="esterm" value="externalpc">External PC<input type="checkbox"></li>
+                    <li class="esterm" value="externalstorage">External Storage Device<input type="checkbox"></li>
+                    <li class="esterm" value="recoverymode">Recovery Mode<input type="checkbox"></li>
+                    <li class="esterm" value="devmode">Dev Mode<input type="checkbox"></li>
+                    <li class="esterm" value="x86">Recovery Mode<input type="checkbox"></li>
+                    <li class="esterm" value="snapandread">Snap and Read<input type="checkbox"></li>
+                    <li class="esterm" value="sourcecodeview">Source Code Viewing (ctrl+u)<input type="checkbox"></li>
+                    <li class="esterm" value="usb">USB<input type="checkbox"></li>
+                    <li class="esterm" value="ublockorigin">uBlock Origin<input type="checkbox"></li>
+                    <li class="esterm" value="unenrollment">Unenrollment <input type="checkbox"></li>
+
+                    
                 </ul>
                 <button type="submit">Search</button>
             </form>
         </details>
         <hr>
+
         <br>
         <details>
             <summary><b id="ToC">Table of Contents</b></summary>
@@ -118,8 +145,14 @@
             <a href="#PB">Point-Blank</a><br>
             <a href="#Quickview">Quickview</a><br>
             <a href="#Sidetracked">Sidetracked</a><br>
-            <a href="#SKIOVOX">SKIOVOX</a><br>
-            <a href="#SKIOVOX Unpatched Method">Unpatched Method</a><br>
+            <br>
+            <details open="true">
+                <summary><a href="#SKIOVOX">SKIOVOX</a></summary>
+                    <ul>
+                        <li><a href="#SKIOVOX Unpatched Method">Unpatched Method</a></li>
+                    </ul>
+            </details>
+            <br>
             <a href="#SOT">SOT</a><br>
             <a href="#SWAB">SWAB</a><br>
             <a href="#SL">Swamp Launcher</a><br>
@@ -170,6 +203,7 @@
         <hr>
         <br>
         <details>
+            <searchi>proxy;</searchi>
             <summary><b id="Alphabetic">Alphabetic</b></summary>
             <p class="small-text">proxy moment
             <br>
@@ -183,6 +217,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;</searchi>
             <summary><b id="ADWB">App Diagnose WiFi Bypass</b></summary>
             <p class="small-text">Requires an app
             <br>
@@ -206,6 +241,7 @@
         </details>
         <br>
         <details>
+            <searchi>proxy;</searchi>
             <summary><b id="BAC">Browser Action Crasher</b></summary>
             <p class="small-text">proxy moment
             <br>
@@ -219,6 +255,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="Buypass">Buypass</b></summary>
             <p class="small-text">Only lasts for 3 minutes.
             <br>
@@ -236,6 +273,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="cauDNS">cauDNS</b></summary>
             <p class="small-text">Requires chrome://network#state
             <br>
@@ -247,6 +285,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;devtools;</searchi>
             <summary><b id="Chaos">Chaos</b></summary>
             <p class="small-text">Requires Devtools.
             <br>
@@ -264,6 +303,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;powerwash;</searchi>
             <summary><b id="Corkey">Corkey</b></summary>
             <p class="small-text">Requires powerwash.
             <br>
@@ -285,6 +325,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="Dextensify">Dextensify</b></summary>
             <p class="small-text">Memory leak unavoidable.
             <br>
@@ -304,6 +345,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;goguardian;</searchi>
             <summary><b id="GG">GoGuardian GoAway</b></summary>
             <p class="small-text">GoGuardian exclusive.
             <br>
@@ -319,6 +361,7 @@
         </details>
         <br>
         <details>
+            <searchi>tablimit;goguardian;</searchi>
             <summary><b id="GTC">GuardianTabCrash</b></summary>
             <p class="small-text">Requires tab limit.
             <br>
@@ -334,6 +377,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;bookmarklet;hapara;</searchi>
             <summary><b id="HFSB">Hapara Focus Session Bypass</b></summary>
             <p class="small-text">Requires data: links.
             <br>
@@ -347,6 +391,7 @@
         </details>
         <br>
         <details>
+            <searchi>v112;os;</searchi>
             <summary><b id="Killcurly">Killcurly</b></summary>
             <p class="small-text">Patched on Chrome OS 112+
             <br>
@@ -364,6 +409,7 @@
         </details>
         <br>
         <details>
+            <searchi>v106;web;bookmarklet;</searchi>
             <summary><b id="Ingot">Ingot</b></summary>
             <p class="small-text">Patched on Chrome OS 106+
             <br>
@@ -378,6 +424,7 @@
         </details>
         <br>
         <details>
+            <searchi>securely;web;</searchi>
             <summary><b id="INSECURELY">INSECURELY</b></summary>
             <p class="small-text">Patched on Securely versions above 2.98.55
             <br>
@@ -389,6 +436,7 @@
         </details>
         <br>
         <details>
+            <searchi>hapara;v111;web;bookmarklet;</searchi>
             <summary><b id="LoMoH">LoMoH</b></summary>
             <p class="small-text">Doesn’t work with Hapara Highlights & Read&Write; patched on Chrome OS 111+
             <br>
@@ -400,6 +448,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="LTMEAT">LTMEAT</b></summary>
             <p class="small-text">Methods using (B) & (C) are patched on Chrome OS 115+
             <br>
@@ -493,6 +542,7 @@
         </details>
         <br>
         <details>
+            <searchi>106;web;bookmarklet;</searchi>
             <summary><b id="PB">Point-Blank</b></summary>
             <p class="small-text">Might be patched on Chrome OS 106+
             <br>
@@ -515,6 +565,7 @@
         </details>
         <br>
         <details>
+            <searchi>bookmarklet;web;</searchi>
             <summary><b id="Quickview">Quickview</b></summary>
             <p class="small-text">Requires bookmarklets
             <br>
@@ -530,6 +581,7 @@
         </details>
         <br>
         <details>
+            <searchi>flags;web;</searchi>
             <summary><b id="Sidetracked">Sidetracked</b></summary>
             <p class="small-text">Requires flag access; only works on Chrome OS 106+
             <br>
@@ -543,6 +595,7 @@
         </details>
         <br>
         <details>
+            <searchi>kiosk;</searchi>
             <summary><b id="SKIOVOX">SKIOVOX</b></summary>
             <p class="small-text">Requires a kiosk app; Most methods patched on version 119
             <br>
@@ -630,6 +683,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;extensionaccess;</searchi>
             <summary><b id="SOT">SOT</b></summary>
             <p class="small-text">Requires extension access.
             <br>
@@ -647,6 +701,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;</searchi>
             <summary><b id="SWAB">SWAB</b></summary>
             <p class="small-text">Not finished
             <br>    
@@ -664,6 +719,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;proxy;dnssettings;</searchi>
             <summary><b id="SL">Swamp Launcher</b></summary>
             <p class="small-text">Requires access to DNS settings
             <br>
@@ -688,6 +744,7 @@
         </details>
         <br>
         <details>
+            <searchi>iboss;blocksi;web;bookmarklet;</searchi>
             <summary><b id="uBoss">uBoss</b></summary>
             <p class="small-text">Exclusive to iBoss & Blocksi
             <br>
@@ -706,6 +763,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="URL Unblocker">URL Unblocker</b></summary>
             <p class="small-text">Requires editing to change website.
             >br>
@@ -723,6 +781,7 @@
         <hr>
         <br>
         <details>
+            <searchi>screwdriver;hardware;</searchi>
             <summary><b id="id">Admin Lock Bypass</b></summary>
             <p class="small-text">Requires screwdriver
             <br>
@@ -742,6 +801,7 @@
         </details>
         <br>
         <details>
+            <searchi>bookmarklet;</searchi>
             <summary><b id="Blank3r">Blank3r</b></summary>
             <p class="small-text">about:blank
             <br>
@@ -759,6 +819,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;bookmarklet;</searchi>
             <summary><b id="id">Blobe BM</b></summary>
             <p class="small-text">Not compatable with every bookmarklet by design
             <br>
@@ -770,6 +831,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="BlobBypass">BlobBypass</b></summary>
             <p class="small-text">Requires BlobWiFi
             <br>
@@ -789,6 +851,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;network;</searchi>
             <summary><b id="BlobWiFi">BlobWiFi</b></summary>
             <p class="small-text">Requires chrome://network
             <br>
@@ -808,6 +871,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;bookmarklet;</searchi>
             <summary><b id="ByeBlocker">ByeBlocker</b></summary>
             <p class="small-text">Requires bookmarklets
             <br>
@@ -819,6 +883,7 @@
         </details>
         <br>
         <details>
+            <searchi>bookmarklet;</searchi>
             <summary><b id="CAC">Car Axle Client</b></summary>
             <p class="small-text">Requires bookmarklets.
             <br>
@@ -830,6 +895,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;network;</searchi>
             <summary><b id="CAUB">CAUB</b></summary>
             <p class="small-text">Has to be done for each WiFI network; Chrome OS version 85+ required
             <br>
@@ -863,6 +929,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;powerwash;</searchi>
             <summary><b id="CRSH2TTY">CRSH2TTY</b></summary>
             <p class="small-text">N/A :0
             <br>
@@ -889,6 +956,7 @@
         </details>
         <br>
         <details>
+            <searchi>v120;externalpc;externalstorage;</searchi>
             <summary><b id="Cryptosmite">Cryptosmite</b></summary>
             <p class="small-text">Requires a storage device, another PC; patched on Chrome OS 120+
             <br>
@@ -927,6 +995,7 @@
         </details>
         <br>
         <details>
+            <searchi>extensionaccess;os;recoverymode;externalstorage</searchi>
             <summary><b id="Downgration">Downgration</b></summary>
             <p class="small-text">Requires storage device; extension access required; Mostly Limited
             <br>
@@ -958,6 +1027,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;recoverymode;externalstorage;</searchi>
             <summary><b id="E-Halcyon">E-Halcyon</b></summary>
             <p class="small-text">Requires a storage device; data doesn't save; patched on Kernver 4
             <br>
@@ -986,6 +1056,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;bookmarklet;</searchi>
             <summary><b id="EL">Extension Launcher</b></summary>
             <p class="small-text">Doesn’t work with blocklist/banlist
             <br>
@@ -1012,6 +1083,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;recoverymode;</searchi>
             <summary><b id="KVS">KVS</b></summary>
             <p class="small-text">Only works on unenrolled Chromebooks; requires a storage device; patched on Kernver 4
             <br>
@@ -1035,6 +1107,7 @@
         </details>
         <br>
         <details>
+            <searchi>powerwash;os;</searchi>
             <summary><b id="Revertion">Revertion</b></summary>
             <p class="small-text">Requires powerwash; untested
             <br>
@@ -1050,6 +1123,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;</searchi>
             <summary><b id="SFB">Search Filter Bypass</b></summary>
             <p class="small-text">doesn't do shit
             <br>
@@ -1061,6 +1135,7 @@
         </details>
         <br>
         <details>
+            <searchi>externalpc;externalstorage;os;</searchi>
             <summary><b id="SH1MMER">SH1MMER</b></summary>
             <br>
             <details>
@@ -1171,6 +1246,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;externalstorage;externalpc;x86;devmode;</searchi>
             <summary><b id="Shimboot">Shimboot</b></summary>
             <p class="small-text">Requires storage device, another PC, x86-based Chromebook; Dev Mode required (see <a href="https://sh1mmer.me/">here</a>)
             <br>
@@ -1195,6 +1271,7 @@
         </details>
         <br>
         <details>
+            <searchi>devmode;web;</searchi>
             <summary><b id="Skebstore">Skebstore</b></summary>
             <p class="small-text">Requires extension Developer Mode
             <br>
@@ -1214,6 +1291,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;snapandread;</searchi>
             <summary><b id="S&R">Snap&Run</b></summary>
             <p class="small-text">Snap&Read exclusive
             <br>
@@ -1257,6 +1335,7 @@
         </details>
         <br>
         <details>
+            <searchi>web;sourcecodeview;</searchi>
             <summary><b id="Source View">Source View</b></summary>
             <p class="small-text">Requires the ability to view a page’s source code
             <br>
@@ -1270,6 +1349,7 @@
         </details>
         <br>
         <details>
+            <searchi>devmode;usb;</searchi>
             <summary><b id="USBoot">USBoot</b></summary>
             <p class="small-text">Requires Dev Mode
             <br>
@@ -1286,6 +1366,7 @@
         </details>
         <br>
         <details>
+            <searchi>ublockorigin;web;</searchi>
             <summary><b id="uRun">uRun</b></summary>
             <p class="small-text">uBlock Origin exclusive
             <br>
@@ -1304,6 +1385,7 @@
         </details>
         <br>
         <details>
+            <searchi>os;web;</searchi>
             <summary><b id="WPE">Wi-Password Export</b></summary>
             <p class="small-text">Only works with connected networks; only works on Chrome OS
             <br>
@@ -1329,6 +1411,7 @@
         <hr>
         <br>
         <details>
+            <searchi>devmode;</searchi>
             <summary><b id="CroshFi">CroshFi</b></summary>
             <p class="small-text">Requires Devmode
             <br>
@@ -1348,6 +1431,7 @@
         </details>
         <br>
         <details>
+            <searchi>v101;</searchi>
             <summary><b id="De-roll">De-roll</b></summary>
             <p class="small-text">Patched on Chrome OS 101+
             <br>
@@ -1370,6 +1454,7 @@
         </details>
         <br>
         <details>
+            <searchi>unenrollment;v117;</searchi>
             <summary><b id="Fakemurk">Fakemurk</b></summary>
             <p class="small-text">Requires unenrollment; patched on version 117+; patched on Kernver 4
             <br>
@@ -1398,6 +1483,7 @@
         </details>
         <br>
         <details>
+            <searchi>powerwash;</searchi>
             <summary><b id="OP Crosh">OP Crosh</b></summary>
             <p class="small-text">Requires powerwash
             <br>
@@ -1415,6 +1501,7 @@
         </details>
         <br>
         <details>
+            <searchi>devmode;os;</searchi>
             <summary><b id="Pollen">Pollen</b></summary>
             <p class="small-text">Requires Dev Mode
             <br>
