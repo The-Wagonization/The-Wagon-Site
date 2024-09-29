@@ -7,6 +7,7 @@ document.getElementById("ExploitSearch-Form").addEventListener("submit", functio
     let searchInfos = Array.from(document.querySelectorAll("searchi"));
     let chromeOsVersion = parseFloat(document.getElementById("ExploitSearch-Version").value)
 
+    let exploitCount = 0;
 
     searchInfos.forEach(e=>{
         e.parentElement.style.display="block";
@@ -16,7 +17,13 @@ document.getElementById("ExploitSearch-Form").addEventListener("submit", functio
                 e.parentElement.style.display="none"
                 return;
             }
-            if(!searchTerms.includes(requirements[i]))e.parentElement.style.display="none"
+            if(!searchTerms.includes(requirements[i])){
+                e.parentElement.style.display="none"
+                return;
+            }
+            exploitCount++;
         }
     });
+
+    document.getElementById("exploitCount").textContent = exploitCount;
 })
