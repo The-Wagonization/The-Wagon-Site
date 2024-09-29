@@ -5,14 +5,17 @@ document.getElementById("ExploitSearch-Form").addEventListener("submit", functio
     ev.preventDefault()
     let searchTerms = Array.from(document.querySelectorAll(".esterm")).filter(e=>e.checked==true).map(e=>e.getAttribute("esterm-value"));
     let searchInfos = Array.from(document.querySelectorAll("searchi"));
-    let chromeOsVersion = document.getElementById("ExploitSearch-Version")
-    
+    let chromeOsVersion = parseFloat(document.getElementById("ExploitSearch-Version").value)
+
 
     searchInfos.forEach(e=>{
         e.parentElement.style.display="block";
         let requirements = e.textContent.split(";").filter(e=>e!="");
-        // console.log(requirements.join()+":::::::::"+ searchTerms.join())
         for(let i = 0;i<requirements.length;i++){
+            if(/^v[\d.]*/.test(requirements[i]) && parseFloat(requirements[i].substring(1, requirements[i].length-1))<=chromeOsVersion ){
+                e.parentElement.style.display="none"
+                return;
+            }
             if(!searchTerms.includes(requirements[i]))e.parentElement.style.display="none"
         }
     });
