@@ -1,4 +1,4 @@
-if(window.location.search=="?dev"){
+if(window.location.search=="?dev"||true){
     document.getElementById("ExploitSearchContainer").style.display = "block"
 }
 document.getElementById("ExploitSearch-Form").addEventListener("submit", function(ev){
