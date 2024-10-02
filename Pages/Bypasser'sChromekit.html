@@ -5,51 +5,52 @@
         <link rel="stylesheet" type="text/css" href="../stylez.css">
         <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+        <script src="..\Audio\BackgroundScript.js"></script>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Small Text</title>
-    <style>
-        .small-centered-text {
-            font-size: 10px;
-            text-align: center;
-        }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text</title>
-    <style>
-        .centered-text {
-            text-align: center;
-        }
-    </style>
-    <title>Small Text</title>
-    <style>
-        .small-text {
-            font-size: 10px;
-        }
-    </style>
-    <style>
-        .indented {
-            margin-left: 20px;
-        }
-    </style>
-    <style>
-        .indented2 {
-            margin-left: 40px;
-        }
-    </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centered Small Text</title>
+        <style>
+            .small-centered-text {
+                font-size: 10px;
+                text-align: center;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centered Text</title>
+        <style>
+            .centered-text {
+                text-align: center;
+            }
+        </style>
+        <title>Small Text</title>
+        <style>
+            .small-text {
+                font-size: 10px;
+            }
+        </style>
+        <style>
+            .indented {
+                margin-left: 20px;
+            }
+        </style>
+        <style>
+            .indented2 {
+                margin-left: 40px;
+            }
+        </style>
     </head>
+    <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
     <body>
-        <a href="..\Pages\Home.html">Home</a> | <b>Bypasser's Chromekit</b>
+        <p class=""><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\BypassingKitsGuide.html">Bypassing Kits Guide</a> | <b>Bypasser's Chromekit</b> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <a href="..\Pages\Contact.html">Contact</a></p>
         <hr>
-        <p class="small-centered-text">This page is for Google Chrome/Chrome OS 
+        <p class="small-centered-text">This page is for Google Chrome/Chrome OS bypasses
         <br>
-        For Windows bypasses, see Bypasser’s Windowskit 
+        For Windows exploits, see Bypasser’s Windowskit 
         <br>
         Most web-based exploits will work on other Chromium based browsers
         </p>
-        <br>
-
         <hr>
+        <br>
         <details style="display:none;" id="ExploitSearchContainer">
             <summary><b id="ExploitSearch">Exploit Finder (WIP)</b></summary>
             <form id="ExploitSearch-Form">
@@ -65,30 +66,30 @@
                 <label>Requirements</label>
                 <ul>
                     <li><input type="checkbox" class="esterm" esterm-value="kiosk">Kiosk</li>
-                    <li><input class="esterm" esterm-value="powerwash" type="checkbox">Powerwash</li>
-                    <li><input class="esterm" esterm-value="devtools" type="checkbox">Dev Tools</li>
-                    <li><input class="esterm" esterm-value="bookmarklet" type="checkbox">Bookmarklet</li>
-                    <li><input class="esterm" esterm-value="flags" type="checkbox">chrome://flags</li>
-                    <li><input class="esterm" esterm-value="tablimit" type="checkbox">Tab Limit</li>
-                    <li><input class="esterm" esterm-value="goguardian" type="checkbox">GoGuardian</li>
-                    <li><input class="esterm" esterm-value="hapara" type="checkbox">Hapara</li>
-                    <li><input class="esterm" esterm-value="securely" type="checkbox">Securely</li>
-                    <li><input class="esterm" esterm-value="extensionaccess" type="checkbox">Extension Access (Ability to install extensions)</li>
-                    <li><input class="esterm" esterm-value="dnssettings" type="checkbox">DNS Settings</li>
-                    <li><input class="esterm" esterm-value="iboss" type="checkbox">iBoss</li>
-                    <li><input class="esterm" esterm-value="blocksi" type="checkbox">Blocksi</li>
-                    <li><input class="esterm" esterm-value="network" type="checkbox">chrome://network</li>
-                    <li><input class="esterm" esterm-value="screwdriver" type="checkbox">Screwdriver</li>
-                    <li><input class="esterm" esterm-value="externalpc" type="checkbox">External PC</li>
-                    <li><input class="esterm" esterm-value="externalstorage" type="checkbox">External Storage Device</li>
-                    <li><input class="esterm" esterm-value="recoverymode" type="checkbox">Recovery Mode</li>
-                    <li><input class="esterm" esterm-value="devmode" type="checkbox">Dev Mode</li>
+                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
+                    <li><input class="esterm" esterm-value="Inspect Element" type="checkbox">Dev Tools</li>
+                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklet</li>
+                    <li><input class="esterm" esterm-value="chrome://flags" type="checkbox">chrome://flags</li>
+                    <li><input class="esterm" esterm-value="Tablimit" type="checkbox">Tab Limit</li>
+                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
+                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
+                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
+                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
+                    <li><input class="esterm" esterm-value="DNSSettings" type="checkbox">DNS Settings</li>
+                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
+                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
+                    <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://network</li>
+                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
+                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox">External PC</li>
+                    <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox">External Storage Device</li>
+                    <li><input class="esterm" esterm-value="RecoveryMode" type="checkbox">Recovery Mode</li>
+                    <li><input class="esterm" esterm-value="DevMode" type="checkbox">Dev Mode</li>
                     <li><input class="esterm" esterm-value="x86" type="checkbox">x86 Chromebook</li>
-                    <li><input class="esterm" esterm-value="snapandread" type="checkbox">Snap and Read</li>
-                    <li><input class="esterm" esterm-value="sourcecodeview" type="checkbox">Source Code Viewing (ctrl+u)</li>
-                    <li><input class="esterm" esterm-value="usb" type="checkbox">USB</li>
-                    <li><input class="esterm" esterm-value="ublockorigin" type="checkbox">uBlock Origin</li>
-                    <li><input class="esterm" esterm-value="unenrollment" type="checkbox">Unenrollment</li>
+                    <li><input class="esterm" esterm-value="Snap&Read" type="checkbox">Snap&Read</li>
+                    <li><input class="esterm" esterm-value="SourceCodeViewing" type="checkbox">Source Code Viewing (Ctrl+U)</li>
+                    <li><input class="esterm" esterm-value="USB" type="checkbox">USB</li>
+                    <li><input class="esterm" esterm-value="uBlockOrigin" type="checkbox">uBlock Origin</li>
+                    <li><input class="esterm" esterm-value="Unenrollment" type="checkbox">Unenrollment</li>
 
                     
                 </ul>
@@ -97,7 +98,6 @@
             </form>
         </details>
         <hr>
-
         <br>
         <details>
             <summary><b id="ToC">Table of Contents</b></summary>
@@ -455,26 +455,29 @@
             <br>
             Crashes an extension's manifest file.
             <br>
-            Web-based exploit.</p>
+            Web-based exploit.
+            <br>
             <br>
             Note: LTMEAT disables all extensions, not just your blocker.
-            <p>Template URL: chrome-extension://ID/manifest.json</p>
-            Extension ID’s:
+            <br>
+            Template URL: chrome-extension://ID/manifest.json
+            <br>
+            Extension IDs (Chrome):</p>
             <ul>
-                <li>Blocksi: pgmjaihnmedpcdkjcgigocogcbffgkbn
-                <li>ContentKeeper: jdogphakondfdmcanpapfahkdomaicfa
-                <li>Cisco Umbrella: jcdhmojfecjfmbdpchihbeilohgnbdci
-                <li>Fortiguard: igbgpehnbmhgdgjbhkkpedommgmfbeao
-                <li>GoGuardian: haldlgldplgnggkjaafhelgiaglafanh
-                <li>Hapara: kbohafcopfpigkjdimdcdgenlhkmhbnc
-                <li>iBoss: kmffehbidlalibfeklaefnckpidbodff
-                <li>LANSchool: baleiojnjpgeojohhhfbichcodgljmnj
-                <li> Linewize: ddfbkhpmcdbciejenfcolaaiebnjcbfc
-                <li> NetRef: khfdeghnhlpdfeenmdofgcbilkngngcp
-                <li> Securly: joflmkccibkooplaeoinecjbmdebglab
-                <li> Smoothwall: jbldkhfglmgeihlcaeliadhipokhocnm
+                <li class="small-text">Blocksi: pgmjaihnmedpcdkjcgigocogcbffgkbn
+                <li class="small-text">ContentKeeper: jdogphakondfdmcanpapfahkdomaicfa
+                <li class="small-text">Cisco Umbrella: jcdhmojfecjfmbdpchihbeilohgnbdci
+                <li class="small-text">Fortiguard: igbgpehnbmhgdgjbhkkpedommgmfbeao
+                <li class="small-text">GoGuardian: haldlgldplgnggkjaafhelgiaglafanh
+                <li class="small-text">Hapara: kbohafcopfpigkjdimdcdgenlhkmhbnc
+                <li class="small-text">iBoss: kmffehbidlalibfeklaefnckpidbodff
+                <li class="small-text">LANSchool: baleiojnjpgeojohhhfbichcodgljmnj
+                <li class="small-text">Linewize: ddfbkhpmcdbciejenfcolaaiebnjcbfc
+                <li class="small-text">NetRef: khfdeghnhlpdfeenmdofgcbilkngngcp
+                <li class="small-text">Securly: joflmkccibkooplaeoinecjbmdebglab
+                <li class="small-text">Smoothwall: jbldkhfglmgeihlcaeliadhipokhocnm
             </ul>
-            <p>If your blocker ID isn’t on this list go to the extension page & copy the character string in the URL.</p>
+            <p class="small-text">If your blocker ID isn’t on this list, go to the extension page & copy the character string in the URL.</p>
             1: Take the Template URL & replace "ID" with the extension ID. This is the extension's manifest page.
             <br>
             2: Go to the extension’s manifest page & bookmark it (A), as well as chrome://kill (B) & chrome://hang (C).
@@ -778,7 +781,7 @@
         </details>
         <br>
         <br>
-        <b>Miscellaneous</b>
+        <b id="Misc">Miscellaneous</b>
         <hr>
         <br>
         <details>
@@ -1408,7 +1411,7 @@
         </details>
         <br>
         <br>
-        <b>Crosh</b>
+        <b id="Crosh">Crosh</b>
         <hr>
         <br>
         <details>
