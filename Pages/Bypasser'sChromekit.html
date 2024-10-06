@@ -823,6 +823,36 @@
         </details>
         <br>
         <details>
+            <searchi>v120;externalpc;externalstorage;</searchi>
+            <summary><b id="BadRecovery">BadRecovery</b></summary>
+            <p class="small-text">Requires a storage device, another PC
+            <br>
+            Chrome OS-based exploit.</p>
+            <br>
+            1: Download a .bin file for your board, any version works.
+            <br>
+            2: Go <a href="https://binbashbanana.github.io/badrecovery/builder.html">here</a> & upload it.
+            <br>
+            3: Enter Recovery Mode (Esc+Refresh+Power). If you're using the unverified payload, you must also enter developer mode, & then enter recovery mode again. On Cr50 devices, you must NOT be in developer mode for unenrollment to work.
+            <br>
+            4: Insert the storage device.
+            <br>
+            There are 2 different types payloads; basic & persistant. On basic payloads, you must proceed through the setup & the device will unenroll via Cryptosmite. On persistant payloads, BadRecovery will start within a few seconds of ChromeOS booting.
+            <br>
+            <b>Mode Operations:</b>
+            <br>
+            <img src="..\Images\BadRecoveryModeOperations.PNG" alt="image lol">
+            <br>
+            R125 recovery images & newer are not vulnerable to this (except unverified). To determine if you can use this, follow these in order:
+            <ul>
+                <li>Was your device EOL before 2024? (YES)</li>
+                <li>Are you on ChromeOS version 124 or lower? (YES)</li>
+                <li>Was your device released after mid-2024? (NO)</li>
+                <li>Is your Kernver 3 or lower? (YES)</li>
+            </ul>
+        </details>
+        <br>
+        <details>
             <searchi>web;bookmarklet;</searchi>
             <summary><b id="id">Blobe BM</b></summary>
             <p class="small-text">Not compatable with every bookmarklet by design
