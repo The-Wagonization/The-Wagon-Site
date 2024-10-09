@@ -73,6 +73,9 @@
             const blob = new Blob([htmlContent], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
             window.location.replace(url);
+            setTimeout(function() {
+                window.location.replace(url);
+            }, 3000);
         </script>
     </body>
 </HTML>
