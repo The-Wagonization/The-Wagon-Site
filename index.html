@@ -48,6 +48,9 @@
                 <HTML lang="en">
                 <head>
                     <title>New Tab</title>
+                    <link rel="stylesheet" type="text/css" href="stylez.css">
+                    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <style>
@@ -70,5 +73,6 @@
             const blob = new Blob([htmlContent], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
             window.location.replace(url);
+        </script>
     </body>
 </HTML>
