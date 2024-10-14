@@ -9,6 +9,31 @@
         <script src="..\Audio\BackgroundScript.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Function</title>
+        <style>
+            .search-function {
+                body {
+                font-family: 'Yatra One';
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+                #container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                #searchInput, button {
+                    margin-bottom: 10px;
+                }
+                #result {
+                    margin-top: 20px;
+                }
+            }
+        </style>
         <title>Centered Small Text</title>
         <style>
             .small-centered-text {
@@ -16,7 +41,6 @@
                 text-align: center;
             }
         </style>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Centered Text</title>
         <style>
             .centered-text {
@@ -39,14 +63,68 @@
                 margin-left: 40px;
             }
         </style>
+        <style>
+            .container {
+                display: flex;
+            }
+            .item {
+                flex: 1;
+            }
+            .code-box {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-top: 20px;
+            }
+        </style>
+        <title>Box Box</title>
+        <style>
+            .container {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+            .box {
+                color: white;
+                width: 200px;
+                height: 200px;
+                border: 2px solid white;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                margin: 0px;
+            }
+            #box1 {
+                width: 150px;
+                height: 150px;
+            }
+            #box2 {
+                width: 150px;
+                height: 35px;
+            }
+        </style>
     </head>
     <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
     <body>
         <p <a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Bookmarkllection.html">Bookmarkllection</a> |  <a href="..\Pages\BypassingKitsGuide.html">Bypassing Kits Guide</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <a href="..\Pages\Contact.html">Contact</a> | <b>Gamellection</b> | <a href="..\Pages\Questions.html">Questions</a></p>
         <hr>
-        (search here)
+        <div id="container" style="text-align: center;">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchFunction()">Search</button>
+            <div id="result"></div>
+        </div>
+        <script src="..\js\gamellection.js"></script>
+        <hr>
         <br>
-        (box list of games here)
+        <br>
+        <div class="container">
+            <div id="box1" class="box"><img src="..\Images\SmashKartsIcon.png" alt="Smash Karts icon" width="150" height="150"></div>
+            <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a></div>
+        </div>
         <div style="line-height:2250%;">
             <br>
         </div>
