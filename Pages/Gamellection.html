@@ -78,14 +78,19 @@
         </style>
         <title>Box Box</title>
         <style>
-            .container {
+            .main-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px; /* Adjust the gap value for horizontal margin */
                 color: white;
+                height: 100vh;
+                align-items: center;
+            }
+            .container {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                flex-direction: column;
                 align-items: center;
-                height: 100vh;
             }
             .box {
                 color: white;
@@ -93,10 +98,9 @@
                 height: 200px;
                 border: 2px solid white;
                 display: flex;
-                justify-content: flex-start;
-                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                margin: 0px;
+                margin: 0;
             }
             #box1 {
                 width: 150px;
@@ -106,7 +110,7 @@
                 width: 150px;
                 height: 35px;
             }
-        </style>
+        </style>    
     </head>
     <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
     <body>
@@ -121,9 +125,31 @@
         <hr>
         <br>
         <br>
-        <div class="container">
-            <div id="box1" class="box"><img src="..\Images\SmashKartsIcon.png" alt="Smash Karts icon" width="150" height="150"></div>
-            <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a></div>
+        <div class="main-container">
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\3SlicesIcon.png" alt="3 Slices icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices.html">3 Slices</a></div>
+            </div>
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\3Slices2Icon.png" alt="3 Slices 2 icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices2.html">3 Slices 2</a></div>
+            </div>
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\LearnToFlyIcon.png" alt="Learn to Fly icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly.html">Learn to Fly</a></div>
+            </div>
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\LearnToFly2Icon.png" alt="Learn to Fly 2 icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly2.html">Learn to Fly 2</a></div>
+            </div>
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\SmashKartsIcon.png" alt="Smash Karts icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a></div>
+            </div>
+            <div class="container">
+                <div id="box1" class="box"><img src="..\Images\Wordle+Icon.png" alt="Wordle+ icon" width="150" height="150"></div>
+                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Wordle+.html">Wordle+</a></div>
+            </div>
         </div>
         <div style="line-height:2250%;">
             <br>
