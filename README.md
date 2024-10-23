@@ -8,4 +8,4 @@
 <br>
 <br>
 <br>
-Join the <a href="">Discord</a>
+Join the <a href="https://discord.com/invite/mSZ2YWzg68">Discord</a>
