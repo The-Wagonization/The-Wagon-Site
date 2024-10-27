@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Loader</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #games {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+        }
+
+        #container {
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        #fullscreen {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>This page requires JavaScript to function!</noscript>
+    <div id="container"></div>
+    <br>
+    <button id="fullscreen">Fullscreen</button>
+    <br>
+    <br>
+    <div id="games"></div>
+    <script>
+        let player;
+        let gameList = ["/Pages/Subpages/Flash/Flash Games/AwesomePlanes.swf", "/Pages/Subpages/Flash/Flash Games/AwesomeTanks.swf", "/Pages/Subpages/Flash/Flash Games/AwesomeTanks2.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense2.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense3.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense4.swf", "/Pages/Subpages/Flash/Flash Games/JohnnyRocketfingers2.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly2.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly3.swf", "/Pages/Subpages/Flash/Flash Games/Run3.swf"]; // Game file list (Compiled using flashlist.js)
+        gameList.forEach(e => {
+            let el = document.createElement('button')
+            let link = e
+            el.textContent = /.*\/(.*).swf/.exec(e)[1]
+            el.addEventListener('click', () => {
+                player.load(link)
+            })
+            document.getElementById('games').appendChild(el)
+        })
+
+
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+
+            //player.load(gameList[0]);
+
+            document.getElementById("fullscreen").addEventListener("click", () => {
+                player.enterFullscreen();
+            })
+        });
+
+
+    </script>
+    <script src="/Ruffle/ruffle.js"></script>
+</body>
+
+</html>
