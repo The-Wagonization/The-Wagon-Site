@@ -89,7 +89,16 @@
             })
         });
 
-
+        window.addEventListener("beforeunload", (ev) => {
+            ev.preventDefault()
+            return;
+        });
+        setInterval(() => {
+            window.onbeforeunload = (ev) => {
+                ev.preventDefault()
+                return;
+            }
+        }, 100);
     </script>
 </body>
 
