@@ -55,6 +55,8 @@
     <br>
     <br>
     <div id="games"></div>
+
+    <script src="/Ruffle/ruffle.js"></script>
     <script>
         let player;
         let gameList = ["/Pages/Subpages/Flash/Flash Games/AwesomePlanes.swf", "/Pages/Subpages/Flash/Flash Games/AwesomeTanks.swf", "/Pages/Subpages/Flash/Flash Games/AwesomeTanks2.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense2.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense3.swf", "/Pages/Subpages/Flash/Flash Games/BloonsTowerDefense4.swf", "/Pages/Subpages/Flash/Flash Games/JohnnyRocketfingers2.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly2.swf", "/Pages/Subpages/Flash/Flash Games/LearnToFly3.swf", "/Pages/Subpages/Flash/Flash Games/Run3.swf"]; // Game file list (Compiled using flashlist.js)
@@ -63,7 +65,11 @@
             let link = e
             el.textContent = /.*\/(.*).swf/.exec(e)[1]
             el.addEventListener('click', () => {
-                player.load(link)
+                player.load(link).then((result) => {
+
+                }).catch((err) => {
+                    alert("An error occured when loading the SWF file: " + err)
+                });
             })
             document.getElementById('games').appendChild(el)
         })
@@ -85,7 +91,6 @@
 
 
     </script>
-    <script src="/Ruffle/ruffle.js"></script>
 </body>
 
 </html>
