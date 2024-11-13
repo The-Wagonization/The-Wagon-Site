@@ -82,33 +82,23 @@
         <p style="float: left;"><a href="..\..\Gamellection.html">Back</a></p>
         <br>
         <div class="embed-container">
-            <div id="flash-content" class="flash-container"></div>
+            <iframe id="embeddedPage" src="https://www.coolmathgames.com/0-learn-to-fly-2"></iframe>
             <button class="fullscreen-button" onclick="fullscreen()">Fullscreen</button>
         </div>
         <script>
-            window.RufflePlayer = window.RufflePlayer || {};
-            window.addEventListener("DOMContentLoaded", () => {
-                let ruffle = window.RufflePlayer.newest();
-                let player = ruffle.createPlayer();
-                let container = document.getElementById("container");
-                container.appendChild(player);
-                player.load("..\Pages\Subpages\Flash\Flash Games\LearnToFly.swf");
-            });
-
             function fullscreen() {
-                const flashContent = document.getElementById("flash-content");
-                if (flashContent.requestFullscreen) {
-                    flashContent.requestFullscreen();
-                } else if (flashContent.mozRequestFullScreen) {
-                    flashContent.mozRequestFullScreen();
-                } else if (flashContent.webkitRequestFullscreen) {
-                    flashContent.webkitRequestFullscreen();
-                } else if (flashContent.msRequestFullscreen) {
-                    flashContent.msRequestFullscreen();
+                var iframe = document.getElementById("embeddedPage");
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) {
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
                 }
             }
-        </script>  
-        <script src="..\..\..\Ruffle\ruffle.js"></script>      
+        </script>        
         <div style="line-height:2250%;">
             <br>
         </div>
