@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Quick, Draw! | The Wagon Site</title>
+        <link rel="icon" type="image/x-icon" href="..\..\..\images\JackWagonIcon.png">
+        <link rel="stylesheet" type="text/css" href="..\..\..\stylez.css">
+        <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+        <script src="..\Audio\BackgroundScript.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centered Small Text</title>
+        <style>
+            .small-centered-text {
+                font-size: 10px;
+                text-align: center;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centered Text</title>
+        <style>
+            .centered-text {
+                text-align: center;
+            }
+        </style>
+        <title>Small Text</title>
+        <style>
+            .small-text {
+                font-size: 10px;
+            }
+        </style>
+        <style>
+            .indented {
+                margin-left: 20px;
+            }
+        </style>
+        <style>
+            .indented2 {
+                margin-left: 40px;
+            }
+        </style>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            iframe {
+                width: 100%;
+                height: 100vh;
+                border: none;
+            }
+       </style>
+       <title>Embedded Webpage with Fullscreen Button</title>
+       <style>
+           .embed-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                }
+            iframe {
+                width: 100%;
+                height: 80%;
+                border: none;
+            }
+            .fullscreen-button {
+                font-family: 'Yatra One';
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-color: white;
+                border: none;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+       </style>
+    </head>
+    <body>
+        <p style="float: left;"><a href="..\..\Gamellection.html">Back</a></p>
+        <br>
+        <div class="embed-container">
+            <iframe id="embeddedPage" src="https://quickdraw.withgoogle.com/#"></iframe>
+            <button class="fullscreen-button" onclick="fullscreen()">Fullscreen</button>
+        </div>
+        <script>
+            function fullscreen() {
+                var iframe = document.getElementById("embeddedPage");
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) {
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            }
+        </script>
+        <div style="line-height:2250%;">
+            <br>
+        </div>
+        <p class="small-centered-text">Created by The Wagonization, consisting of JackWagon885 
+        <br>
+        All credit goes to the respective owners. I only compile them in a list.
+        <br>
+        Fuck you Google</p>
+    </body>
+</HTML>
