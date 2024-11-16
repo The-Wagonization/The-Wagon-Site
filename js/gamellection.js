@@ -19,9 +19,12 @@ function searchFunction() {
         '<a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly.html">Learn to Fly</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly2.html">Learn to Fly 2</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\MinecraftClassic.html">Minecraft Classic</a>',
+        '<a href="..\Pages\Subpages\Gamellection Subpages\n-gon.html">n-gon</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\QuickDrawWithGoogle.html">Quick, Draw!</a>',
+        '<a href="..\Pages\Subpages\Gamellection Subpages\Run3.html">Run 3</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\Slope.html">Slope</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a>',
+        '<a href="..\Pages\Subpages\Gamellection Subpages\Tetris.html">Tetris</a>',
         '<a href="..\Pages\Subpages\Gamellection Subpages\Wordle+.html">Wordle+</a>',
     ];
     let result = data.filter(item => item.toLowerCase().includes(input));
