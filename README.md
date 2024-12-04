@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-<a href="https://the-wagonization.github.io/The-Wagon-Site/">The Wagon Site</a> is a collection of various things, such as exploits, bookmarklets, games, proxies, & more.
+<a href="https://the-wagonization.github.io/The-Wagon-Site/">The Wagon Site</a> is a collection of various things, such as exploits, bookmarklets, games, proxies, & more, created by JackWagon885. Any other user is unofficial.
 <br>
 <br>
 <br>
