@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'BlackBoysOnMopeds';
+  src: url('fonts/BLACKBOYSONMOPEDS.ttf') format('truetype');
+}
+.centre {
+  text-align: center;
+  font-family: "BlackBoysOnMopeds", sans-serif;
+  font-size: 2em;
+  color: #fbb824;
+  font-weight: 100;
+}
+.tab-widget {
+  width: 80%;
+  margin: 0 auto;
+}
+.tab-header {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+  font-size: 1em;
+}
+.tab-button:hover {
+  background-color: #ddd;
+}
+.tab-button.active {
+  background-color: white;
+  border-bottom: 2px solid white;
+}
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+.tab-content.active {
+  display: block;
+}

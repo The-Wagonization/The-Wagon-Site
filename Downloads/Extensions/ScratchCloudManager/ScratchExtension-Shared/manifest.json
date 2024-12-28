@@ -1,0 +1,28 @@
+{
+  "name": "☁ Scratch Cloud Variable Hack",
+  "version": "0.5.2",
+  "description": "Allows custom cloud variable packets to be sent to Scratch",
+  "manifest_version": 3,
+  "author": "AceCoderClaws",
+  "action": {
+      "default_popup": "index.html",
+      "default_title": "☁ Cloud Hack"
+  },
+  "icons": {
+      "48": "images/ScatchHackLogo_x48.png",
+      "128": "images/ScatchHackLogo_x128.png"
+  },
+  "permissions": [
+      "activeTab",
+      "scripting"
+  ],
+  "content_scripts": [
+      {
+          "matches": ["*://scratch.mit.edu/*"],
+          "js": ["content.js"]
+      }
+  ],
+  "host_permissions": [
+      "*://scratch.mit.edu/*"
+  ]
+}

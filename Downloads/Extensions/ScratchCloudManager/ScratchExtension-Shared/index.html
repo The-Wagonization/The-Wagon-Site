@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>☁ Cloud Hack</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+    <div class="container mt-3" style="width: 450px;">
+      <p class="centre">Scratch Cloud Hack</p>
+      <div class="tab-header">
+        <button class="tab-button active" id="handshakeTab">Handshake</button>
+        <button class="tab-button" id="sendActionTab">Send Action</button>
+      </div>
+      <div id="Handshake" class="tab-content active">
+        <form id="handshakeForm">
+          <label for="name">Packet Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="user">Username:</label><br>
+          <input type="text" id="user" name="user"><br>
+          <label for="project_id">Project ID:</label><br>
+          <input type="text" id="project_id" name="project_id"><br>
+          <input type="button" value="Submit" id="submitButton">
+        </form>
+      </div>
+      <div id="SendAction" class="tab-content">
+        <form id="updateForm">
+          <label for="name">Packet Method:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="user">Username:</label><br>
+          <input type="text" id="user" name="user"><br>
+          <label for="project_id">Project ID:</label><br>
+          <input type="text" id="project_id" name="project_id"><br>
+          <label for="var_name">Variable Name:</label><br>
+          <input type="text" id="var_name" name="var_name"><br>
+          <label for="value">Value:</label><br>
+          <input type="text" id="value" name="value"><br>
+          <input type="button" value="Submit" id="sendActionSubmitButton">
+        </form>
+      </div>
+      <label for="response">Response Packets:</label><br>
+      <textarea id="response" rows="10" style="width: 100%;" readonly></textarea>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
