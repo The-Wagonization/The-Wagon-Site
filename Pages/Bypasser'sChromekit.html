@@ -60,59 +60,61 @@
         <hr>
         <p class="small-centered-text">This page is for Google Chrome/Chrome OS bypasses
         <br>
-        For Windows exploits, see Bypasser’s Windowskit 
+        For Windows exploits, see <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser’s Windowskit</a> 
         <br>
-        Most web-based exploits will work on other Chromium based browsers
-        </p>
-        <hr>
+        Most web-based exploits will work on other Chromium based browsers</p>
+        <br>
         <br>
         <details style="display:none;" id="ExploitSearchContainer">
-            <summary><b id="ExploitSearch">Exploit Finder (WIP)</b></summary>
+            <summary><b id="ExploitSearch">Exploit Finder</b></summary>
             <form id="ExploitSearch-Form">
                 <label for="ExploitSearch-Version">Chrome OS Version</label><br>
-                <input type="text" id="ExploitSearch-Version" placeholder="127" value="127" type="number"><br>
+                <input type="text" id="ExploitSearch-Version" placeholder="114" value="114" type="number"><br>
                 <label>Exploit Type</label>
                 <ul id="ExploitSearch-ExploitType">
-                    <li><input class="esterm" esterm-value="web" type="checkbox" checked=true>Web Based</li>
-                    <li><input class="esterm" esterm-value="os" type="checkbox" checked=true>OS Based</li>
-                    <li><input class="esterm" esterm-value="proxy" type="checkbox" checked=true>Proxy Based</li>
-                    <li><input class="esterm" esterm-value="hardware" type="checkbox">Hardware Based</li>
+                    <li><input class="esterm" esterm-value="Hardware" type="checkbox">Hardware Based</li>
+                    <li><input class="esterm" esterm-value="OS" type="checkbox" checked=true>OS Based</li>
+                    <li><input class="esterm" esterm-value="Proxy" type="checkbox" checked=true>Proxy Based</li>
+                    <li><input class="esterm" esterm-value="Web" type="checkbox" checked=true>Web Based</li>
+                </ul>
+                <label>Blocker</label>
+                <ul>
+                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
+                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
+                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
+                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
+                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
                 </ul>
                 <label>Requirements</label>
                 <ul>
-                    <li><input type="checkbox" class="esterm" esterm-value="kiosk">Kiosk</li>
-                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
-                    <li><input class="esterm" esterm-value="Inspect Element" type="checkbox">Dev Tools</li>
-                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklet</li>
-                    <li><input class="esterm" esterm-value="chrome://flags" type="checkbox">chrome://flags</li>
-                    <li><input class="esterm" esterm-value="Tablimit" type="checkbox">Tab Limit</li>
-                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
-                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
-                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
-                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
+                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklets</li>
+                    <li><input class="esterm" esterm-value="DevMode" type="checkbox">Dev Mode</li>
                     <li><input class="esterm" esterm-value="DNSSettings" type="checkbox">DNS Settings</li>
-                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
-                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
-                    <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://network</li>
-                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
+                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
                     <li><input class="esterm" esterm-value="ExternalPC" type="checkbox">External PC</li>
                     <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox">External Storage Device</li>
+                    <li><input class="esterm" esterm-value="InspectElement" type="checkbox">Inspect Element</li>
+                    <li><input class="esterm" esterm-value="Kiosk" type="checkbox">Kiosk Apps</li>
+                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
                     <li><input class="esterm" esterm-value="RecoveryMode" type="checkbox">Recovery Mode</li>
-                    <li><input class="esterm" esterm-value="DevMode" type="checkbox">Dev Mode</li>
-                    <li><input class="esterm" esterm-value="x86" type="checkbox">x86 Chromebook</li>
-                    <li><input class="esterm" esterm-value="Snap&Read" type="checkbox">Snap&Read</li>
-                    <li><input class="esterm" esterm-value="SourceCodeViewing" type="checkbox">Source Code Viewing (Ctrl+U)</li>
-                    <li><input class="esterm" esterm-value="USB" type="checkbox">USB</li>
-                    <li><input class="esterm" esterm-value="uBlockOrigin" type="checkbox">uBlock Origin</li>
-                    <li><input class="esterm" esterm-value="Unenrollment" type="checkbox">Unenrollment</li>
-
-                    
+                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
+                    <li><input class="esterm" esterm-value="SourceCode" type="checkbox">Source Code Viewing (Ctrl+U)</li>
+                    <li><input class="esterm" esterm-value="TabLimit" type="checkbox">Tab Limit</li>
+                    <details>
+                        <summary>chrome://</summary>
+                        <li><input class="esterm" esterm-value="chrome://flags" type="checkbox">chrome://flags</li>
+                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://network</li>
+                    </details>
+                    <details>
+                        <summary>Extension</summary>
+                        <li><input class="esterm" esterm-value="Snap&Read" type="checkbox">Snap&Read</li>
+                        <li><input class="esterm" esterm-value="uBlockOrigin" type="checkbox">uBlock Origin</li>
+                    </details>
                 </ul>
                 <button type="submit">Search</button>
                 <p>Found <span id="exploitCount">0</span> exploits</p>
             </form>
         </details>
-        <hr>
         <br>
         <details>
             <summary><b id="ToC">Table of Contents</b></summary>
@@ -150,74 +152,114 @@
             <br>
             <a href="#LoMoH">LoMoH</a>
             <br>
-            <details open="true">
+            <details>
                 <summary><a href="#LTMEAT">LTMEAT</a></summary>
                     <ul>
-                        <li><a href="#LTMEAT Switch Method">Switch Method</a></li>
-                        <li><a href="#LTMEAT Chat Method">Chat Method</a></li>
-                        <li><a href="#LTMEAT Temp Method">Temporary Method</a></li>
-                        <li><a href="#LTMEAT Print Method">Print Method</a></li>
-                        <li><a href="#LTMEAT Skid Method">Skid Method</a></li>
-                        <li><a href="#LTMEAT WiFi Method">WiFi Method</a></li>
+                        <li><a href="#LTMEATSwitchMethod">Switch Method</a></li>
+                        <li><a href="#LTMEATChatMethod">Chat Method</a></li>
+                        <li><a href="#LTMEATTempMethod">Temporary Method</a></li>
+                        <li><a href="#LTMEATPrintMethod">Print Method</a></li>
+                        <li><a href="#LTMEATSkidMethod">Skid Method</a></li>
+                        <li><a href="#LTMEATWiFiMethod">WiFi Method</a></li>
                     </ul>
             </details>
+            <a href="#PB">Point-Blank</a>
             <br>
-            <a href="#PB">Point-Blank</a><br>
-            <a href="#Quickview">Quickview</a><br>
-            <a href="#Sidetracked">Sidetracked</a><br>
-            <details open="true">
+            <a href="#Quickview">Quickview</a>
+            <br>
+            <a href="#Sidetracked">Sidetracked</a>
+            <br>
+            <details>
                 <summary><a href="#SKIOVOX">SKIOVOX</a></summary>
                     <ul>
-                        <li><a href="#SKIOVOX Unpatched Method">Unpatched Method</a></li>
+                        <li><a href="#SKIOVOXUnpatchedMethod">Unpatched Method</a></li>
                     </ul>
             </details>
-            <a href="#SOT">SOT</a><br>
-            <a href="#SWAB">SWAB</a><br>
-            <a href="#SL">Swamp Launcher</a><br>
-            <a href="#uBoss">uBoss</a><br>
-            <a href="#URL Unblocker">URL Unblocker</a><br>
-            <a href="#id">Admin Lock Bypass</a><br>
-            <a href="#Blank3r">Blank3r</a><br>
-            <a href="#id">Blobe BM</a><br>
-            <a href="#BlobBypass">BlobBypass</a><br>
-            <a href="#BlobWiFi">BlobWiFi</a><br>
-            <a href="#ByeBlocker">ByeBlocker</a><br>
-            <a href="#CAC">Car Axle Client</a><br>
-            <a href="#CAUB">CAUB</a><br>
-            <a href="#CAUB Flag Method">Flag Method</a><br>
-            <a href="#CRSH2TTY">CRSH2TTY</a><br>
-            <a href="#Cryptosmite">Cryptosmite</a><br>
-            <a href="#Downgration">Downgration</a><br>
-            <a href="#E-Halcyon">E-Halcyon</a><br>
-            <a href="#EL">Extension Launcher</a><br>
-            <a href="#KVS">KVS</a><br>
-            <a href="#Revertion">Revertion</a><br>
-            <a href="#SFB">Search Filter Bypass</a><br>
-            <details open="true">
+            <a href="#SOT">SOT</a>
+            <br>
+            <a href="#SWAB">SWAB</a>
+            <br>
+            <a href="#SL">Swamp Launcher</a>
+            <br>
+            <a href="#uBoss">uBoss</a>
+            <br>
+            <a href="#URLUnblocker">URL Unblocker</a>
+            <br>
+            <a href="#AdminLockBypass">Admin Lock Bypass</a>
+            <br>
+            <a href="#Blank3r">Blank3r</a>
+            <br>
+            <a href="#BlobeBM">Blobe BM</a>
+            <br>
+            <a href="#BlobBypass">BlobBypass</a>
+            <br>
+            <a href="#BlobWiFi">BlobWiFi</a>
+            <br>
+            <a href="#ByeBlocker">ByeBlocker</a>
+            <br>
+            <a href="#CAC">Car Axle Client</a>
+            <br>
+            <details>
+                <summary><a href="#CAUB">CAUB</a><br></summary>
+                    <ul>
+                        <li><a href="#CAUBFlagMethod">Flag Method</a></li>
+                    </ul>
+            </details>
+            <a href="#CRSH2TTY">CRSH2TTY</a>
+            <br>
+            <a href="#Cryptosmite">Cryptosmite</a>
+            <br>
+            <a href="#Downgration">Downgration</a>
+            <br>
+            <a href="#E-Halcyon">E-Halcyon</a>
+            <br>
+            <a href="#EL">Extension Launcher</a>
+            <br>
+            <a href="#KVS">KVS</a>
+            <br>
+            <a href="#Revertion">Revertion</a>
+            <br>
+            <a href="#SFB">Search Filter Bypass</a>
+            <br>
+            <details>
                 <summary><a href="#SH1MMER">SH1MMER</a><br></summary>
                     <ul>
-                        <li><a href="#SH1MMER Legacy">SH1MMER Legacy</a></li>
-                        <li><a href="#SH1MMER Modern">SH1MMER Modern</a></li>
+                        <li><a href="#SH1MMERLegacy">SH1MMER Legacy</a></li>
+                        <li><a href="#SH1MMERModern">SH1MMER Modern</a></li>
+                        <li><a href="#SH1MMERScrewdriverUnfog">Screwdriver Unfog</a><br></li>
                     </ul>
             </details>
-            <a href="#SH1MMER Screwdriver Unfog">Screwdriver Unfog</a><br>
-            <a href="#Shimboot">Shimboot</a><br>
-            <a href="#Skebstore">Skebstore</a><br>
-            <a href="#S&R">Snap&Run</a><br>
-            <a href="#Source View">Source View</a><br>
-            <a href="#USBoot">USBoot</a><br>
-            <a href="#uRun">uRun</a><br>
-            <a href="#PPT">Policy Password Tool</a><br>
-            <a href="#CroshFi">CroshFi</a><br>
-            <a href="#De-roll">De-roll</a><br>
-            <a href="#Fakemurk">Fakemurk</a><br>
-            <a href="#OP Crosh">OP Crosh</a><br>
+            <a href="#Shimboot">Shimboot</a>
+            <br>
+            <a href="#Skebstore">Skebstore</a>
+            <br>
+            <a href="#S&R">Snap&Run</a>
+            <br>
+            <a href="#SourceView">Source View</a>
+            <br>
+            <a href="#USBoot">USBoot</a>
+            <br>
+            <a href="#uRun">uRun</a>
+            <br>
+            <a href="#PPT">Policy Password Tool</a>
+            <br>
+            <a href="#CroshFi">CroshFi</a>
+            <br>
+            <a href="#De-roll">De-roll</a>
+            <br>
+            <a href="#Fakemurk">Fakemurk</a>
+            <br>
+            <a href="#OPCrosh">OP Crosh</a>
+            <br>
             <a href="#Pollen">Pollen</a>
         </details>
         <hr>
         <br>
         <details>
-            <searchi>proxy;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Proxy;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="Alphabetic">Alphabetic</b></summary>
             <p class="small-text">proxy moment
             <br>
@@ -231,9 +273,10 @@
         </details>
         <br>
         <details>
-            <searchi>os;</searchi>
+            <searchi>OS;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="ADWB">App Diagnose WiFi Bypass</b></summary>
-            <p class="small-text">Requires an app
+            <p class="small-text">Requires a app
             <br>
             a p p.
             <br>
@@ -255,7 +298,9 @@
         </details>
         <br>
         <details>
-            <searchi>os;</searchi>
+            <searchi>OS;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>DNSSettings</searchi>
             <summary><b id="Baghdad">Baghdad</b></summary>
             <p class="small-text">Requires access to DNS settings
             <br>
@@ -277,7 +322,9 @@
         </details>
         <br>
         <details>
-            <searchi>proxy;bookmarklet;web;</searchi>
+            <searchi>Proxy</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="BAC">Browser Action Crasher</b></summary>
             <p class="small-text">proxy moment
             <br>
@@ -291,7 +338,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="Buypass">Buypass</b></summary>
             <p class="small-text">Only lasts for 3 minutes.
             <br>
@@ -309,7 +357,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>chrome://</searchi>
             <summary><b id="cauDNS">cauDNS</b></summary>
             <p class="small-text">Requires chrome://network#state
             <br>
@@ -321,7 +371,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;devtools;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>InspectElement</searchi>
             <summary><b id="Chaos">Chaos</b></summary>
             <p class="small-text">Requires Devtools.
             <br>
@@ -339,7 +391,9 @@
         </details>
         <br>
         <details>
-            <searchi>os;powerwash;</searchi>
+            <searchi>OS</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Powerwash</searchi>
             <summary><b id="Corkey">Corkey</b></summary>
             <p class="small-text">Requires powerwash.
             <br>
@@ -347,7 +401,7 @@
             <br>
             Chrome OS-based exploit.</p>
             <br>
-            1: Enter recovery page (Esc+Refresh+Power) or powerwash.
+            1: Powerwash your Chromebook.
             <br>
             2: Log into your Chromebook & immediately turn off WiFi, then perform an instant restart (refresh+power).
             <br>
@@ -361,7 +415,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>chrome://</searchi>
             <summary><b id="Dextensify">Dextensify</b></summary>
             <p class="small-text">Memory leak unavoidable.
             <br>
@@ -381,7 +437,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="ExtHang3r">ExtHang3r</b></summary>
             <p class="small-text">N/A
             <br>
@@ -393,7 +450,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;goguardian;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="GG">GoGuardian GoAway</b></summary>
             <p class="small-text">GoGuardian exclusive.
             <br>
@@ -409,7 +467,9 @@
         </details>
         <br>
         <details>
-            <searchi>tablimit;goguardian;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets;TabLimit</searchi>
             <summary><b id="GTC">GuardianTabCrash</b></summary>
             <p class="small-text">Requires tab limit.
             <br>
@@ -425,7 +485,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;bookmarklet;hapara;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="HFSB">Hapara Focus Session Bypass</b></summary>
             <p class="small-text">Requires data: links.
             <br>
@@ -439,7 +501,10 @@
         </details>
         <br>
         <details>
-            <searchi>v112;os;</searchi>
+            <searchi>v112</searchi>
+            <searchi>OS</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>chrome://</searchi>
             <summary><b id="Killcurly">Killcurly</b></summary>
             <p class="small-text">Patched on Chrome OS 112+
             <br>
@@ -457,7 +522,10 @@
         </details>
         <br>
         <details>
-            <searchi>v106;web;bookmarklet;</searchi>
+            <searchi>v106</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="Ingot">Ingot</b></summary>
             <p class="small-text">Patched on Chrome OS 106+
             <br>
@@ -472,7 +540,8 @@
         </details>
         <br>
         <details>
-            <searchi>securely;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="INSECURELY">INSECURELY</b></summary>
             <p class="small-text">Patched on Securely versions above 2.98.55
             <br>
@@ -484,7 +553,10 @@
         </details>
         <br>
         <details>
-            <searchi>hapara;v111;web;bookmarklet;</searchi>
+            <searchi>v111</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="LoMoH">LoMoH</b></summary>
             <p class="small-text">Doesn’t work with Hapara Highlights & Read&amp;Write; patched on Chrome OS 111+
             <br>
@@ -496,7 +568,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>v114</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="LTMEAT">LTMEAT</b></summary>
             <p class="small-text">Methods using (B) & (C) are patched on Chrome OS 115+
             <br>
@@ -535,7 +609,10 @@
             <br>
             <br>
             <details>
-                <summary><b id="LTMEAT Switch Method">Switch Method</b></summary>
+                <searchi>v114</searchi>
+                <searchi>Web</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <summary><b id="LTMEATSwitchMethod">Switch Method</b></summary>
                 1: While on (A), click on (B).
                 <br>
                 2: Duplicate the tab.
@@ -547,7 +624,9 @@
             <br>
             <br>
             <details>
-                <summary><b id="LTMEAT Chat Method">Chat Method</b></summary>
+                <searchi>Web</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <summary><b id="LTMEATChatMethod">Chat Method</b></summary>
                 1: Wait until your teacher opens the chat window.
                 <br>
                 2: Spam X until it stops opening.
@@ -557,7 +636,9 @@
             <br>
             <br>
             <details>
-                <summary><b id="LTMEAT Temp Method">Temporary Method</b></summary>
+                <searchi>Web</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <summary><b id="LTMEATTempMethod">Temporary Method</b></summary>
                 1: Create a new bookmark folder (spam.js) & inside that folder, make 38 bookmarks of the page chrome-extension://id/background.js (you can do this easily with the bookmark manager).
                 <br>
                 2: Go to chrome://settings/performance & turn memory saver off. Under “Keep these sites always active”, add chrome-extension://id/background.js.
@@ -569,7 +650,10 @@
             <br>
             <br>
             <details>
-                <summary><b id="LTMEAT Skid Method">Skid Method</b></summary>
+                <searchi>v114</searchi>
+                <searchi>Web</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <summary><b id="LTMEATSkidMethod">Skid Method</b></summary>
                 1: Go to (A) & click on (C).
                 <br>
                 2: Duplicate the tab (right click on it & click “duplicate”).
@@ -579,7 +663,9 @@
             <br>
             <br>
             <details>
-                <summary><b id="LTMEAT WiFi Method">WiFi Method</b></summary>
+                <searchi>Web</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <summary><b id="LTMEATWiFiMethod">WiFi Method</b></summary>
                 1: Go to your blocker's extension page.
                 <br>
                 2: Disable WiFi.
@@ -593,7 +679,10 @@
         </details>
         <br>
         <details>
-            <searchi>106;web;bookmarklet;</searchi>
+            <searchi>v106</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="PB">Point-Blank</b></summary>
             <p class="small-text">Might be patched on Chrome OS 106+
             <br>
@@ -616,7 +705,9 @@
         </details>
         <br>
         <details>
-            <searchi>bookmarklet;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="Quickview">Quickview</b></summary>
             <p class="small-text">Requires bookmarklets
             <br>
@@ -632,7 +723,9 @@
         </details>
         <br>
         <details>
-            <searchi>flags;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="Sidetracked">Sidetracked</b></summary>
             <p class="small-text">Requires flag access; only works on Chrome OS 106+
             <br>
@@ -646,7 +739,10 @@
         </details>
         <br>
         <details>
-            <searchi>kiosk;</searchi>
+            <searchi>v119</searchi>
+            <searchi>OS</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Kiosk</searchi>
             <summary><b id="SKIOVOX">SKIOVOX</b></summary>
             <p class="small-text">Requires a kiosk app; Most methods patched on version 119
             <br>
@@ -667,14 +763,14 @@
             If you see a “back” button proceed to method A (steps 6-7). Otherwise go to method B (steps 8-10) or method C (11-13).
             <br>
             <br>
-            Method A:
+            <a href="SKIOVOX-A">Method A:</a>
             <br>
             6: Click “add other WiFi network” & immediately press Esc twice & Enter. If you get a screen saying “multi sign-in is disab;ed”, press Esc to bypass it.
             <br>
             7: There may be an open window belonging to your school profile, you can close it. In the window behind it that has no extensions, click the 3 dots & then click “new window”. Use this window instead. Go to steps 14+.
             <br>
             <br>
-            Method B:
+            <a href="SKIOVOX-B">Method B:</a>
             <br>
             8: Press the “diagnose” button.
             <br>
@@ -683,7 +779,7 @@
             10: Click Wi-Fi, then the settings link. Close this window to reveal a Chrome window. Go to steps 14+.
             <br>
             <br>
-            Method C:
+            <a href="SKIOVOX-C">Method C:</a>
             <br>
             11: Just click “add other WiFi network”.
             <br>
@@ -714,7 +810,10 @@
             <br>
             <br>
             <details>
-                <summary><b id="SKIOVOX Unpatched Method">Unpatched Method</b></summary>
+                <searchi>OS</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <searchi>Kiosk</searchi>
+                <summary><b id="SKIOVOXUnpatchedMethod">Unpatched Method</b></summary>
                 1: Do the main methods steps 1-4.
                 <br>
                 2: Click the cog in the brightness settings instead.
@@ -734,7 +833,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;extensionaccess;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>ExtensionAccess</searchi>
             <summary><b id="SOT">SOT</b></summary>
             <p class="small-text">Requires extension access.
             <br>
@@ -752,7 +853,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;</searchi>
+            <searchi>OS</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="SWAB">SWAB</b></summary>
             <p class="small-text">Not finished
             <br>    
@@ -770,7 +872,9 @@
         </details>
         <br>
         <details>
-            <searchi>os;proxy;dnssettings;</searchi>
+            <searchi>OS;Proxy</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>DNSSettings</searchi>
             <summary><b id="SL">Swamp Launcher</b></summary>
             <p class="small-text">Requires access to DNS settings
             <br>
@@ -795,7 +899,9 @@
         </details>
         <br>
         <details>
-            <searchi>iboss;blocksi;web;bookmarklet;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;iBoss</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="uBoss">uBoss</b></summary>
             <p class="small-text">Exclusive to iBoss & Blocksi
             <br>
@@ -814,8 +920,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
-            <summary><b id="URL Unblocker">URL Unblocker</b></summary>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <summary><b id="URLUnblocker">URL Unblocker</b></summary>
             <p class="small-text">Requires editing to change website.
             >br>
             An unblocked alternative link.
@@ -832,7 +939,8 @@
         <hr>
         <br>
         <details>
-            <searchi>screwdriver;hardware;</searchi>
+            <searchi>Hardware</searchi>
+            <searchi>Screwdriver</searchi>
             <summary><b id="id">Admin Lock Bypass</b></summary>
             <p class="small-text">Requires screwdriver
             <br>
@@ -852,7 +960,8 @@
         </details>
         <br>
         <details>
-            <searchi>bookmarklet;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="Blank3r">Blank3r</b></summary>
             <p class="small-text">about:blank
             <br>
@@ -870,7 +979,9 @@
         </details>
         <br>
         <details>
-            <searchi>v120;externalpc;externalstorage;</searchi>
+            <searchi>v120</searchi>
+            <searchi>OS; Unenrollment</searchi>
+            <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="BadRecovery">BadRecovery</b></summary>
             <p class="small-text">Requires a storage device, another PC
             <br>
@@ -900,8 +1011,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;bookmarklet;</searchi>
-            <summary><b id="id">Blobe BM</b></summary>
+            <searchi>Web</searchi>
+            <summary><b id="BlobeBM">Blobe BM</b></summary>
             <p class="small-text">Not compatable with every bookmarklet by design
             <br>
             Runs bookmarklets.
@@ -912,7 +1023,7 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web</searchi>
             <summary><b id="BlobBypass">BlobBypass</b></summary>
             <p class="small-text">Requires BlobWiFi
             <br>
@@ -932,7 +1043,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;network;</searchi>
+            <searchi>Web</searchi>
+            <searchi>chrome://; Network</searchi>
             <summary><b id="BlobWiFi">BlobWiFi</b></summary>
             <p class="small-text">Requires chrome://network
             <br>
@@ -952,19 +1064,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;bookmarklet;</searchi>
-            <summary><b id="ByeBlocker">ByeBlocker</b></summary>
-            <p class="small-text">Requires bookmarklets
-            <br>
-            Unblocked websites.
-            <br>
-            Web-based exploit.</p>
-            <br>
-            1: Create a bookmarklet with this <a href="">code</a> & run it.
-        </details>
-        <br>
-        <details>
-            <searchi>bookmarklet;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="CAC">Car Axle Client</b></summary>
             <p class="small-text">Requires bookmarklets
             <br>
@@ -978,7 +1079,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;network;</searchi>
+            <searchi>Web</searchi>
+            <searchi>chrome://; Network</searchi>
             <summary><b id="CAUB">CAUB</b></summary>
             <p class="small-text">Has to be done for each WiFI network; Chrome OS version 85+ required
             <br>
@@ -1000,7 +1102,9 @@
             <br>
             <br>
             <details>
-                <summary><b id="CAUB Flag Method">Flag Method</b></summary>
+                <searchi>Web</searchi>
+                <searchi>chrome://; Network</searchi>
+                <summary><b id="CAUBFlagMethod">Flag Method</b></summary>
                 <p class="small-text">Requires chrome://flags access
                 <br>
                 Chrome OS-based exploit.</p>
@@ -1012,7 +1116,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;powerwash;</searchi>
+            <searchi>OS;Unenrollment</searchi>
+            <searchi>Powerwash</searchi>
             <summary><b id="CRSH2TTY">CRSH2TTY</b></summary>
             <p class="small-text">N/A :0
             <br>
@@ -1039,7 +1144,9 @@
         </details>
         <br>
         <details>
-            <searchi>v120;externalpc;externalstorage;</searchi>
+            <searchi>v120</searchi>
+            <searchi>OS;Unenrollment</searchi>
+            <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="Cryptosmite">Cryptosmite</b></summary>
             <p class="small-text">Requires a storage device, another PC; patched on Chrome OS 120+
             <br>
@@ -1078,7 +1185,8 @@
         </details>
         <br>
         <details>
-            <searchi>extensionaccess;os;recoverymode;externalstorage</searchi>
+            <searchi>OS</searchi>
+            <searchi>ExtensionAccess;ExternalStorage;RecoveryMode</searchi>
             <summary><b id="Downgration">Downgration</b></summary>
             <p class="small-text">Requires storage device; extension access required; Mostly Limited
             <br>
@@ -1110,7 +1218,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;recoverymode;externalstorage;</searchi>
+            <searchi>OS;Unenrollment</searchi>
+            <searchi>ExternalStorage;RecoverMode</searchi>
             <summary><b id="E-Halcyon">E-Halcyon</b></summary>
             <p class="small-text">Requires a storage device; data doesn't save; patched on Kernver 4
             <br>
@@ -1139,7 +1248,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;bookmarklet;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Bookmarklets</searchi>
             <summary><b id="EL">Extension Launcher</b></summary>
             <p class="small-text">Doesn’t work with blocklist/banlist
             <br>
@@ -1166,7 +1276,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;recoverymode;</searchi>
+            <searchi>OS</searchi>
+            <searchi>RecoveryMode</searchi>
             <summary><b id="KVS">KVS</b></summary>
             <p class="small-text">Only works on unenrolled Chromebooks; requires a storage device; patched on Kernver 4
             <br>
@@ -1190,7 +1301,8 @@
         </details>
         <br>
         <details>
-            <searchi>powerwash;os;</searchi>
+            <searchi>OS</searchi>
+            <searchi>Powerwash</searchi>
             <summary><b id="Revertion">Revertion</b></summary>
             <p class="small-text">Requires powerwash; untested
             <br>
@@ -1206,7 +1318,7 @@
         </details>
         <br>
         <details>
-            <searchi>web;</searchi>
+            <searchi>Web</searchi>
             <summary><b id="SFB">Search Filter Bypass</b></summary>
             <p class="small-text">doesn't do shit
             <br>
@@ -1218,11 +1330,14 @@
         </details>
         <br>
         <details>
-            <searchi>externalpc;externalstorage;os;</searchi>
+            <searchi>OS;Unenrollment</searchi>
+            <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="SH1MMER">SH1MMER</b></summary>
             <br>
             <details>
-                <summary><b id="SH1MMER Legacy">SH1MMER Legacy</b></summary>
+                <searchi>OS;Unenrollment</searchi>
+                <searchi>ExternalPC;ExternalStorage</searchi>
+                <summary><b id="SH1MMERLegacy">SH1MMER Legacy</b></summary>
                 <p class="small-text">Requires 1 storage device, another PC;  no UI; patched on Kernver 4
                 <br>
                 Unenrolls your Chromebook, removing ALL restrictions.
@@ -1251,7 +1366,9 @@
             </details>
             <br>
             <details>
-                <summary><b id="SH1MMER Modern">SH1MMER Modern</b></summary>
+                <searchi>OS;Unenrollment</searchi>
+                <searchi>ExternalPC;ExternalStorage</searchi>
+                <summary><b id="SH1MMERModern">SH1MMER Modern</b></summary>
                 <p class="small-text">Requires 1 storage device, another PC;  incompatible with Hanna/Coral boards; patched on Kernver 4
                 <br>
                 Unenrolls your Chromebook, removing ALL restrictions.
@@ -1282,8 +1399,10 @@
                 Google has "patched" SH1MMER Modern on Chromebooks that have been on version 112+. However, there are extra steps to get it to work properly, as seen below.
                 <br>
                 <br>
+                <searchi>Hardware</searchi>
+                <searchi>Screwdriver</searchi>
                 <details>
-                    <summary><b id="SH1MMER Screwdriver Unfog">Screwdriver Unfog</b></summary>
+                    <summary><b id="SH1MMERScrewdriverUnfog">Screwdriver Unfog</b></summary>
                     <p class="small-text">Requires screwdriver; Dev Mode; Chromebook on version 113 or lower.</p>
                     <br>
                     1: Use the Admin Lock Bypass above, but don't insert the battery.
@@ -1329,7 +1448,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;externalstorage;externalpc;x86;devmode;</searchi>
+            <searchi>OS</searchi>
+            <searchi>>DevMode;ExternalPC;ExternalStorage;x86</searchi>
             <summary><b id="Shimboot">Shimboot</b></summary>
             <p class="small-text">Requires storage device, another PC, x86-based Chromebook; Dev Mode required (see <a href="https://sh1mmer.me/">here</a>)
             <br>
@@ -1354,7 +1474,8 @@
         </details>
         <br>
         <details>
-            <searchi>devmode;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>DevMode;ExtensionDevMode</searchi>
             <summary><b id="Skebstore">Skebstore</b></summary>
             <p class="small-text">Requires extension Developer Mode
             <br>
@@ -1374,7 +1495,8 @@
         </details>
         <br>
         <details>
-            <searchi>web;snapandread;</searchi>
+            <searchi>Web</searchi>
+            <searchi>Snap&Read;</searchi>
             <summary><b id="S&R">Snap&Run</b></summary>
             <p class="small-text">Snap&Read exclusive
             <br>
@@ -1418,8 +1540,9 @@
         </details>
         <br>
         <details>
-            <searchi>web;sourcecodeview;</searchi>
-            <summary><b id="Source View">Source View</b></summary>
+            <searchi>Web</searchi>
+            <searchi>SourceCode</searchi>
+            <summary><b id="SourceView">Source View</b></summary>
             <p class="small-text">Requires the ability to view a page’s source code
             <br>
             Reconstructs a web page from its source code.
@@ -1432,7 +1555,8 @@
         </details>
         <br>
         <details>
-            <searchi>devmode;usb;</searchi>
+            <searchi>OS</searchi>
+            <searchi>DevMode</searchi>
             <summary><b id="USBoot">USBoot</b></summary>
             <p class="small-text">Requires Dev Mode
             <br>
@@ -1449,7 +1573,8 @@
         </details>
         <br>
         <details>
-            <searchi>ublockorigin;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>uBlockOrigin</searchi>
             <summary><b id="uRun">uRun</b></summary>
             <p class="small-text">uBlock Origin exclusive
             <br>
@@ -1468,7 +1593,8 @@
         </details>
         <br>
         <details>
-            <searchi>os;web;</searchi>
+            <searchi>Web</searchi>
+            <searchi>chrome://; Network</searchi>
             <summary><b id="PPT">Policy Password Tool</b></summary>
             <p class="small-text">Only works with connected networks; only works on Chrome OS
             <br>
@@ -1494,9 +1620,10 @@
         <hr>
         <br>
         <details>
-            <searchi>devmode;</searchi>
+            <searchi>OS</searchi>
+            <searchi>Crosh;DevMode</searchi>
             <summary><b id="CroshFi">CroshFi</b></summary>
-            <p class="small-text">Requires Devmode
+            <p class="small-text">Requires Dev Mode
             <br>
             Gives you the password to a WiFi network.</p>
             <br>
@@ -1514,7 +1641,9 @@
         </details>
         <br>
         <details>
-            <searchi>v101;</searchi>
+            <searchi>v101</searchi>
+            <searchi>OS</searchi>
+            <searchi>Crosh</searchi>
             <summary><b id="De-roll">De-roll</b></summary>
             <p class="small-text">Patched on Chrome OS 101+
             <br>
@@ -1537,7 +1666,9 @@
         </details>
         <br>
         <details>
-            <searchi>unenrollment;v117;</searchi>
+            <searchi>v117;</searchi>
+            <searchi>OS</searchi>
+            <searchi>DevMode;RecoverMode</searchi>
             <summary><b id="Fakemurk">Fakemurk</b></summary>
             <p class="small-text">Requires unenrollment; patched on version 117+; patched on Kernver 4
             <br>
@@ -1566,8 +1697,10 @@
         </details>
         <br>
         <details>
-            <searchi>powerwash;</searchi>
-            <summary><b id="OP Crosh">OP Crosh</b></summary>
+            <searchi>OS</searchi>
+            <searchi>Powerwash</searchi>
+            <searchi>Crosh</searchi>
+            <summary><b id="OPCrosh">OP Crosh</b></summary>
             <p class="small-text">Requires powerwash
             <br>
             Deletes the extensions.</p>
@@ -1584,7 +1717,9 @@
         </details>
         <br>
         <details>
-            <searchi>devmode;os;</searchi>
+            <searchi>OS</searchi>
+            <searchi>DevMode</searchi>
+            <searchi>Crosh</searchi>
             <summary><b id="Pollen">Pollen</b></summary>
             <p class="small-text">Requires Dev Mode
             <br>

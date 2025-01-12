@@ -60,27 +60,74 @@
         <hr>
         <p class="small-centered-text">This page is for Windows exploits
         <br>
-        For Chrome/Chrome OS bypasses, see Bypasser’s Chromekit 
-        </p>
+        For Chrome/Chrome OS bypasses, see <a href="..\Pages\Bypasser'sChromekit.html">Bypasser’s Chromekit</a></p>
         <br>
         <br>
+        <details style="display:none;" id="ExploitSearchContainer">
+            <summary><b id="ExploitSearch">Exploit Finder</b></summary>
+            <form id="ExploitSearch-Form">
+                <label for="ExploitSearch-Version">Windows Version</label><br>
+                <input type="text" id="ExploitSearch-Version" placeholder="10" value="10" type="number"><br>
+                <label>Exploit Type</label>
+                <ul id="ExploitSearch-ExploitType">
+                    <li><input class="esterm" esterm-value="Hardware" type="checkbox">Hardware Based</li>
+                    <li><input class="esterm" esterm-value="OS" type="checkbox" checked=true>OS Based</li>
+                    <li><input class="esterm" esterm-value="Proxy" type="checkbox" checked=true>Proxy Based</li>
+                    <li><input class="esterm" esterm-value="Web" type="checkbox" checked=true>Web Based</li>
+                </ul>
+                <label>Blocker</label>
+                <ul>
+                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
+                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
+                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
+                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
+                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
+                </ul>
+                <label>Requirements</label>
+                <ul>
+                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklets</li>
+                    <li><input class="esterm" esterm-value="CDrive" type="checkbox">C Drive Access</li>
+                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
+                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox">External PC</li>
+                    <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox">External Storage Device</li>
+                    <li><input class="esterm" esterm-value="InspectElement" type="checkbox">Inspect Element</li>
+                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
+                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
+                    <li><input class="esterm" esterm-value="SourceCode" type="checkbox">Source Code Viewing (Ctrl+U)</li>
+                    <li><input class="esterm" esterm-value="TabLimit" type="checkbox">Tab Limit</li>
+                    <li><input class="esterm" esterm-value="WindowsPE" type="checkbox">Windows PE</li>
+                    <details>
+                        <summary>Extension</summary>
+                        <li>N/A</li>
+                    </details>
+                </ul>
+                <button type="submit">Search</button>
+                <p>Found <span id="exploitCount">0</span> exploits</p>
+            </form>
+        </details>
+
         <details>
             <summary><b id="ToC">Table of Contents</b></summary>
             <a href="#Batched">Batched</a>
             <br>
             <a href="#CMaDmin">CMaDmin</a>
             <br>
+            <a href="#DeTasked">DeTasked</a>
+            <br>
             <a href="#PowerEXE">PowerEXE</a>
             <br>
-            <a href="#StickyKeysExploit">Sticky Keys Exploit</a>
-            <br>
-            <a href="#UtilCMD">UtilCMD</a>
+            <details>
+                <summary> <a href="#Swapped">Swapped</a></summary>
+                    <ul>
+                        <li><a href="#SwappedManualMethod">Swapped Manual</a></li>
+                    </ul>
+            </details>
         </details>
         <hr>
         <br>
         <details>
             <summary><b id="Batched">Batched</b></summary>
-            <p class="small-text">requires Command Prompt to be somewhat enabled
+            <p class="small-text">requires Command Prompt (somewhat)
             <br>
             Run a batch file to emulate other apps or run commands.</p>
             <br>
@@ -93,17 +140,28 @@
         <br>
         <details>
             <summary><b id="CMaDmin">CMaDmin</b></summary>
-            <p class="small-text">Windows 7+; requires Command Prompt
+            <p class="small-text">Windows 7+; requires C drive access
             <br>
-            Allows you to create a new administrator account, bypassing restrictions.</p>
+            Create a new administrator account, bypassing restrictions.</p>
             <br>
-            1: Open Command Prompt.
+            1: Access an admin Command Prompt/Powershell prompt. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
             <br>
             2: Create a new user by running these commands: "net {username} /add" & "net localgroup administrators {username} /add".
             <br>
-            3: Restart your computer.
+            3: Login with the username & password you made. This account has administrator access.
+        </details>
+        <br>
+        <details>
+            <summary><b id="DeTasked">DeTasked</b></summary>
+            <p class="small-text">Windows ?+; requires admin
             <br>
-            4: Skip the account setup on Windows 7. Otherwise, allow Windows to set up the account.
+            End the task of (or just delete) the file.</p>
+            <br>
+            1: Open Task Manager. You can use the search box or Ctrl+Alt+Delete.
+            <br>
+            2: Find the file responsible. If you're bypassing parental controls, the file will be somethine like "wpcmon.exe".
+            <br>
+            3: Right click it, then you can either click "End Task" to stop it for now or click "Open File Location" & then delete the file itself.
         </details>
         <br>
         <details>
@@ -120,10 +178,10 @@
         </details>
         <br>
         <details>
-            <summary><b id="StickyKeysExploit">Sticky Keys Exploit</b></summary>
-            <p class="small-text">Windows 7+
+            <summary><b id="Swapped">Swapped</b></summary>
+            <p class="small-text">Windows ?+; requires admin prompt & C drive access
             <br>
-            Swaps Sticky Keys with an admin Command Prompt window.</p>
+            Swaps either Sticky Keys or Utilman with any file you want. </p>
             <br>
             1: Access an admin Command Prompt/Powershell prompt. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
             <br> 
@@ -131,46 +189,35 @@
             <br>
             3: Run “dir”. Keep going until you find a drive with the Windows directory (1).
             <br>
-            4: Run “copy sethc.exe sethc.bak”.
+            4: Create a backup by runinng “copy sethc.exe sethc.bak” for Sticky Keys or "copy utilman.exe utilman.bak" for Utilman.
             <br>
-            5: Run “copy cmd.exe sethc.exe”.
+            5: Swap the respective file with another file. In order to replace with another file, change the latter filename. For Command Prompt, run “copy cmd.exe sethc.exe” for Sticky Keys or "copy cmd.exe utilman.exe" for Utilman.
             <br>
             6: Type "Y" to proceed.
             <br>
-            7: Activate Sticky Keys (press Shift 5 times).
+            7: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on login screen as well as Ctrl+Alt+Delete).
             <br>
-            8: Run “net user (username) (password) /add”. Replace (username) & (password) with each respective thing (no parentheses).
+            8: Preform CMaDmin.
             <br>
-            9: Run “C:\Windows\System32\> net localgroup  administrators (username of previous command) /add”.
             <br>
-            10: Login with the username & password you made. This account has administrator access.
-        </details>
-        <br>
-        <details>
-            <summary><b id="UtilCMD">UtilCMD</b></summary>
-            <p class="small-text">Windows 7+
-            <br>
-            Enables the Command Prompt, allowing you to run commands.</p>
-            <br>
-            1: Restart the computer via Power button.
-            <br>
-            2: Wait for the startup screen & select "Start Windows Normally", then press enter.
-            <br>
-            3: Restart via Power button again.
-            <br>
-            4: Select "Launch Startup Repair". If you don't see this option, repeat steps 1-4.
-            <br>
-            5: Click "Cancel" when prompted, then click the "View problem details" drop-down box.
-            <br>
-            6: Select "If the online privacy statement is not available..." to open Notepad.
-            <br>
-            7: In the Notepad window, open the computer's system files (system32) by clicking "Files", then "Open...".
-            <br>
-            8: Change all the file types you can see.
-            <br>
-            9: Replace Ultility Manager with Command Prompt by renaming the Utilman to "Utilman1", then coping the "cmd" file & renaming it "Utilman".
-            <br>
-            10: Close the remaining windows, then click "Cancel" in the Startup Repair window & click "Yes" when prompted.
+            <details>
+                <summary><b id="SwappedManualMethod">Swapped Manual</b></summary>
+                <p class="small-text">Windows ?+; requires admin & C drive access
+                    <br>
+                    Manually swap either Sticky Keys or Utilman with any file you want.</p>
+                    <br>
+                    1: Open File Explorer.
+                    <br>
+                    2: Find the file you want to replace (sethc.exe for Sticky Keys or utilman.exe for Utilman).
+                    <br>
+                    3: Make a duplicate & change the file type to .bak (or whatever really).
+                    <br>
+                    4: Replace the original file with another file (make sure it has the same name). I recommend either cmd.exe or the <a href="..\Downloads\UtilmanReplacer.exe">Ease of Access Replacer</a>.
+                    <br>
+                    5: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on login screen as well as Ctrl+Alt+Delete).
+                    <br>
+                    6: Preform CMaDmin.
+            </details>
         </details>
     <div style="line-height:2250%;">
         <br>
