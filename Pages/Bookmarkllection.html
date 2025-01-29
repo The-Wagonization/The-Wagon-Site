@@ -94,10 +94,10 @@
             <summary><b>Installation</b></summary>
             Obviously, this requires bookmarklets.
             <br>
-            Installing is super easy, there are 2 methods to do so.
+            Installing bookmarklets is super easy, barely an inconvinience with 2 different methods to do so.
             <details>
                 <summary><b>Drag & Drop</b></summary>
-                By far the easiest, however it won't work if there's just plain text.
+                By far the easiest, however it won't work if it's just plain text.
                 <br>
                 1: Enable Bookmarks Bar (Ctrl+Shift+B).
                 <br>
@@ -143,6 +143,9 @@
             </div>
             <div class="code-box">
                 <span>Edit Page<br><a href="javascript:document.body.contentEditable = 'true'; document.designMode='on'; document.body.spellcheck=false;void 0">On</a>/<a href="javascript:document.body.contentEditable = 'false'; document.designMode='off'; document.body.spellcheck=true;void 0">Off</a></span>
+            </div>
+            <div class="code-box">
+                <span><a href="javascript:document.write(`<style> iframe{margin:0px; border:none; padding:0px; outline:none} body{margin:0px}</style><iframe src = "${prompt("enter url")}" width = ${window.innerWidth} height = ${window.innerHeight} />`)">Embed Site into <br>Current Tab</a></span>
             </div>
             <div class="code-box">
                 <span><a href="javascript:(function()%7B&quot;use strict&quot;%3B var all %3D document.getElementsByTagName(&quot;*&quot;)%3B var i%3B var max%3B for (i %3D 0%2C max %3D all.length%3B i &lt; max%3B i %2B%3D 1) %7B if (all%5Bi%5D.disabled) %7B all%5Bi%5D.disabled %3D 'false'%3B %7D %7D %7D)()">Enable All</a></span>

