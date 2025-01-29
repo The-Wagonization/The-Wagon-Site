@@ -1,4 +1,4 @@
-<b>The best way to launch The Wagon Site is via the <a href="">bookmarklet</a>.</b>
+<b>The best way to launch The Wagon Site is via the <a href="https://github.com/The-Wagonization/The-Wagon-Site/blob/main/Launcher.js">bookmarklet</a>.</b>
 <br>
 <br>
 <br>
