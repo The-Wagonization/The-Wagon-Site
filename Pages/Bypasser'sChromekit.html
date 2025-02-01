@@ -69,47 +69,47 @@
             <summary><b id="ExploitSearch">Exploit Finder</b></summary>
             <form id="ExploitSearch-Form">
                 <label for="ExploitSearch-Version">Chrome OS Version</label><br>
-                <input type="text" id="ExploitSearch-Version" placeholder="114" value="114" type="number"><br>
+                <input type="text" id="ExploitSearch-Version" placeholder="Any" value="vAny" type="number"><br>
                 <label>Exploit Type</label>
                 <ul id="ExploitSearch-ExploitType">
-                    <li><input class="esterm" esterm-value="Hardware" type="checkbox">Hardware Based</li>
+                    <li><input class="esterm" esterm-value="Hardware" type="checkbox" checked=true>Hardware Based</li>
                     <li><input class="esterm" esterm-value="OS" type="checkbox" checked=true>OS Based</li>
                     <li><input class="esterm" esterm-value="Proxy" type="checkbox" checked=true>Proxy Based</li>
                     <li><input class="esterm" esterm-value="Web" type="checkbox" checked=true>Web Based</li>
                 </ul> 
                 <label>Blocker</label>
                 <ul>
-                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
-                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
-                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
-                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
-                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
+                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox" checked=true>Blocksi</li>
+                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox" checked=true>GoGuardian</li>
+                    <li><input class="esterm" esterm-value="Hapara" type="checkbox" checked=true>Hapara</li>
+                    <li><input class="esterm" esterm-value="iBoss" type="checkbox" checked=true>iBoss</li>
+                    <li><input class="esterm" esterm-value="Securely" type="checkbox" checked=true>Securely</li>
                 </ul>
                 <label>Requirements</label>
                 <ul>
-                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklets</li>
-                    <li><input class="esterm" esterm-value="DevMode" type="checkbox">Dev Mode</li>
-                    <li><input class="esterm" esterm-value="DNSSettings" type="checkbox">DNS Settings</li>
-                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
-                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox">External PC</li>
-                    <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox">External Storage Device</li>
-                    <li><input class="esterm" esterm-value="InspectElement" type="checkbox">Inspect Element</li>
-                    <li><input class="esterm" esterm-value="Kiosk" type="checkbox">Kiosk Apps</li>
-                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
-                    <li><input class="esterm" esterm-value="RecoveryMode" type="checkbox">Recovery Mode</li>
-                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
-                    <li><input class="esterm" esterm-value="SourceCode" type="checkbox">Source Code Viewing (Ctrl+U)</li>
-                    <li><input class="esterm" esterm-value="TabLimit" type="checkbox">Tab Limit</li>
+                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox" checked=true>Bookmarklets</li>
+                    <li><input class="esterm" esterm-value="DevMode" type="checkbox" checked=true>Dev Mode</li>
+                    <li><input class="esterm" esterm-value="DNSSettings" type="checkbox" checked=true>DNS Settings</li>
+                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox" checked=true>Extension Access</li>
+                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox" checked=true>External PC</li>
+                    <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox" checked=true>External Storage Device</li>
+                    <li><input class="esterm" esterm-value="InspectElement" type="checkbox" checked=true>Inspect Element</li>
+                    <li><input class="esterm" esterm-value="Kiosk" type="checkbox" checked=true>Kiosk Apps</li>
+                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox" checked=true>Powerwash</li>
+                    <li><input class="esterm" esterm-value="RecoveryMode" type="checkbox" checked=true>Recovery Mode</li>
+                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox" checked=true>Screwdriver</li>
+                    <li><input class="esterm" esterm-value="SourceCode" type="checkbox" checked=true>Source Code Viewing (Ctrl+U)</li>
+                    <li><input class="esterm" esterm-value="TabLimit" type="checkbox" checked=true>Tab Limit</li>
                     <details>
                         <summary>chrome://</summary>
-                        <li><input class="esterm" esterm-value="chrome://flags" type="checkbox">chrome://flags</li>
-                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://network</li>
-                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox">chrome://net-internals</li>
+                        <li><input class="esterm" esterm-value="chrome://flags" type="checkbox" checked=true>chrome://flags</li>
+                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox" checked=true>chrome://network</li>
+                        <li><input class="esterm" esterm-value="chrome://network" type="checkbox" checked=true>chrome://net-internals</li>
                     </details>
                     <details>
                         <summary>Extension</summary>
-                        <li><input class="esterm" esterm-value="Snap&Read" type="checkbox">Snap&Read</li>
-                        <li><input class="esterm" esterm-value="uBlockOrigin" type="checkbox">uBlock Origin</li>
+                        <li><input class="esterm" esterm-value="Snap&Read" type="checkbox" checked=true>Snap&Read</li>
+                        <li><input class="esterm" esterm-value="uBlockOrigin" type="checkbox" checked=true>uBlock Origin</li>
                     </details>
                 </ul>
                 <button type="submit">Search</button>
@@ -275,6 +275,7 @@
         <hr>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Proxy;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
@@ -292,6 +293,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="ADWB">App Diagnose WiFi Bypass</b></summary>
@@ -317,6 +319,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>DNSSettings</searchi>
@@ -341,6 +344,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Proxy</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
@@ -357,6 +361,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="Buypass">Buypass</b></summary>
@@ -376,6 +381,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>chrome://</searchi>
@@ -390,6 +396,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Hapara</searchi>
             <searchi>InspectElement</searchi>
@@ -410,6 +417,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Powerwash</searchi>
@@ -434,6 +442,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>chrome://</searchi>
@@ -456,6 +465,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="ExtHang3r">ExtHang3r</b></summary>
@@ -469,6 +479,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="GG">GoGuardian GoAway</b></summary>
@@ -486,6 +497,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets;TabLimit</searchi>
@@ -504,6 +516,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Hapara;iBoss</searchi>
             <searchi>chrome://net-internals</searchi>
@@ -527,6 +540,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
@@ -564,6 +578,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>InspectElement</searchi>
@@ -696,6 +711,7 @@
             <br>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>Web</searchi>
                 <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
                 <summary><b id="LTMEATChatMethod">Chat Method</b></summary>
@@ -708,6 +724,7 @@
             <br>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>Web</searchi>
                 <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
                 <summary><b id="LTMEATTempMethod">Temporary Method</b></summary>
@@ -735,6 +752,7 @@
             <br>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>Web</searchi>
                 <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
                 <summary><b id="LTMEATWiFiMethod">WiFi Method</b></summary>
@@ -777,6 +795,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
@@ -795,6 +814,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Securely</searchi>
             <searchi>uBlockOrigin</searchi>
@@ -838,6 +858,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
@@ -925,6 +946,7 @@
             <br>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>OS</searchi>
                 <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
                 <searchi>Kiosk</searchi>
@@ -948,6 +970,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>ExtensionAccess</searchi>
@@ -968,6 +991,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="SWAB">SWAB</b></summary>
@@ -987,6 +1011,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;Proxy</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>DNSSettings</searchi>
@@ -1014,6 +1039,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;iBoss</searchi>
             <searchi>Bookmarklets</searchi>
@@ -1035,6 +1061,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="URLUnblocker">URL Unblocker</b></summary>
@@ -1054,6 +1081,7 @@
         <hr>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Hardware</searchi>
             <searchi>Screwdriver</searchi>
             <summary><b id="id">Admin Lock Bypass</b></summary>
@@ -1075,6 +1103,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="Blank3r">Blank3r</b></summary>
@@ -1126,6 +1155,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <summary><b id="BlobeBM">Blobe BM</b></summary>
             <p class="small-text">Not compatable with every bookmarklet by design
@@ -1138,6 +1168,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <summary><b id="BlobBypass">BlobBypass</b></summary>
             <p class="small-text">Requires BlobWiFi
@@ -1158,6 +1189,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>chrome://; Network</searchi>
             <summary><b id="BlobWiFi">BlobWiFi</b></summary>
@@ -1179,6 +1211,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;Unenrollment</searchi>
             <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="BR1CK">BR1CK</b></summary>
@@ -1192,6 +1225,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="CAC">Car Axle Client</b></summary>
@@ -1207,6 +1241,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>chrome://; Network</searchi>
             <summary><b id="CAUB">CAUB</b></summary>
@@ -1230,6 +1265,7 @@
             <br>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>Web</searchi>
                 <searchi>chrome://; Network</searchi>
                 <summary><b id="CAUBFlagMethod">Flag Method</b></summary>
@@ -1244,6 +1280,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>DevMode;ExternalStorageDevice</searchi>
             <summary><b id="ChrioskDumping">Chriosk Dumping</b></summary>
@@ -1273,6 +1310,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;Unenrollment</searchi>
             <searchi>Powerwash</searchi>
             <summary><b id="CRSH2TTY">CRSH2TTY</b></summary>
@@ -1342,6 +1380,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>ExtensionAccess;ExternalStorage;RecoveryMode</searchi>
             <summary><b id="Downgration">Downgration</b></summary>
@@ -1375,6 +1414,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;Unenrollment</searchi>
             <searchi>ExternalStorage;RecoverMode</searchi>
             <summary><b id="E-Halcyon">E-Halcyon</b></summary>
@@ -1405,6 +1445,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="EL">Extension Launcher</b></summary>
@@ -1433,13 +1474,9 @@
         </details>
         <br>
         <details>
-            <searchi>OS Based</searchi>
-            <searchi>ProxyBased</searchi>
-            <searchi>ExternalPC</searchi>
-            <searchi>ExternalStorageDevice</searchi>
-            <searchi>Powerwash</searchi>
-            <searchi>RecoveryMode</searchi>
-            <searchi>Unenrollment</searchi>
+            <searchi>vAny;</searchi>
+            <searchi>OS</searchi>
+            <searchi>ExternalPC;ExternalStorageDevice;Powerwash;RecoveryMode;Unenrollment</searchi>
             <summary><b id="Icarus">Icarus</summary><p class="small-text">Requires a storage device, another PC
                 <br>
                 Unenrolls devices with device management interception using a proxy & a custom Certificate Authority.
@@ -1473,6 +1510,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>RecoveryMode</searchi>
             <summary><b id="KVS">KVS</b></summary>
@@ -1498,6 +1536,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Powerwash</searchi>
             <summary><b id="Revertion">Revertion</b></summary>
@@ -1515,6 +1554,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <summary><b id="SFB">Search Filter Bypass</b></summary>
             <p class="small-text">doesn't do shit
@@ -1527,6 +1567,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS;Unenrollment</searchi>
             <searchi>ExternalPC;ExternalStorage</searchi>
             <summary><b id="SH1MMER">SH1MMER</b></summary>
@@ -1563,6 +1604,7 @@
             </details>
             <br>
             <details>
+                <searchi>vAny;</searchi>
                 <searchi>OS;Unenrollment</searchi>
                 <searchi>ExternalPC;ExternalStorage</searchi>
                 <summary><b id="SH1MMERModern">SH1MMER Modern</b></summary>
@@ -1621,6 +1663,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>>DevMode;ExternalPC;ExternalStorage;x86</searchi>
             <summary><b id="Shimboot">Shimboot</b></summary>
@@ -1647,6 +1690,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>DevMode;ExtensionDevMode</searchi>
             <summary><b id="Skebstore">Skebstore</b></summary>
@@ -1668,6 +1712,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>Snap&Read;</searchi>
             <summary><b id="S&R">Snap&Run</b></summary>
@@ -1713,6 +1758,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>SourceCode</searchi>
             <summary><b id="SourceView">Source View</b></summary>
@@ -1728,6 +1774,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>uBlockOrigin</searchi>
             <summary><b id="uBlockRun">uBlock Run</b></summary>
@@ -1748,6 +1795,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>DevMode</searchi>
             <summary><b id="USBoot">USBoot</b></summary>
@@ -1766,6 +1814,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>uBlockOrigin</searchi>
             <summary><b id="uRun">uRun</b></summary>
@@ -1786,6 +1835,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>Web</searchi>
             <searchi>chrome://; Network</searchi>
             <summary><b id="PPT">Policy Password Tool</b></summary>
@@ -1813,6 +1863,7 @@
         <hr>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Crosh;DevMode</searchi>
             <summary><b id="CroshFi">CroshFi</b></summary>
@@ -1859,7 +1910,7 @@
         </details>
         <br>
         <details>
-            <searchi>v117;</searchi>
+            <searchi>v117</searchi>
             <searchi>OS</searchi>
             <searchi>DevMode;RecoverMode</searchi>
             <summary><b id="Fakemurk">Fakemurk</b></summary>
@@ -1890,6 +1941,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Powerwash</searchi>
             <searchi>Crosh</searchi>
@@ -1910,6 +1962,7 @@
         </details>
         <br>
         <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>DevMode</searchi>
             <searchi>Crosh</searchi>
@@ -1935,7 +1988,6 @@
     All credit goes to the respective owners. I only compile them in a list.
     <br>
     Fuck you Google</p>
-
     <script src="../js/chromekit.js"></script>
     </body>
 </HTML>
