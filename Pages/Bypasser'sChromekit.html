@@ -91,6 +91,7 @@
                     <li><input class="esterm" esterm-value="DevMode" type="checkbox" checked=true>Dev Mode</li>
                     <li><input class="esterm" esterm-value="DNSSettings" type="checkbox" checked=true>DNS Settings</li>
                     <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox" checked=true>Extension Access</li>
+                    <li><input class="esterm" esterm-value="ExtensionCodeExecution" type="checkbox" checked=true>Extension Code Execution</li>
                     <li><input class="esterm" esterm-value="ExternalPC" type="checkbox" checked=true>External PC</li>
                     <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox" checked=true>External Storage Device</li>
                     <li><input class="esterm" esterm-value="InspectElement" type="checkbox" checked=true>Inspect Element</li>
@@ -123,6 +124,8 @@
             <br>
             <a href="#ADWB">App Diagnose WiFi Bypass</a>
             <br>
+            <a href="#BackAge">BackAge</a>
+            <br>
             <a href="#Baghdad">Baghdad</a>
             <br>
             <a href="#BAC">Browser Action Crasher</a>
@@ -133,9 +136,15 @@
             <br>
             <a href="#Chaos">Chaos</a>
             <br>
+            <a href="CookieDough">Cookie Dough</a>
+            <br>
             <a href="#Corkey">Corkey</a>
             <br>
+            <a href="#Crimson">Crimson</a>
+            <br>
             <a href="#Dextensify">Dextensify</a>
+            <br>
+            <a href="#DisableManager">Disable Manager</a>
             <br>
             <a href="#ExtHang3r">ExtHang3r</a>
             <br>
@@ -176,6 +185,8 @@
             <br>
             <a href="#Sidetracked">Sidetracked</a>
             <br>
+            <a href="#Sigill">Sigill</a>
+            <br>
             <details>
                 <summary><a href="#SKIOVOX">SKIOVOX</a></summary>
                     <ul>
@@ -191,6 +202,8 @@
             <a href="#uBoss">uBoss</a>
             <br>
             <a href="#URLUnblocker">URL Unblocker</a>
+            <br>
+            <a href="#WindowOfOpportunity">Window of Opportunity</a>
             <br>
             <br>
             <a href="#AdminLockBypass">Admin Lock Bypass</a>
@@ -233,6 +246,10 @@
             <br>
             <a href="#KVS">KVS</a>
             <br>
+            <a href="#LockedModeX">Locked Mode X</a>
+            <br>
+            <a href="#NCOCrOS">NCOCrOS</a>
+            <br>
             <a href="#Revertion">Revertion</a>
             <br>
             <a href="#SFB">Search Filter Bypass</a>
@@ -247,11 +264,17 @@
             </details>
             <a href="#Shimboot">Shimboot</a>
             <br>
+            <a href="#Sh0vel">Sh0vel</a>
+            <br>
             <a href="#Skebstore">Skebstore</a>
             <br>
             <a href="#S&R">Snap&Run</a>
             <br>
             <a href="#SourceView">Source View</a>
+            <br>
+            <a href="#SIPE">Sync Internals Password Extractor</a>
+            <br>
+            <a href="#Tr3nch">Tr3nch</a>
             <br>
             <a href="#uBlock Run">uBlock Run</a>
             <br>
@@ -261,12 +284,16 @@
             <br>
             <a href="#PPT">Policy Password Tool</a>
             <br>
+            <a href="#V4PL">V4PL</a>
+            <br>
             <br>
             <a href="#CroshFi">CroshFi</a>
             <br>
             <a href="#De-roll">De-roll</a>
             <br>
             <a href="#Fakemurk">Fakemurk</a>
+            <br>
+            <a href="#K1LL3RSP1D3R">K1LL3R SP1D3R</a>
             <br>
             <a href="#OPCrosh">OP Crosh</a>
             <br>
@@ -316,6 +343,27 @@
             6: Click "Open in Settings", then close it.
             <br>
             7: Repeat step 2.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>ExtensionDevMode</searchi>
+            <summary><b id="BackAge">BackAge</b></summary>
+            <p class="small-text">Requires Extension Dev Mode
+            <br>
+            Freezes extensions.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Go to chrome://extensions & enable Extension Dev Mode.
+            <br>
+            2: Click on the background page of the extension you want to block, then "Network", "Disable Cache", & "No Throttling".
+            <br>
+            3: Go to Settings & click on the "Disable javascript" box. Keep this tab open.
+            <br>
+            4: Disable "No Throttling".
         </details>
         <br>
         <details>
@@ -418,6 +466,21 @@
         <br>
         <details>
             <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
+            <summary><b id="CookieDough">Cookie Dough</b></summary>
+            <p class="small-text">Requires bookmarklets
+            <br>
+            Creates a loop to screw over extensions.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Run <a href="javascript:for(let _=new Blob;;)document.cookie=URL.createObjectURL(_)+'='+URL.createObjectURL(_),URL.revokeObjectURL(_),Notification.requestPermission()">this</a> bookmarklet on the blocked page of your extension.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>Powerwash</searchi>
@@ -443,6 +506,29 @@
         <br>
         <details>
             <searchi>vAny;</searchi>
+            <searchi>OS;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Powerwash</searchi>
+            <summary><b id="Crimson">Crimson</b></summary>
+            <p class="small-text">Doesn't work with a force install list; requires powerwash
+            <br>
+            Corrupts extensions.
+            <br>
+            OS-based exploit.</p>
+            <br>
+            1: Powerwash your Chromebook.
+            <br>
+            2: Login & immediately disable WiFi.
+            <br>
+            3: Go to chrome://settings/syncSetup/advanced & click "Customize Sync".
+            <br>
+            4: Turn off sync for Extensions & everything else.
+            <br>
+            5: Save changes & enable WiFi.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
             <searchi>Web;</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <searchi>chrome://</searchi>
@@ -462,6 +548,23 @@
             4: Immediately switch back to chrome://extensions & spam the “allow access to file URLs” for a few seconds.
             <br>
             5: The extension is now disabled. You need to flip the switch a few times every couple of minutes, & you may need to reopen the Dextensify page every once in a while to prevent an unavoidable memory leak from crashing the system.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
+            <summary><b id="Disable Manager">Disable Manager</b></summary>
+            <p class="small-text">Requires bookmarklets, Task Manager
+            <br>
+            Stop extensions form working with Task Manager & a bookmarklet.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Open Task Manager & click on your blocker, then end its task.
+            <br>
+            2: Run either <a href="javascript:onbeforeunload=i=>1">this</a> or <a href="javascript: onbeforeunload = (i) => 1;">this</a> bookmarklet on the newly unblocked page.
         </details>
         <br>
         <details>
@@ -772,9 +875,9 @@
             <searchi>Blocksi;GoGuardian;iBoss;Securely</searchi>
             <searchi>Bookmarklets</searchi>
             <summary><b id="PB">Point-Blank</b></summary>
-            <p class="small-text">Might be patched on Chrome OS 106+
+            <p class="small-text">N/A
             <br>
-            Allows you to execute scripts on the extensions page, as well as hard & soft disable extensions.
+            Allows you to execute scripts using extensions, as well as hard & soft disable extensions.
             <br>
             Web-based exploit.</p>
             <br>
@@ -819,7 +922,7 @@
             <summary><b id="Securly-Kill">Securely-Kill</b></summary>
             <p class="small-text">Requies uBlock Origin
             <br>
-            A toggle that kills Securely using black magic.
+            A button that kills Securely using black magic.
             <br>
             Web-based exploit.</p>
             <br>
@@ -870,6 +973,28 @@
             1: Go to chrome://flags#search-web-in-side-panel & enable it, then restart.
             <br>
             2: Open the side panel & select “google.com” from the drop own list.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <summary><b id="Sigill">Sigill</b></summary>
+            <p class="small-text">Requires an extension with a textbox
+            <br>
+            Hangs extensions.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Download the <a href="..\Downloads\HTMLS\Sigill\index.html" download="index.html">index.html</a> & <a href="https://www.mediafire.com/file/225dj6xp4orcm08/emoji/file">emoji</a> files.
+            <br>
+            2: Insert the emoji file into the HTML file.
+            <br>
+            3: Click "Copy to Clipboard".
+            <br>
+            4: In a textbox from the extension you want to disable, do paste & after a second, do it again.
+            <br>
+            5: Immediately after, open a page related to the extension (such as the manifest file) & keep it open.
         </details>
         <br>
         <details>
@@ -1074,6 +1199,20 @@
             2: Go to the URL.
         </details>
         <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <summary><b id="WindowOfOpportunity">Window of Opportunity</b></summary>
+            <p class="small-text">Requires the "Allow Access to FIle URLS" switch
+            <br>
+            Gives a very brief window of time where websites will be unblocked.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Go to your blocker's extension & flip the "Allow Access to File URLS" switch. You will have a very short window to access websites.
+        </details>
+        <br>
         <br>
         <b id="Misc">Miscellaneous</b>
         <hr>
@@ -1189,7 +1328,7 @@
         <details>
             <searchi>vAny;</searchi>
             <searchi>Web</searchi>
-            <searchi>chrome://; Network</searchi>
+            <searchi>chrome://Network</searchi>
             <summary><b id="BlobWiFi">BlobWiFi</b></summary>
             <p class="small-text">Requires chrome://network
             <br>
@@ -1475,7 +1614,7 @@
             <searchi>vAny;</searchi>
             <searchi>OS</searchi>
             <searchi>ExternalPC;ExternalStorageDevice;Powerwash;RecoveryMode;Unenrollment</searchi>
-            <summary><b id="Icarus">Icarus</summary><p class="small-text">Requires a storage device, another PC
+            <summary><b id="Icarus">Icarus</b></summary><p class="small-text">Requires a storage device, another PC
                 <br>
                 Unenrolls devices with device management interception using a proxy & a custom Certificate Authority.
                 <br>
@@ -1531,6 +1670,43 @@
             6: Reenter Recovery Mode.
             <br>
             7: Follow the instructions on-screen.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <summary><b id="LockedModeX">Locked Mode X</b></summary>
+            <p class="small-text">Very buggy
+            <br>
+            Bypasses Google's Locked Mode.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Open the locked form twice.
+            <br>
+            2: Click "Continue" on both at the <b>exact</b> same time. Using touchscreen will help a lot.
+            <br>
+            3: Click the Overview button (not Alt+Tab, that closes the quiz) on your keyboard. 
+            <br>
+            <br>
+            Note you can't screenshot until the form has been submitted.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>OS;</searchi>
+            <searchi>chrome://flags</searchi>
+            <summary><b id="NCOCrOS">NCOCrOS</b></summary>
+            <p class="small-text">Requires chrome://flags
+            <br>
+            Allows you to update your web browser separate from Chrome OS.
+            <br>
+            OS-based exploit.</p>
+            <br>
+            1: Go to chrome://flags#lacros & enable it.
+            <br>
+            2: Restart your Chromebook.
         </details>
         <br>
         <details>
@@ -1690,6 +1866,26 @@
         <details>
             <searchi>vAny;</searchi>
             <searchi>Web</searchi>
+            <searchi>ExtensionCodeExecution; chrome://flags</searchi>
+            <summary><b id="uRun">Sh0vel</b></summary>
+            <p class="small-text">Requires code execution in extensions, chrome://flags access
+            <br>
+            Unblocks bookmarklets.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Get code execution in an extension. This extension will need to have the "tabs", "activeTab", & "browserAction" permissions as well as 'unsafe-eval' set in the CSP.
+            <br>
+            2: Enable the flag "#extensions-on-chrome-urls".
+            <br>
+            3: Get a bookmarklet & place it as follows: chrome.browserAction.onClicked.addListener(() => {chrome.tabs.executeScript(null, {code: `location.href="javascript:bookmarklet";`});});
+            <br>
+            4: Open the URL you want this code to run on & click the extension icon.
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web</searchi>
             <searchi>DevMode;ExtensionDevMode</searchi>
             <summary><b id="Skebstore">Skebstore</b></summary>
             <p class="small-text">Requires extension Developer Mode
@@ -1769,6 +1965,84 @@
             1: Go to a website & view its source code with Ctrl+U or by using the View Source bookmarklet.
             <br>
             2: Copy everything from the newly opened tab & paste it in a site like <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic">this.</a>
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <summary><b id="SIPE">Sync Internals Password Extractor</b></summary>
+            <p class="small-text">Requires a CAUB'd WiFi network
+            <br>
+            Find the WiFi password for CAUB'd WiFi networks.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: <a href="#CAUB">CAUB</a> the WiFi network you want to get the password from.
+            <br>
+            2: Go <a href="https://sipe.pages.dev/">here</a> & type the name of the WiFi network.
+            <br>
+            3: Click the majik (TM) button, it will tell you what you'll need to press in step 6.
+            <br>
+            4: Go to chrome://sync-internals/ in a new tab & click the "Search" tab.
+            <br>
+            5: Type "wifi_" in the textbox & click "Search".
+            <br>
+            6: Click the name of the wifi you got from step 3 & copy all the data. Note that it might be a longer string than what it says on SIPE.
+            <br>
+            7: Go back to SIPE & paste the data in the textbox, then click the majik button (TM).
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Web;</searchi>
+            <searchi>ExtensionDevMode</searchi>
+            <summary><b id="Tr3nch">Tr3nch</b></summary>
+            <p class="small-text">Requires Sh0vel, Extension Dev Mode
+            <br>
+            Run scripts in Chrome pages.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1. Enter a kiosk profile with <a href="#SKIOVOX">SKIOVOX</a>.
+            <br>
+            2. Download the ZIP from <a href="https://github.com/MunyDev/skiovox-breakout">here</a>.
+            <br>
+            3. Navigate to chrome://extensions & enable Extension Dev Mode, then load the extension.
+            <br>
+            4. Navigate to chrome-untrusted://crosh & run "vmc create-extra-disk --size=1 /home/chronos/user/MyFiles/Downloads/opener.txt". It should return "A raw disk is created at /home/chronos/user/MyFiles/Downloads/opener.txt."
+            <br>
+            5. Open a new tab. If the default New Tab page loads, install the SKIOVOX Helper extension in a new tab before proceeding.
+            <br>
+            6. Click the folder icon in the bottom right. The file manager should open. Navigate to "Downloads".
+            <br>
+            7. Open the opener.txt file. A new window should open with a blank page tab. This window is managed by your organization.
+            <br>
+            8. Open a new tab & close the blank page tab.
+            <br>
+            9. Navigate to chrome://extensions & open the details page of the extension you previously chose to install in your managed profile. Copy its extension ID.
+            <br>
+            10. Return to the regular window that is not managed by your organization.
+            <br>
+            11. Activate the Skiovox Breakout extension.
+            <br>
+            12. In the input field for the extension ID, enter the ID of the extension you previously chose to install in your managed profile.
+            <br>
+            13. Set the textarea text to the script you want to run.
+            <br>
+            14. Click Start injection.
+            <br>
+            <br>
+            Loading the Tr3nch Menu:
+            <br>
+            <br>
+            1. Navigate to chrome://flags & enable the "extensions-on-chrome-urls" flag.
+            <br>
+            3. Click "Restar" then navigate to chrome://os-settings, chrome://setttings, chrome://extensions, chrome://chrome-signin, chrome://inspect, chrome://file-manager, chrome://network, or chrome://oobe.
+            <br>
+            4. Click the extensions extension icon in the toolbar.
+            <br>
+            5. Click & activate the extension with the injected script. The Tr3nch menu should launch.
         </details>
         <br>
         <details>
@@ -1853,7 +2127,7 @@
             <br>
             5: Go back to chrome://net-export & stop logging.
             <br>
-            6: Go <a href="https://luphoria.com/netlog-policy-password-tool">here</a> or open <a href="..\Downloads\PolicyPasswordTool.html" download="PolicyPasswordTool">this</a> HTML file & upload the log file.
+            6: Go <a href="https://luphoria.com/netlog-policy-password-tool">here</a> or open <a href="..\Downloads\HTMLs\PolicyPasswordTool.html" download="PolicyPasswordTool">this</a> HTML file & upload the log file.
         </details>
         <br>
         <br>
@@ -1862,7 +2136,6 @@
         <br>
         <details>
             <searchi>vAny;</searchi>
-            <searchi>OS</searchi>
             <searchi>Crosh;DevMode</searchi>
             <summary><b id="CroshFi">CroshFi</b></summary>
             <p class="small-text">Requires Dev Mode
@@ -1884,7 +2157,6 @@
         <br>
         <details>
             <searchi>v101</searchi>
-            <searchi>OS</searchi>
             <searchi>Crosh</searchi>
             <summary><b id="De-roll">De-roll</b></summary>
             <p class="small-text">Patched on Chrome OS 101+
@@ -1909,8 +2181,7 @@
         <br>
         <details>
             <searchi>v117</searchi>
-            <searchi>OS</searchi>
-            <searchi>DevMode;RecoverMode</searchi>
+            <searchi>Crosh;DevMode;RecoveryMode</searchi>
             <summary><b id="Fakemurk">Fakemurk</b></summary>
             <p class="small-text">Requires unenrollment; patched on version 117+; patched on Kernver 4
             <br>
@@ -1940,9 +2211,18 @@
         <br>
         <details>
             <searchi>vAny;</searchi>
-            <searchi>OS</searchi>
-            <searchi>Powerwash</searchi>
             <searchi>Crosh</searchi>
+            <summary><b id="K1LL3RSP1D3R">K1LL3R SP1D3R</b></summary>
+            <p class="small-text">Requires Chronos access
+            <br>
+            Kills all extensions.
+            <br>
+            1: Run "while true; do kill -9 $(pgrep -f "\-\-extension\-process"); done".
+        </details>
+        <br>
+        <details>
+            <searchi>vAny;</searchi>
+            <searchi>Crosh;Powerwash</searchi>
             <summary><b id="OPCrosh">OP Crosh</b></summary>
             <p class="small-text">Requires powerwash
             <br>
@@ -1961,9 +2241,7 @@
         <br>
         <details>
             <searchi>vAny;</searchi>
-            <searchi>OS</searchi>
-            <searchi>DevMode</searchi>
-            <searchi>Crosh</searchi>
+            <searchi>Crosh;DevMode</searchi>
             <summary><b id="Pollen">Pollen</b></summary>
             <p class="small-text">Requires Dev Mode
             <br>
