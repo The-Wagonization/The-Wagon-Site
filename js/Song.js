@@ -20,28 +20,33 @@ function songInit() {const audioElement = document.getElementById('background-mu
             switch (newSong) {
                 case "Crucified in Heaven":
                 case "CiH":
-                    songPath = "../Audio/CrucifiedInHeaven.mp3";
+                    songPath = "..\Audio\CrucifiedInHeaven.mp3";
                     break;
                 case "Make it look like an Accident":
-                    songPath = "../Audio/MakeItLookLikeAnAccident.mp3";
+                case "MiLLaA":
+                    songPath = "..\Audio\MakeItLookLikeAnAccident.mp3";
                     break;
                 case "Map of the Stars":
-                    songPath = "../Audio/MapOfTheStars.mp3";
+                case "MotS":
+                    songPath = "..\Audio\MapOfTheStars.mp3";
                     break;
                 case "Night Demon Theme":
-                    songPath = "../Audio/NightDemonTheme.mp3";
+                case "NDT":
+                    songPath = "..\Audio\NightDemonTheme.mp3";
                     break;
                 case "Overwerk":
-                    songPath = "../Audio/Overwerk.mp3";
+                    songPath = "..\Audio\Overwerk.mp3";
                     break;
                 case "In the End":
-                    songPath = "../Audio/Time.mp3";
+                case "ItE":
+                    songPath = "..\Audio\Time.mp3";
                     break;
                 case "shut the fuck up":
+                case "n":
                     songPath = null;
                     break;
                 default:
-                    songPath = "../Audio/CrucifiedInHeaven.mp3";
+                    songPath = "..\Audio\CrucifiedInHeaven.mp3";
             }
             if (songPath) {
                 localStorage.setItem("selectedSong", songPath);
