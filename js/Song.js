@@ -20,33 +20,33 @@ function songInit() {const audioElement = document.getElementById('background-mu
             switch (newSong) {
                 case "Crucified in Heaven":
                 case "CiH":
-                    songPath = "..\The-Wagon-Site\Audio\CrucifiedInHeaven.mp3";
+                    songPath = "../Audio/CrucifiedInHeaven.mp3";
                     break;
                 case "Make it look like an Accident":
                 case "MiLLaA":
-                    songPath = "..\The-Wagon-Site\Audio\MakeItLookLikeAnAccident.mp3";
+                    songPath = "../Audio/MakeItLookLikeAnAccident.mp3";
                     break;
                 case "Map of the Stars":
                 case "MotS":
-                    songPath = "..\The-Wagon-Site\Audio\MapOfTheStars.mp3";
+                    songPath = "../Audio/MapOfTheStars.mp3";
                     break;
                 case "Night Demon Theme":
                 case "NDT":
-                    songPath = "..\The-Wagon-Site\Audio\NightDemonTheme.mp3";
+                    songPath = "../Audio/NightDemonTheme.mp3";
                     break;
                 case "Overwerk":
-                    songPath = "..\The-Wagon-Site\Audio\Overwerk.mp3";
+                    songPath = "../Audio/Overwerk.mp3";
                     break;
                 case "In the End":
                 case "ItE":
-                    songPath = "..\The-Wagon-Site\Audio\Time.mp3";
+                    songPath = "../Audio/Time.mp3";
                     break;
                 case "shut the fuck up":
                 case "n":
                     songPath = null;
                     break;
                 default:
-                    songPath = "..\The-Wagon-Site\Audio\CrucifiedInHeaven.mp3";
+                    songPath = "../Audio/CrucifiedInHeaven.mp3";
             }
             if (songPath) {
                 localStorage.setItem("selectedSong", songPath);
