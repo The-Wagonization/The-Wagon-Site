@@ -30,14 +30,9 @@
                    </style>
                 </head>
                 <body>
-                    <iframe src="https://the-wagonization.github.io/The-Wagon-Site/Pages/Home.html"></iframe>
                 </body>
                 </HTML>
-            `;
-            window.location.replace(about:blank);
-            setTimeout(function() {
-                window.location.replace(url);
-            }, 3000);
+            window.open('about:blank', '_blank').document.write(`<iframe src="https://the-wagonization.github.io/The-Wagon-Site/Pages/Home.html" style="width:100%; height:100vh; border:none;"></iframe>`)`
         </script>
         <title>Centered Small Text</title>
         <style>
