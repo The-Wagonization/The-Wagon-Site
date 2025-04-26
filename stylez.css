@@ -1,3 +1,14 @@
+:root {
+    --FontColor: white;
+    --GraDir: bottom right;
+    --GradStop1: black;
+    --GradStop2: black;
+    --GradStop3: grey;
+    --GradStop4: black;
+    --GradStop5: black;
+    --LinkColor: grey;
+    --LinkColorHover: lightgrey;
+  }
 @font-face {
     font-family: 'Yatra One';
     src: url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
@@ -7,20 +18,49 @@
     src: url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 }
 body {
-    background-color: black;
-    color: white;
+    background-image: repeating-linear-gradient(to var(--GraDir), var(--GradStop1), var(--GradStop2), var(--GradStop3), var(--GradStop4));
+    color: var(--FontColor);
     font-family: 'Yatra One';
 }
 h1, h2, h3, h4, h5, h6, p {
+    color: var(--FontColor);
     font-family: 'Eagle Lake';
 }
 p {
     
 }
-details{
+a:link {
+    color: var(--LinkColor);
+    text-decoration: none;
+  }
+  a:visited {
+    color: var(--LinkColor);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--LinkColorHover);
+    text-decoration: none;
+    font-style: italic;
+  }
+  a:active {
+    color: var(--LinkColor);
+    text-decoration: none;
+    font-style: italic;
+  }
+details {
     
 }
-
 searchi{
     display:none;
+}
+.fade-out {
+  animation: fadeOut 150ms forwards;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }

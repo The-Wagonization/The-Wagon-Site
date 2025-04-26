@@ -6,27 +6,12 @@
         <link rel="stylesheet" type="text/css" href="../stylez.css">
         <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
-        <script src="..\Audio\BackgroundScript.js"></script>
         <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "oqwnloclrl");
-        </script>
-        <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.key === '`' || event.key === '`') {
-                    window.location.href = 'https://classroom.google.com/u/1/h';
-                }
-            });
-        </script>
-        <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.key === '`' || event.key === '`') {
-                    window.location.href = 'https://classroom.google.com/u/1/h';
-                }
-            });
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,19 +45,222 @@
                 margin-left: 40px;
             }
         </style>
+        <style>
+            .code-box {
+                width: 100px;
+                height: 60px;
+                background-color: #000000;
+                border: 2px solid #ccc;
+                padding: 0;
+                margin: 0;
+                font-family: "Yatra One";
+                white-space: pre;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                font-size: 10px;
+                text-align: center;
+            }
+        </style>
+        <style>
+            .container {
+                display: flex;
+            }
+            .item {
+                flex: 1;
+            }
+            .code-box {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-top: 20px;
+            }
+        </style>
+        <style>
+            .box-head {
+                width: 200px;
+                height: 100px;
+                border: 2px solid white;
+                padding: 0px;
+                margin: 1px;
+            }
+        </style>
+        <title>Box</title>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border: 2px solid white;
+                margin: 1px;
+            }
+        </style>
     </head>
-    <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
+    <audio id="background-music" autoplay loop></audio>
     <body>
-        <p class=""><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bookmarkllection.html">Bookmarkllection</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <a href="..\Pages\CargoWagon.html">CargoWagon</a> | <a href="..\Pages\ExtensionList.html">Extension List</a> | <a href="..\Pages\Gamellection.html">Gamellection</a> | <a href="..\Pages\Hackkit.html">Hackkit</a> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a> | <a href="..\Pages\VideoTutorialPage.html">Video Tutorial Page</a></p>
+        <img src="..\Images\cog.png" alt="cog" style="float: right; width:21px; height:21px;">
+        <p class=""><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <a href="..\Pages\Gamellection.html">Gamellection</a> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a></p>
         <hr>
-        setting deez nuts in your mouth
+        <div class="box-head" style="float: right">
+            <h1 class="centered-text">Song</h1>
+        </div>
+        <div class="box" style="float: right; align-content: center">
+            <form id="Song-Form">
+                <input type="text" id="Song" placeholder="Crucified in Heaven" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Song-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("Song").value;
+                    });
+                </script>                
+            </form>
+        </div>
+        <div class="box-head" style="float: left">
+            <h1 class="centered-text">Cloaking</h1>
+        </div>
+        <div class="box" style="float: left">
+            <ul>
+                <li><a id="ND" href="..\aboutblank.html">about:blank</a></li>
+                <li><a id="ND" href="..\blbo.html">blob</a></li>
+                <li><a id="ND" href="https://the-wagonization.github.io/The-Wagon-Site/Pages/Config.html">N/A</a></li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form id="Panic-Form" style="float: none">
+            <input type="text" id="PanicURL" placeholder="Panic Destination" type="text">
+            <button type="submit">Enter</button>
+            <script>
+                document.getElementById("Panic-Form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const inputValue = document.getElementById("PanicURL").value.trim();
+                    let PanicURL;
+                    if (inputValue === "Clever") {
+                        PanicURL = "https://clever.com/oauth/district-picker?channel=clever&client_id=4c63c1cf623dce82caac&confirmed=true&redirect_uri=https%3A%2F%2Fclever.com%2Fin%2Fauth_callback&response_type=code&state=e8fcacfe3d302f03afe6780be466418492065c8b032c7b0a8a932b4bd03f3903";
+                    } else if (inputValue === "Google Classroom") {
+                        PanicURL = "https://classroom.google.com/u/1/";
+                    } else if (inputValue === "Google Drive") {
+                        PanicURL = "https://drive.google.com/drive/u/0/my-drive";
+                    } else if (inputValue === "ReadingPlus") {
+                        PanicURL = "https://student.readingplus.com/seereader/api/sec/login";
+                    } else if (inputValue === "Schoology") {
+                        PanicURL = "https://schoology.spartanburg4.org/login/";
+                    } else {
+                        PanicURL = inputValue || "https://classroom.google.com/u/1/";
+                    }
+                    localStorage.setItem("p", PanicURL);
+                });
+            </script>
+        </form>
+        <details>
+            <summary>Text Color</summary>
+            <form id="TextColor-Form" style="float: none">
+                <input type="text" id="TColor" placeholder="Text Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("TextColor-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("TColor").value.trim();
+                        const FontColor = inputValue;
+                        localStorage.setItem("TColor", FontColor);
+                        document.documentElement.style.setProperty('--FontColor', FontColor);
+                    });
+                </script>
+            </form>
+            <form id="LinkColor-Form" style="float: none">
+                <input type="text" id="LColor" placeholder="Link Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("LinkColor-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("LColor").value.trim();
+                        const LinkColor = inputValue;
+                        localStorage.setItem("TColor", LinkColor);
+                        document.documentElement.style.setProperty('--LinkColor', LinkColor);
+                    });
+                </script>
+            </form>
+            <form id="LinkColorHover-Form" style="float: none">
+                <input type="text" id="LHColor" placeholder="Link Color (Hover)" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("LinkColorHover-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("LHColor").value.trim();
+                        const LinkColorHover = inputValue;
+                        localStorage.setItem("LHColor", LinkColorHover);
+                        document.documentElement.style.setProperty('--LinkColorHover', LinkColorHover);
+                    });
+                </script>
+            </form>
+        </details>
+        <details>
+            <summary>Background Color</summary>
+            <form id="Grad1-Form" style="float: none">
+                <input type="text" id="GradStop1" placeholder="Gradient Stop 1 Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Grad1-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("GradStop1").value.trim();
+                        const GradStop1 = inputValue
+                        localStorage.setItem("GradStop1Color", GradStop1);
+                        document.documentElement.style.setProperty('--GradStop1', GradStop1);
+                    });
+                </script>
+            </form>
+            <form id="Grad2-Form" style="float: none">
+                <input type="text" id="GradStop2" placeholder="Gradient Stop 2 Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Grad2-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("GradStop2").value.trim();
+                        const GradStop2 = inputValue
+                        localStorage.setItem("GradStop2Color", GradStop2);
+                        document.documentElement.style.setProperty('--GradStop2', GradStop2);
+                    });
+                </script>
+            </form>
+            <form id="Grad3-Form" style="float: none">
+                <input type="text" id="GradStop3" placeholder="Gradient Stop 3 Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Grad3-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("GradStop3").value.trim();
+                        const GradStop3 = inputValue
+                        localStorage.setItem("GradStop3Color", GradStop3);
+                        document.documentElement.style.setProperty('--GradStop3', GradStop3);
+                    });
+                </script>
+            </form>
+            <form id="Grad4-Form" style="float: none">
+                <input type="text" id="GradStop4" placeholder="Gradient Stop 4 Color" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Grad4-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("GradStop4").value.trim();
+                        const GradStop4 = inputValue
+                        localStorage.setItem("GradStop4Color", GradStop4);
+                        document.documentElement.style.setProperty('--GradStop4', GradStop4);
+                    });
+                </script>
+            </form>
+        </details>
         <div style="line-height:2250%;">
             <br>
         </div>
         <p class="small-centered-text">Created by The Wagonization, consisting of JackWagon885 
         <br>
-        All credit goes to the respective owners. I only compile them in a list.
+        All credit goes to the respective owners. I only compile them in a list. The audio was not made by me either.
         <br>
-        Fuck you Google</p>
+        setting deez nuts in your mouth</p>
     </body>
 </HTML>
+<script src="..\yee.js"></script>

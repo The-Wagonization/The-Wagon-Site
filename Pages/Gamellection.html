@@ -6,20 +6,12 @@
         <link rel="stylesheet" type="text/css" href="../stylez.css">
         <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
-        <script src="..\Audio\BackgroundScript.js"></script>
         <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "oqwnloclrl");
-        </script>
-        <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.key === '`' || event.key === '`') {
-                    window.location.href = 'https://classroom.google.com/u/1/h';
-                }
-            });
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,13 +114,29 @@
             }
             #box2 {
                 width: 150px;
-                height: 35px;
+                height: 50px;
+                align-content: center;
             }
-        </style>    
+        </style>
+        <style>
+            .scroll-section {
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+                display: flex;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scroll-section::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+          
     </head>
-    <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
+    <audio id="background-music" autoplay loop></audio>
     <body>
-        <p><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bookmarkllection.html">Bookmarkllection</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <a href="..\Pages\CargoWagon.html">CargoWagon</a> | <a href="..\Pages\ExtensionList.html">Extension List</a> | <b>Gamellection</b> | <a href="..\Pages\Hackkit.html">Hackkit</a> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a> | <a href="..\Pages\VideoTutorialPage.html">Video Tutorial Page</a></p>
+        <a href="..\Pages\Config.html"><img src="..\Images\cog.png" alt="cog" style="float: right; width:21px; height:21px;"></a>
+        <p><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <a href="..\Pages\Bypasser'sWindowskit.html">Bypasser's Windowskit</a> | <b>Gamellection</b> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a></p>
         <hr>
         <div id="container" style="text-align: center;">
             <input type="text" id="searchInput" placeholder="Search...">
@@ -139,101 +147,152 @@
         <hr>
         <br>
         <br>
-        <div class="main-container">
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\2048Icon.png" alt="2048 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\2048.html">2048</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\3SlicesIcon.png" alt="3 Slices icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices.html">3 Slices</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\3Slices2Icon.png" alt="3 Slices 2 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices2.html">3 Slices 2</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\AwesomePlanesIcon.png" alt="Awesome Planes icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomePlanes.html">Awesome Planes</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\AwesomeTanksIcon.png" alt="Awesome Tanks icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomeTanks.html">Awesome Tanks</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\AwesomeTanks2Icon.png" alt="Awesome Tanks 2 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomeTanks2.html">Awesome Tanks 2</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BFTVTSIcon.png" alt="BTTS icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigFLAPPYTowerVSTinySquare.html">Big FLAPPY Tower VS Tiny Square</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BITTSIcon.png" alt="BITTS icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigICETowerTinySquare.html">Big ICE Tower Tiny Square</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BNTVTSIcon.png" alt="BNTVTS icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigNEONTowerVSTinySquare.html">Big NEON Tower VS Tiny Square</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BTTSIcon.png" alt="BTTS icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigTowerTinySquare.html">Big Tower Tiny Square</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BTTS2Icon.png" alt="BTTS2 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigTowerTinySquare2.html">Big Tower Tiny Square 2</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BTDIcon.png" alt="BTD icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BTD.html">Bloons Tower Defense</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\BTD2Icon.png" alt="BTD2 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BTD2.html">Bloons Tower Defense 2</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\Connect4Icon.png" alt="Connect 4 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Connect4.html">Connect 4</a></div>
-            </div>
-            <br>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\EscapeRoadIcon.png" alt="Escape Road icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\EscapeRoad.html">Escape Road</a></div>
-            </div>
-            <br>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\GoogleSnakeIcon.png" alt="Goggle Snake icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\GoogleSnake.html">Google Snake</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\LearnToFlyIcon.png" alt="Learn to Fly icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly.html">Learn to Fly</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\LearnToFly2Icon.png" alt="Learn to Fly 2 icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly2.html">Learn to Fly 2</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\MinecraftClassicIcon.png" alt="Minecraft Classic icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\MinecraftClassic.html">Minecraft Classic</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\QuickDrawWithGoogleIcon.png" alt="Quick, Draw! icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\QuickDrawWithGoogle.html">Quick, Draw!</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\SlopeIcon.png" alt="Slope icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Slope.html">Slope</a></div>
-            </div>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\SmashKartsIcon.png" alt="Smash Karts icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a></div>
-            </div>
-            <br>
-            <div class="container">
-                <div id="box1" class="box"><img src="..\Images\Wordle+Icon.png" alt="Wordle+ icon" width="150" height="150"></div>
-                <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Wordle+.html">Wordle+</a></div>
+        <div class="scroll-section">
+            <div class="main-container">
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\2048Icon.png" alt="I fucked your mom 2048 times" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\2048.html">2048</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\3SlicesIcon.png" alt="real men use 1 slice" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices.html">3 Slices</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\3Slices2Icon.png" alt="real men use 1 slice 2" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\3Slices2.html">3 Slices 2</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\AchievementUnlockedIcon.png" alt="achieve deez nuts" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AchievementUnlocked.html">Achievement<br>Unlocked</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\AntbusterIcon.png" alt="THAT SON OF A BITCH THAT SON OF A BITCH" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Antbuster.html">Antbuster</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\AwesomePlanesIcon.png" alt="9/11" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomePlanes.html">Awesome Planes</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\AwesomeTanksIcon.png" alt="lazer bitch" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomeTanks.html">Awesome Tanks</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\AwesomeTanks2Icon.png" alt="more toys >:)" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\AwesomeTanks2.html">Awesome Tanks 2</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BigFLAPPYTowerVSTinySquareIcon.png" alt="flap" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigFLAPPYTowerVSTinySquare.html">Big FLAPPY Tower<br>VS Tiny Square</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BigICETowerTinySquareIcon.png" alt="ICE IS NICE" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigICETowerTinySquare.html">Big ICE Tower<br>Tiny Square</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BigNEONTowerVSTinySquareIcon.png" alt="everything looks better with neon" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigNEONTowerVSTinySquare.html">Big NEON Tower<br>VS Tiny Square</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BigTowerTinySquareIcon.png" alt="the best one" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigTowerTinySquare.html">Big Tower<br>Tiny Square</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BigTowerTinySquare2Icon.png" alt="actually the 6th because fuck you that's why" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BigTowerTinySquare2.html">Big Tower<br>Tiny Square 2</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BTDIcon.png" alt="ultrasonic tack shooter go brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BTD.html">Bloons<br>Tower Defense</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BTD2Icon.png" alt="monke" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BTD2.html">Bloons Tower<br>Defense 2</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\BTD3Icon.png" alt="m o n k e" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\BTD3.html">Bloons Tower<br>Defense 3</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\Connect4Icon.png" alt="if only you could connect with some BITCHES" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Connect4.html">Connect 4</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\EscapeRoadIcon.png" alt="YOU'LL NEVER TAKE ME ALIVE" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\EscapeRoad.html">Escape Road</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\FNAWIcon.png" alt="spoopy" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\FiveNightsAtWinstons.html">Five Nights<br>at Winston's</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\GoogleSnakeIcon.png" alt="Goggle Snake" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\GoogleSnake.html">Google Snake</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\HongKong97Icon.png" alt="MOTHERFUCKING HONG KONG 97" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\HongKong97.html">Hong Kong 97</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\LearnToFlyIcon.png" alt="bouncing is bad" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly.html">Learn to Fly</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\LearnToFly2Icon.png" alt="BRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICKBRICK" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly2.html">Learn to Fly 2</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\LearnToFly3Icon.png" alt="this is a spinoff" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\LearnToFly3.html">Learn to Fly 3</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\MinecraftClassicIcon.png" alt="this is your grandpa's minecraft" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\MinecraftClassic.html">Minecraft Classic</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\MooMooIcon.png" alt="beef stew with milk" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\MooMoo.html">Moo Moo</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\n-gonIcon.png" alt="n-gon & on & on & on again" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\n-gon.html">n-gon</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\NSMBIcon.png" alt="arrrrrrrrr" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\NewSuperMarioBros.html">New Super<br>Mario Bros.</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\Pac-ManIcon.png" alt="waka waka" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Pac-Man.html">Pac-man</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\QuickDrawWithGoogleIcon.png" alt="DRAW DRAW DRAW" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\QuickDrawWithGoogle.html">Quick, Draw!</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\Run3Icon.png" alt="all the other kitties with the pumped up titties..." width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Run3.html">Run 3</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\ShellShockersIcon.png" alt="shell shocked" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SHellShockers.html">Shell Shockers</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\SlopeIcon.png" alt="why the fuck is it so glitchy" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Slope.html">Slope</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\SmashKartsIcon.png" alt="you know who else got smashed" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\SmashKarts.html">Smash Karts</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\TetrisIcon.png" alt="Bm-ta-pt-tiBm-ta-Bm-pt-ta" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Tetris.html">Tetris</a></div>
+                </div>
+                <div class="container">
+                    <div id="box1" class="box"><img src="..\Images\Wordle+Icon.png" alt="wordle but plus wow shocker" width="150" height="150"></div>
+                    <div id="box2" class="box"><a href="..\Pages\Subpages\Gamellection Subpages\Wordle+.html">Wordle+</a></div>
+                </div>
             </div>
         </div>
         <div style="line-height:2250%;">
@@ -246,3 +305,4 @@
         Fuck you Google</p>
     </body>
 </HTML>
+<script src="..\yee.js"></script>

@@ -6,20 +6,12 @@
         <link rel="stylesheet" type="text/css" href="../stylez.css">
         <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
-        <script src="..\Audio\BackgroundScript.js"></script>
         <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "oqwnloclrl");
-        </script>
-        <script>
-            document.addEventListener('keydown', function(event) {
-                if (event.key === '`' || event.key === '`') {
-                    window.location.href = 'https://classroom.google.com/u/1/h';
-                }
-            });
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +22,6 @@
                 text-align: center;
             }
         </style>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Centered Text</title>
         <style>
             .centered-text {
@@ -54,9 +45,10 @@
             }
         </style>
     </head>
-    <audio id="background-music" src="..\Audio\MapOfTheStars.mp3" autoplay loop></audio>
+    <audio id="background-music" autoplay loop></audio>
     <body>
-        <p class=""><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bookmarkllection.html">Bookmarkllection</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <b>Bypasser's Windowskit</b> | <a href="..\Pages\CargoWagon.html">CargoWagon</a> | <a href="..\Pages\ExtensionList.html">Extension List</a> | <a href="..\Pages\Gamellection.html">Gamellection</a> | <a href="..\Pages\Hackkit.html">Hackkit</a> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a> | <a href="..\Pages\VideoTutorialPage.html">Video Tutorial Page</a></p>
+        <a href="..\Pages\Config.html"><img src="..\Images\cog.png" alt="cog" style="float: right; width:21px; height:21px;"></a>
+        <p class=""><a href="..\Pages\Home.html">Home</a> | <a href="..\Pages\Navigation.html">All</a> | <a href="..\Pages\Bypasser'sChromekit.html">Bypasser's Chromekit</a> | <b>Bypasser's Windowskit</b> | <a href="..\Pages\Gamellection.html">Gamellection</a> | <a href="..\Pages\ProxList.html">ProxList</a> | <a href="..\Pages\Questions.html">Questions</a></p>
         <hr>
         <p class="small-centered-text">This page is for Windows exploits
         <br>
@@ -66,70 +58,66 @@
         <details style="display:none;" id="ExploitSearchContainer">
             <summary><b id="ExploitSearch">Exploit Finder</b></summary>
             <form id="ExploitSearch-Form">
-                <label for="ExploitSearch-Version">Windows Version</label><br>
-                <input type="text" id="ExploitSearch-Version" placeholder="10" value="10" type="number"><br>
+                <label>Windows Version</label>
+                <ul id="ExploitSearch-WindowsVersion">
+                    <li><input class="esterm" esterm-value="7" type="checkbox">7</li>
+                    <li><input class="esterm" esterm-value="8" type="checkbox">8</li>
+                    <li><input class="esterm" esterm-value="8.1" type="checkbox">8.1</li>
+                    <li><input class="esterm" esterm-value="10" type="checkbox">10</li>
+                    <li><input class="esterm" esterm-value="11" type="checkbox">11</li>
+                </ul>
                 <label>Exploit Type</label>
                 <ul id="ExploitSearch-ExploitType">
-                    <li><input class="esterm" esterm-value="Hardware" type="checkbox">Hardware Based</li>
-                    <li><input class="esterm" esterm-value="OS" type="checkbox" checked=true>OS Based</li>
-                    <li><input class="esterm" esterm-value="Proxy" type="checkbox" checked=true>Proxy Based</li>
-                    <li><input class="esterm" esterm-value="Web" type="checkbox" checked=true>Web Based</li>
+                    <li><input class="esterm" esterm-value="Software" type="checkbox" checked="true">Software Based</li>
+                    <li><input class="esterm" esterm-value="Hardware" type="checkbox" checked="true">Hardware Based</li>
+                    <li><input class="esterm" esterm-value="Web" type="checkbox" checked="true">Web Based</li>
                 </ul>
                 <label>Blocker</label>
-                <ul>
-                    <li><input class="esterm" esterm-value="Blocksi" type="checkbox">Blocksi</li>
-                    <li><input class="esterm" esterm-value="GoGuardian" type="checkbox">GoGuardian</li>
-                    <li><input class="esterm" esterm-value="Hapara" type="checkbox">Hapara</li>
-                    <li><input class="esterm" esterm-value="iBoss" type="checkbox">iBoss</li>
-                    <li><input class="esterm" esterm-value="Securely" type="checkbox">Securely</li>
+                <ul id="ExploitSearch-Blocker">
+                    <li><input class="esterm" esterm-value="iBoss" type="checkbox" checked="true">iBoss</li>
+                    <li><input class="esterm" esterm-value="Securely" type="checkbox" checked="true">Securely</li>
                 </ul>
                 <label>Requirements</label>
-                <ul>
-                    <li><input class="esterm" esterm-value="Bookmarklets" type="checkbox">Bookmarklets</li>
-                    <li><input class="esterm" esterm-value="CDrive" type="checkbox">C Drive Access</li>
-                    <li><input class="esterm" esterm-value="ExtensionAccess" type="checkbox">Extension Access</li>
-                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox">External PC</li>
-                    <li><input class="esterm" esterm-value="ExternalStorageDevice" type="checkbox">External Storage Device</li>
-                    <li><input class="esterm" esterm-value="InspectElement" type="checkbox">Inspect Element</li>
-                    <li><input class="esterm" esterm-value="Powerwash" type="checkbox">Powerwash</li>
-                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox">Screwdriver</li>
-                    <li><input class="esterm" esterm-value="SourceCode" type="checkbox">Source Code Viewing (Ctrl+U)</li>
-                    <li><input class="esterm" esterm-value="TabLimit" type="checkbox">Tab Limit</li>
-                    <li><input class="esterm" esterm-value="WindowsPE" type="checkbox">Windows PE</li>
-                    <details>
-                        <summary>Extension</summary>
-                        <li>N/A</li>
-                    </details>
+                <ul id="ExploitSearch-ExploitReq">
+                    <li><input class="esterm" esterm-value="Administrator" type="checkbox" checked="true">Administrator Privileges</li>
+                    <li><input class="esterm" esterm-value="CommandPrompt" type="checkbox" checked="true">Command Prompt</li>
+                    <li><input class="esterm" esterm-value="CDrive" type="checkbox" checked="true">Installation Drive Access</li>
+                    <li><input class="esterm" esterm-value="ExternalPC" type="checkbox" checked="true">External PC</li>
+                    <li><input class="esterm" esterm-value="BootSettings" type="checkbox" checked="true">Boot Settings</li>
+                    <li><input class="esterm" esterm-value="FactoryReset" type="checkbox" checked="true">Factory Reset</li>
+                    <li><input class="esterm" esterm-value="Powershell" type="checkbox" checked="true">Powershell</li>
+                    <li><input class="esterm" esterm-value="Screwdriver" type="checkbox" checked="true">Screwdriver</li>
+                    <li><input class="esterm" esterm-value="TaskManager" type="checkbox" checked="true">Task Manager</li>
+                    <li><input class="esterm" esterm-value="WindowsPE" type="checkbox" checked="true">Windows PE</li>
                 </ul>
                 <button type="submit">Search</button>
-                <p>Found <span id="exploitCount">0</span> exploits</p>
             </form>
         </details>
-
+        <br>
         <details>
             <summary><b id="ToC">Table of Contents</b></summary>
-            <a href="#Batched">Batched</a>
+            <a id="ND" href="#Batched">Batched</a>
             <br>
-            <a href="#CMaDmin">CMaDmin</a>
+            <a id="ND" href="#CMaDmin">CMaDmin</a>
             <br>
-            <a href="#DeTasked">DeTasked</a>
+            <a id="ND" href="#DeTasked">DeTasked</a>
             <br>
-            <a href="#INSECURELY">INSECURELY</a>
-            <br>
-            <a href="#PowerEXE">PowerEXE</a>
+            <a id="ND" href="#PowerEXE">PowerEXE</a>
             <br>
             <details>
-                <summary> <a href="#Swapped">Swapped</a></summary>
+                <summary> <a id="ND" href="#Swapped">Swapped</a></summary>
                     <ul>
-                        <li><a href="#SwappedManualMethod">Swapped Manual</a></li>
+                        <li><a id="ND" href="#SwappedManualMethod">Swapped Manual</a></li>
                     </ul>
             </details>
         </details>
         <hr>
         <br>
         <details>
+            <searchi>7;8;8.1;10;11</searchi>
+            <searchi>Software</searchi>
             <summary><b id="Batched">Batched</b></summary>
-            <p class="small-text">requires Command Prompt (somewhat)
+            <p class="small-text">Windows ?+; requires Command Prompt (somewhat)
             <br>
             Run a batch file to emulate other apps or run commands.</p>
             <br>
@@ -141,12 +129,15 @@
         </details>
         <br>
         <details>
+            <searchi>7;8;8.1;10;11</searchi>
+            <searchi>Software</searchi>
+            <searchi>CDrive;WindowsPE</searchi>
             <summary><b id="CMaDmin">CMaDmin</b></summary>
-            <p class="small-text">Windows 7+; requires C drive access
+            <p class="small-text">Windows 7+; requires admin*
             <br>
             Create a new administrator account, bypassing restrictions.</p>
             <br>
-            1: Access an admin Command Prompt/Powershell prompt. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
+            1: Access an admin Command Prompt/Powershell prompt. You can access an elevated Command Prompt/Powershell instance (more permissions than admin) by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
             <br>
             2: Create a new user by running these commands: "net {username} /add" & "net localgroup administrators {username} /add".
             <br>
@@ -154,6 +145,9 @@
         </details>
         <br>
         <details>
+            <searchi>7;8;8.1;10;11</searchi>
+            <searchi>Software</searchi>
+            <searchi>Administrator;TaskManager</searchi>
             <summary><b id="DeTasked">DeTasked</b></summary>
             <p class="small-text">Windows ?+; requires admin
             <br>
@@ -161,73 +155,74 @@
             <br>
             1: Open Task Manager. You can use the search box or Ctrl+Alt+Delete.
             <br>
-            2: Find the file responsible. If you're bypassing parental controls, the file will be somethine like "wpcmon.exe".
+            2: Find the file responsible. If you're bypassing parental controls, the file will be "wpcmon.exe".
             <br>
             3: Right click it, then you can either click "End Task" to stop it for now or click "Open File Location" & then delete the file itself.
         </details>
         <br>
         <details>
-            <searchi>Web</searchi>
-            <searchi>Securely</searchi>
-            <summary><b id="INSECURELY">INSECURELY</b></summary>
-            <p class="small-text">Patched on Securely versions above 2.98.55
-            <br>
-            A toggle that kills Securely using black magic.
-            <br>
-            Web-based exploit.</p>
-            <br>
-            1: Go <a href="https://ext-remover.net/detail/INSECURLY/">here</a> & flip the switch.
-        </details>
-        <br>
-        <details>
+            <searchi>10;11</searchi>
+            <searchi>Software</searchi>
+            <searchi>CommandPrompt;Powershell</searchi>
             <summary><b id="PowerEXE">PowerEXE</b></summary>
-            <p class="small-text">Windows 10+; requires Powershell
+            <p class="small-text">Windows 10+; requires Command Prompt/Powershell
             <br>
             Allows you to run any executable file you want.</p>
             <br>
             1: Open Windows Powershell & run “cd (exelocation)”.
             <br> 
-            2: Run “Copy .\filename C:\Windows\Temp\exefilename”.
+            2: Run “copy .\filename C:\Windows\Temp\exefilename”.
             <br>
             3: Run “C:\Windows\Temp\exefilename”.
         </details>
         <br>
         <details>
+            <searchi>7;8;8.1;10;11</searchi>
+            <searchi>Software</searchi>
+            <searchi>CDrive;WindowsPE</searchi>
             <summary><b id="Swapped">Swapped</b></summary>
-            <p class="small-text">Windows ?+; requires admin prompt & C drive access
+            <p class="small-text">Windows ?+; requires elevated prompt & installation drive (commonly C) access
             <br>
-            Swaps either Sticky Keys or Utilman with any file you want. </p>
+            Swaps a file (commonly Sticky Keys or Ease of Access Manager) with any file you want.
             <br>
-            1: Access an admin Command Prompt/Powershell prompt. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
+            <i>Also known as either the Sticky Keys or Utilman exploit.</i></p>
+            <details>
+                <summary>Swapped.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4"> Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Access an elevated Command Prompt/Powershell instance. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt". You can also use a Windows 10 Media Installation USB & select Next>Repair Your Computer>Troubleshoot>Command Prompt.
             <br> 
-            2: Run “C:”.
+            2: Run “C:”. Note that Windows can be installed on any drive, C is just the most common one.
             <br>
             3: Run “dir”. Keep going until you find a drive with the Windows directory (1).
             <br>
             4: Create a backup by runinng “copy sethc.exe sethc.bak” for Sticky Keys or "copy utilman.exe utilman.bak" for Utilman.
             <br>
-            5: Swap the respective file with another file. In order to replace with another file, change the latter filename. For Command Prompt, run “copy cmd.exe sethc.exe” for Sticky Keys or "copy cmd.exe utilman.exe" for Utilman.
+            5: Swap the respective file with another file. In order to replace Sticky Keys/Utilman with another file, change the former's filename. For Command Prompt, run “copy cmd.exe sethc.exe” for Sticky Keys or "copy cmd.exe utilman.exe" for Utilman.
             <br>
             6: Type "Y" to proceed.
             <br>
-            7: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on login screen as well as Ctrl+Alt+Delete).
+            7: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on the login screen as well as Ctrl+Alt+Delete).
             <br>
             8: Preform CMaDmin.
             <br>
             <br>
             <details>
+                <searchi>7;8;8.1;10;11</searchi>
+                <searchi>Software</searchi>
+                <searchi>Administrator;CDrive</searchi>
                 <summary><b id="SwappedManualMethod">Swapped Manual</b></summary>
-                <p class="small-text">Windows ?+; requires admin & C drive access
+                <p class="small-text">Windows ?+; requires admin & installation drive (commonly C) access
                     <br>
                     Manually swap either Sticky Keys or Utilman with any file you want.</p>
-                    <br>
                     1: Open File Explorer.
                     <br>
                     2: Find the file you want to replace (sethc.exe for Sticky Keys or utilman.exe for Utilman).
                     <br>
                     3: Make a duplicate & change the file type to .bak (or whatever really).
                     <br>
-                    4: Replace the original file with another file (make sure it has the same name). I recommend either cmd.exe or the <a href="..\Downloads\UtilmanReplacer.exe">Ease of Access Replacer</a>.
+                    4: Replace the original file with another file (make sure it has the same name). I recommend either cmd.exe or the <a id="ND" href="..\Downloads\UtilmanReplacer.exe">Ease of Access Replacer</a>.
                     <br>
                     5: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on login screen as well as Ctrl+Alt+Delete).
                     <br>
@@ -242,5 +237,7 @@
     All credit goes to the respective owners. I only compile them in a list.
     <br>
     Gotta love how Google didn't take this page down</p>
+    <script src="../js/windowskit.js"></script>
     </body>
 </HTML>
+<script src="..\yee.js"></script>
