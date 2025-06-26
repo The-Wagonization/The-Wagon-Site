@@ -1616,7 +1616,7 @@
             <br>
             3: Downgrade to 118. If you're on a version before 118, stay on it.
             <br>
-            4: Download an injected RMA Shim from <a href="https://dl.kxtz.dev/ChromeOS">here</a>.
+            4: Download an injected RMA Shim from <a href="https://dl.kxtz.dev/ChromeOS">here</a> build your own.
             <br>
             5: Flash the injected RMA Shim onto a USB device.
             <br>
@@ -1624,17 +1624,7 @@
             <br>
             7: Reenter Recovery Mode & plug in the storage device.
             <br>
-            8: Run cryptosmite.sh in the injected shim.
-            <br>
-            9: In the "edit stateful bash" screen's bash prompt, run  "tar -xvf /mnt/shim_stateful/stateful.tar.xz -C /mnt/stateful" & then "exit". The system will reboot into Verified Mode.
-            <br>
-            10: Click "Ok" in the oobe screen.
-            <br>
-            11: At the "Who would you like to add to this Chromebook?" screen, enable Dev Mode.
-            <p class="small-text">You can skip the wait by entering Recovery Mode & booting into the shim on the "Dev Mode is enabled" screen, then selecting the bash shell & running "mkfs.ext4 /dev/mmcblk0p1 -F", "mount -0 loop, rw /dev/mmcblk0p1 /tmp",  "touch /tmp/.developer_mode", "umount /tmp && sync" & "Reboot". Add this as a bash script so you don't have to run these commands every time. On "enrollment" branch shims, this script is already included.</p>
-            12: After enabling Dev Mode, press Ctrl+Alt+F2 quickly after you boot.
-            <br>
-            13: Type "Root", "vpd -i RW_VPD -s check_enrollment=0", & "cryptohome --action+remove_firmware_management_parameters". If you don't get the timing right, powerwash & try again.
+            8: Navigate to the Cryptosmite payload, press enter, then Y.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1702,7 +1692,7 @@
                     <p class="small-text indented2">3: 120</p>
                     <p class="small-text indented2">4: 125</p>
                     <p class="small-text indented2">5: 132</p>
-                    fwver 2 versions are 112+
+                    fwver 2 versions are 114+
             3: Go to chrome://version & check your board (under platform).
             <br>
             4: Go to chrome100.dev & find your board (use Ctrl+F) or find the bins <a href="https://dl.kxtz.dev/ChromeOS">here</a>.
@@ -1790,24 +1780,21 @@
             Disabling FWWP allows you to do many things, including flashing custom firmware (allowing for installation of Linux, Windows, etc.) & setting GBB flags.
             <br>
             <br>
-            The method to disable FWWP depends on your Chromebook. History of FWWP:
+            The method to disable FWWP depends on your Chromebook, however if you've been on v114 or above you must use Pencil method. History of FWWP:
             <br>
-            PreCr50: these old boards used either a screw or a jumper on the motherboard & are some of the simplest out there. If you happen to be lucky enough, I recommend removing this.
+            PreCr50: these old boards used either a screw, a jumper, or a switch on the motherboard & are some of the simplest out there. If you happen to be lucky enough, I recommend trying this.
             <br>
-            Cr50: following this, a new chip was added known as the Cr50. Older Cr50 Chromebooks set FWWP to the battery sense line, while later ones require everybody's favorite Pencil method. You can also use Closed Case Debugging/SuzyQable on all of these.
+            Cr50: following this, a new chip was added known as the Cr50. Older Cr50 Chromebooks set FWWP to the battery sense line, while later ones require everybody's favorite Pencil method. You can also use Closed Case Debugging/SuzyQable on all of these, as long as you're unenrolled.
             <br>
-            Ti50: the generation 2 Cr50 chip, better known as the Ti50, was added later on & now adds the toughest roadblock yet. This chip now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable.
+            Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled) or Pencil Sharpener (patched on v136).
             <br>
             <br>
             <details>
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="FWWP:Screw">Screw</b></summary>
-                <p class="small-text">Requires screwdriver
-                <br>
-                <i>The Screw</i></p>
-                <br>
+                <summary><b id="FWWP:Screw">Screw; possibly patched on fimware 2+</b></summary>
+                <p class="small-text">Requires screwdriver</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
                 2: Locate & use unscrew on the WP screw.
@@ -1820,10 +1807,7 @@
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
                 <summary><b id="FWWP:Jumper">Jumper</b></summary>
-                <p class="small-text">Requires screwdriver, bridger
-                <br>
-                <i>Jumped a shark</i></p>
-                <br>
+                <p class="small-text">Requires screwdriver, bridger; possibly patched on fimware 2+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
                 2: Disconnect the internal battery cover.
@@ -1838,17 +1822,16 @@
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
                 <summary><b id="FWWP:Battery">Battery</b></summary>
-                <p class="small-text">Requires screwdriver
-                <br>
-                <i>lil Smoke</i>
-                </p>
-                <br>
+                <p class="small-text">Requires screwdriver; possibly patched on fimware 2+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
                 2: Unplug the power cord connecting the battery & motherboard.
                 <br>
-                3: Hold the power button for 30 seconds.
+                3: Run the nessesary commands. If you're on v136+ you should probably change device secret.
+                <p class="small-text indented">Save device secret: vpd -i RO_VPD -l
                 <br>
+                Change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=device_secret
+                </p>
                 4: Plug the power cord back in & screw the back cover on (or just leave it off you fucking psycho).
             </details>
             <br>
@@ -1857,11 +1840,12 @@
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
                 <summary><b id="FWWP:Pencil">Pencil</b></summary>
-                <p class="small-text">Requires screwdriver, bridger, external storage device
-                <br>
-                <i>This is fine</i></p>
-                <br>
+                <p class="small-text">Requires Cr50, screwdriver, bridger, external storage device</p>
                 1: oh fuck no not yet
+                <br>
+                save device secret: vpd -i RO_VPD -l
+                <br>
+                change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=$(openssl rand -hex 32)
             </details> 
             <br>
             <details>
@@ -1869,10 +1853,7 @@
                 <searchi>Hardware</searchi>
                 <searchi>Debug Cable</searchi>
                 <summary><b id="FWWP:CCD">Closed Case Debugging/SuzyQable</b></summary>
-                <p class="small-text">Requires Dev Mode, debug cable
-                <br>
-                <i>Don't fuck with the sons of anarchy fan</i></p>
-                <br>
+                <p class="small-text">Requires Dev Mode, debug cable; doesn't work with active FWMP</p>
                 1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
                 <br>
                 2: Login as root & run "gsctool -a -o".
@@ -1890,7 +1871,17 @@
                 8: Run "crossystem wpsw_cur" & verify it returns 0, then reboot.
                 <br>
                 <br>
-                Unbricking Ti50s: hold the power button, on Chromebooks press F2 twice & on Chromeboxes press the recovery pinhole instead, then release the power button & repeat.
+                Unbricking Ti50s: hold the power button, on Chromebooks press F2 twice or on Chromeboxes press the recovery pinhole instead, then release the power button & repeat.
+            </details> 
+            <br>
+            <details>
+                <summary><b id="FWWP:GBBFlags">GBB flags</b></summary>
+                <p class="small-text">Requires disabled FWWP</p>
+                These allow you to edit certain things, such as the Dev Mode wait timer, disable FWMP (unenroll), force enable certain things such as USB booting, & more.
+                <br>
+                1: Go to the <a href="https://binbashbanana.github.io/gbbflaginator/">GBB Flaginator</a> to easily set select flags to set.
+                <br>
+                2: Run "futility gbb -s --flash --flags=0x120b7" on newer devices & "/usr/share/vboot/bin/set_gbb_flags.sh 0x120b7" on older ones to set flags. You can read them with "futility gbb -g --flash --flags"/"/usr/share/vboot/bin/get_gbb_flags.sh" respectively.
             </details> 
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
@@ -1902,7 +1893,7 @@
             <summary><b id="Firmware2">Firmware2</b></summary>
             <p class="small-text">Requires Dev Mode, FWWP disabled
             <br>
-            Dekeyrolls your device.
+            Dekeyrolls your device. Not the same as firmware 2, the updated version of Chromebook firmware included in v114+
             <br>
             Chrome OS-based exploit.</p>
             <br>
@@ -2388,11 +2379,11 @@
         <details>
             <searchi>Any</searchi>
             <searchi>OS</searchi>
-            <searchi>DevMode</searchi>
+            <searchi>DevMode;ExternalStorageDevice</searchi>
             <summary><b id="USBoot">USBoot</b></summary>
-            <p class="small-text">Requires Dev Mode
+            <p class="small-text">Requires Dev Mode, external storage device
             <br>
-            Allows you to boot from a USB device.</p>
+            Allows you to boot from an external storage device. See <a href="#Shimboot">Shimboot</a> for booting Linux from an external storage device</p>
             <details>
                 <summary>USBoot.mp4</summary>
                 <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
@@ -2402,7 +2393,7 @@
             <br>
             2: After selecting "boot from internal disk", press Ctrl+Alt+F2.
             <br>
-            3: Type "sudo crossystem dev_boot_usb=1". Note that if the GBB Flag that ignores this is set you can skip this step.
+            3: Type "sudo crossystem dev_boot_usb=1". Note that if the GBB flag that ignores this is set you can skip this step.
             <br>
             <br>
             Press "Ctrl+U" on the OS Verification screen to boot from USB.
