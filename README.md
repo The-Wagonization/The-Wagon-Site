@@ -1,4 +1,4 @@
-<b>The best way to launch The Wagon Site is via the <a href="../Launcher.js">bookmarklet</a>.</b>
+<b>The best way to launch The Wagon Site is via the <a href="./Launcher.js">bookmarklet</a>.</b>
 <br>
 <br>
 <br>
