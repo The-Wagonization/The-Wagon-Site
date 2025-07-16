@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scripts = [
       '../js/diso.js',
       '../js/panik.js',
+      '../js/sanit.js',
       '../js/Song.js',
   ];
   scripts.forEach((src, index) => {
