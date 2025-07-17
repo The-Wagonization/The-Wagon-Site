@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.head.appendChild(cssVarsScript);
   const scripts = [
       '../js/diso.js',
+      '../js/linkczech.js',
       '../js/panik.js',
       '../js/sanit.js',
       '../js/Song.js',

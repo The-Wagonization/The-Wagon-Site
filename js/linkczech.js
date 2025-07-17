@@ -1,17 +1,15 @@
 // TODO: Make it completely asynchronous so it tests the sites simultaneously
-// TODO: Add more status codes and site specific checks
-
+// TODO: Add more status codes & site specific checks
 (async()=>{
 const fs = require("fs")
-let pageHtmlPath = "./Pages/ProxList.html"
+let pageHtmlPath = "..\Pages\ProxList.html"
 let pageHtml = fs.readFileSync(pageHtmlPath, "utf-8")
-
 const regex = /<a id="ND" href="(https:\/\/.*?)">.*?<\/a>/g
 while(true){
     let res = regex.exec(pageHtml)
     if(res==null)break;
     if(res[1].startsWith("http")){
-        console.log("\x1b[1;37mTesting proxy: "+res[1])
+        console.log("\x1b[1;37mte sting: "+res[1])
         let isValid = false
         try{
         isValid = ![404,403, 500].includes(((await fetch(res[1], {
@@ -23,15 +21,15 @@ while(true){
             console.warn(err)
         }
         if(isValid){
-            console.log(`\x1b[1;32m${res[1]} is valid!`)
+            console.log(`\x1b[1;32m${res[1]} valid`)
         }else{
-            console.log(`\x1b[1;31m${res[1]} is not valid!`)
+            console.log(`\x1b[1;31m${res[1]} is bullshit`)
             pageHtml = pageHtml.replace(res[0], "")
 
         }
     }
 }
-console.log("\x1b[0mDone testing proxies!")
+console.log("\x1b[0mtested links")
 fs.writeFileSync(pageHtmlPath, pageHtml, "utf-8")
 process.exit()
 })()
