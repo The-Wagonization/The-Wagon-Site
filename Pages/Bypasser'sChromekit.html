@@ -44,6 +44,12 @@
                 margin-left: 40px;
             }
         </style>
+        <style>
+            .small-indented {
+                font-size: 10px;
+                margin-left: 20px;
+            }
+        </style>
     </head>
     <audio id="background-music" autoplay loop></audio>
     <body>
@@ -298,6 +304,8 @@
             <a id="ND" href="#Sh0vel">Sh0vel</a>
             <br>
             <a id="ND" href="#SH1MMER">SH1MMER</a>
+            <br>
+            <a id="ND" href="#sh1ttyOOBE">sh1ttyOOBE</a>
             <br>
             <a id="ND" href="#Shimboot">Shimboot</a>
             <br>
@@ -2075,7 +2083,7 @@
             <searchi>OS;Unenrollment</searchi>
             <searchi>ExternalStorageDevice</searchi>
             <summary><b id="SH1MMER">SH1MMER</b></summary>
-            p class="small-text">Requires a storage device; patched on kernver 4+
+            <p class="small-text">Requires a storage device; patched on kernver 4+
             <br>
             Unenrolls your Chromebook, removing ALL restrictions.
             <br>
@@ -2126,6 +2134,44 @@
                 <br>
                 8: Once you're done, reboot your computer with Power+Refresh, then reunenroll.
             </details>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>133-138</searchi>
+            <searchi>OS;Unenrollment</searchi>
+            <summary><b id="sh1ttyOOBE">sh1ttyOOBE</b></summary>
+            <p class="small-text">Only works on kernver 5
+            <br>
+            Unenrolls your Chromebook, removing ALL restrictions.
+            <br>
+            Chrome OS-based exploit.</p>
+            <details>
+                <summary>sh1ttyOOBE.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
+            <br>
+            2: Look at the text in the top-left corner. If the number doesn't end in 5, your Chromebook is unsupported.
+            <br>
+            3: Powerwash your Chromebook, then on the "Welcome to your Chromebook" screen wait until you see the "Quick set up with Android" button. <b>Do not click "Get Started" if it doesn't show immediately.</b>
+            <br>
+            4: Press Ctrl+Shift+R & click "Cancel".
+            <br>
+            5: Click "Enter your google account email & password" & it should say to "Connect to a network".
+            <br>
+            6: Open quick settings & connect to a network.
+            <br>
+            7: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
+            <br>
+            <p class="small-text">Other:
+            <br>
+            A: After signing in you can sign out, which will return you to the welcome screen. From here, proceed with OOBE & sign in with the same email, then when you sign in it will hang on the "Please wait" screen. 
+            <br>
+            Afterwards, simply restart or press Alt+Volume Up+X to return to the lockscreen. This will persist until the next powerwash.
+            <br>
+            B: After gaining persistance via the above instruction, you can simply boot modified recovery images in unverified Recovery Mode.</p>
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
