@@ -6,6 +6,8 @@ function initCSSVars() {
         document.documentElement.style.setProperty('--LinkColor', SavedLinkColor);
         const SavedLinkColorHover = localStorage.getItem("LHColor") || "lightgrey";
         document.documentElement.style.setProperty('--LinkColorHover', SavedLinkColorHover);
+        const SavedTextSize = localStorage.getItem("TSize") || "15";
+        document.documentElement.style.setProperty('--TextSize', SavedTextSize);
         const SavedGradStop1Color = localStorage.getItem("GradStop1Color") || "black";
         document.documentElement.style.setProperty('--GradStop1', SavedGradStop1Color);
         const SavedGradStop2Color = localStorage.getItem("GradStop2Color") || "black";

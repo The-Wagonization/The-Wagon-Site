@@ -157,7 +157,7 @@
             </script>
         </form>
         <details>
-            <summary>Text Color</summary>
+            <summary>Text Settings</summary>
             <form id="TextColor-Form" style="float: none">
                 <input type="text" id="TColor" placeholder="Text Color" type="text">
                 <button type="submit">Enter</button>
@@ -194,6 +194,19 @@
                         const LinkColorHover = inputValue;
                         localStorage.setItem("LHColor", LinkColorHover);
                         document.documentElement.style.setProperty('--LinkColorHover', LinkColorHover);
+                    });
+                </script>
+            </form>
+            <form id="TextSize-Form" style="float: none">
+                <input type="text" id="TSize" placeholder="Text Size" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("TextSize-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("TSize").value.trim();
+                        const TextSize = inputValue;
+                        localStorage.setItem("TSize", TextSize);
+                        document.documentElement.style.setProperty('--TextSize', TextSize);
                     });
                 </script>
             </form>

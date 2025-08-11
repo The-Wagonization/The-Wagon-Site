@@ -1,5 +1,6 @@
 :root {
     --FontColor: white;
+    --TextSize: 15px;
     --GraDir: bottom right;
     --GradStop1: black;
     --GradStop2: black;
@@ -21,7 +22,7 @@ body {
     background-image: repeating-linear-gradient(to var(--GraDir), var(--GradStop1), var(--GradStop2), var(--GradStop3), var(--GradStop4));
     color: var(--FontColor);
     font-family: 'Yatra One';
-    font-size: 15px;
+    font-size: var(--TextSize);
 }
 h1, h2, h3, h4, h5, h6, p {
     color: var(--FontColor);
