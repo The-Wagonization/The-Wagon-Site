@@ -1476,7 +1476,7 @@
             <summary><b id="Br0ker">Br0ker</b></summary>
             <p class="small-text">Requires extenral storage device; patched on Chrome OS v133+
             <br>
-            Unenrollment exploit. Note if you're on kernver 5 you'll have to use a v132 LTS-channel image, ie. for platform version 16093.109.0.
+            Unenrollment exploit. Note if you're on kernver 5 you'll have to use a v132 LTS-channel image, ie. for platform version 16093.109.0 (no need to manually downgrade).
             <br>
             Chrome OS-based exploit.</p>
             <br>
@@ -1491,7 +1491,50 @@
             <br>
             3: Once it restarts. wait until the "Get Started" button appears, then enter Dev Mode again.
             <br>
-            4: Follow <a href="https://discord.com/channels/419123358698045453/1395179303464996984">this message</a> (in Titanium Network server).
+            <br>
+            <details>
+                <summary><b>v110 & lower</b></summary>
+                A: Run this command in any root shell, then powerwash:
+                <br>
+                vpd -i RW_VPD -s check_enrollment=0
+            </details>
+            <br>
+            <details>
+                <summary><b>v111-124</b></summary>
+                A: Run these commands in either VT2 shell or Ctrl+U booted shim, then powerwash:
+                <br>
+                vpd -i RW_VPD -s check_enrollment=0
+                <br>
+                tpm_manager_client take_ownership
+                <br>
+                cryptohome --action=remove_firmware_management_parameters
+            </details>
+            <br>
+            <details>
+                <summary><b>v125-135</b></summary>
+                A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
+                <br>
+                echo --enterprise-enable-unified-state-determination=never >/tmp/chrome_dev.conf
+                <br>
+                echo --enterprise-enable-forced-re-enrollment=never >>/tmp/chrome_dev.conf
+                <br>
+                echo --enterprise-enable-initial-enrollment=never >>/tmp/chrome_dev.conf
+                <br>
+                mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf
+                <br>
+                initctl restart ui
+            </details>
+            <br>
+            <details>
+                <summary><b>v136+</b></summary>
+                A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
+                <br>
+                echo --enterprise-enable-state-determination=never >/tmp/chrome_dev.conf'
+                <br>
+                mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf
+                <br>
+                initctl restart ui
+            </details>
             <br>
             5: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
         </details>
@@ -1828,7 +1871,7 @@
             <br>
             PreCr50: these old boards used either a screw, a jumper, or a switch on the motherboard & are some of the simplest out there. If you happen to be lucky enough, I recommend trying this.
             <br>
-            Cr50: following this, a new chip was added known as the Cr50. Older Cr50 Chromebooks set FWWP to the battery sense line, while later ones require everybody's favorite Pencil method. You can also use Closed Case Debugging/SuzyQable on all of these, as long as you're unenrolled.
+            Cr50: following this, a new chip was added known as the Cr50. Cr50 Chromebooks set FWWP to the battery sense line prior to v115, while nowadays we require everybody's favorite Pencil method. You can also use Closed Case Debugging/SuzyQable on all of these, as long as you're unenrolled.
             <br>
             Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled) or Pencil Sharpener (patched on v136).
             <br>
@@ -1895,9 +1938,9 @@
             <details>
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
-                <searchi>Debug Cable</searchi>
+                <searchi>Dev Mode</searchi>
                 <summary><b id="FWWP:CCD">Closed Case Debugging/SuzyQable</b></summary>
-                <p class="small-text">Requires Dev Mode, debug cable; doesn't work with active FWMP</p>
+                <p class="small-text">Requires Dev Mode; doesn't work with active FWMP</p>
                 1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
                 <br>
                 2: Login as root & run "gsctool -a -o".
