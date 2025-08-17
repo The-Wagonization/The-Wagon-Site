@@ -245,6 +245,8 @@
             <br>
             <a id="ND" href="#HPFSB">Hapara Focus Session Bypass</a>
             <br>
+            <a id="ND" href="#Hartools">Hartools</a>
+            <br>
             <a id="ND" href="#HSTS">HSTS</a>
             <br>
             <a id="ND" href="#IcarusLite">Icarus Lite</a>
@@ -710,6 +712,51 @@
         <details>
             <searchi>Any</searchi>
             <searchi>Web</searchi>
+            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+            <searchi>Bookmarklets</searchi>
+            <summary><b id="HFSB">Hapara Focus Session Bypass</b></summary>
+            <p class="small-text">Requires data: links.
+            <br>
+            Bypasses Hapara's Focus Session.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Create a bookmarklet with this <a id="ND" href="&quot;data:text/html,&lt;!DOCTYPE html> &lt;html> &lt;head> &lt;title>full screen iframe&lt;/title> &lt;style type=&quot;text/css&quot;> html { overflow: auto; } html, body, div, iframe { margin: 0px; padding: 0px; height: 100%; border: none; } iframe { display: block; width: 100%; border: none; overflow-y: auto; overflow-x: hidden; } &lt;/style> &lt;/head> &lt;body> &lt;iframe src=&quot;https://www.google.com.au&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot; scrolling=&quot;auto&quot; id=&quot;google&quot;> &lt;/iframe> &lt;/body> &lt;/html>"> code.</a>
+            <br>
+            2: During a focus session, run the bookmarklet.
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>v132</searchi>
+            <searchi>Web</searchi>
+            <searchi>har har har</searchi>
+            <summary><b id="Hartools">Hartools</b></summary>
+            <p class="small-text">Patched on Chrome OS 133+
+            <br>
+            har har har har har har
+            <br>
+            Created by crosbreaker team.
+            <br>
+            Web-based exploit.</p>
+            <br>
+            1: Download <a href="https://github.com/crossjbly/HarTools/releases/download/1.04/HarTools-05092025.har">this</a> file.
+            <br>
+            2: Go <a href="devtools://devtools/bundled/inspector.html">here</a>.
+            <br>
+            3: Once it loads, add "?experiments=true" to the end of the URL.
+            <br>
+            4: On the inspector page's sidebar, click the 2 arrows & select "Network".
+            <br>
+            5: Upload the har har file.
+            <br>
+            6: Double click the text that appears in the box.
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
+            <searchi>Web</searchi>
             <searchi>Hapara;iBoss</searchi>
             <searchi>chrome://net-internals</searchi>
             <summary><b id="HSTS">HSTS</b></summary>
@@ -726,24 +773,6 @@
             3: Repeat step 2, but use "localhost" instead of 127.0.0.1.
             <br>
             4: Restart your computer.
-        </details>
-        <p style="display: none"><a href="#ToC">back to top</a></p>
-        <br>
-        <details>
-            <searchi>Any</searchi>
-            <searchi>Web</searchi>
-            <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
-            <searchi>Bookmarklets</searchi>
-            <summary><b id="HFSB">Hapara Focus Session Bypass</b></summary>
-            <p class="small-text">Requires data: links.
-            <br>
-            Bypasses Hapara's Focus Session.
-            <br>
-            Web-based exploit.</p>
-            <br>
-            1: Create a bookmarklet with this <a id="ND" href="&quot;data:text/html,&lt;!DOCTYPE html> &lt;html> &lt;head> &lt;title>full screen iframe&lt;/title> &lt;style type=&quot;text/css&quot;> html { overflow: auto; } html, body, div, iframe { margin: 0px; padding: 0px; height: 100%; border: none; } iframe { display: block; width: 100%; border: none; overflow-y: auto; overflow-x: hidden; } &lt;/style> &lt;/head> &lt;body> &lt;iframe src=&quot;https://www.google.com.au&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot; scrolling=&quot;auto&quot; id=&quot;google&quot;> &lt;/iframe> &lt;/body> &lt;/html>"> code.</a>
-            <br>
-            2: During a focus session, run the bookmarklet.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
