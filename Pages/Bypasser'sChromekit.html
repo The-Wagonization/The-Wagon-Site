@@ -207,6 +207,13 @@
             <br>
             <a id="ND" href="#ChrioskDumping">Chriosk Dumping</a>
             <br>
+            <details>
+                <summary><a id="ND" href="#CKAUB">CKAUB</a><br></summary>
+                    <ul>
+                        <li><a id="ND" href="#DAUB">DAUB</a></li>
+                    </ul>
+            </details>
+            <br>
             <a id="ND" href="#CookieDough">Cookie Dough</a>
             <br>
             <a id="ND" href="#Corkey">Corkey</a>
@@ -216,8 +223,6 @@
             <a id="ND" href="#CroshFi">CroshFi</a>
             <br>
             <a id="ND" href="#Cryptosmite">Cryptosmite</a>
-            <br>
-            <a id="ND" href="#DAUB">DAUB</a>
             <br>
             <a id="ND" href="#De-roll">De-roll</a>
             <br>
@@ -1727,6 +1732,75 @@
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
+        <searchi>Any</searchi>
+        <searchi>OS</searchi>
+        <details>
+            <summary><b id="CKAUB">CKAUB</b></summary>
+            <p class="small-text">d
+            <br>
+            Prevents your Chromebook from automatically updating by deleting the update partitions. Version of DAUB that allows for updating Chrome OS manually.
+            <br>
+            Works while enrolled.
+            <br>
+            OS-based exploit.</p>
+            <details>
+                <summary>CKAUB.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Access a shell (via methods such as SH1MMER or BadApple).
+            <br>
+            2: Mount a storage device with <a href="..\Downloads\CKAUB.sh">CKAUB.sh</a> & run that payload.
+            <br>
+            <br>
+            Updating:
+            <br>
+            1: Run the payload, then run "<i>dd if=/dev/sdX4 of=/dev/mmcblk0p2 bs=1M oflag=direct status=progress</i>" & "<i>dd if=/dev/sdX3 of=/dev/mmcblk0p3 bs=1M oflag=direct status=progress</i>", where <i>X</i> is your external storage device's drive letter. You can run "<i>lsblk</i>" in the dialog where it asks you to enter the command.
+            <br>
+            2: When it asks you to flash a recovery image, flash one that's +1 kernver higher than your current. 
+            <br>
+            <br>
+            <details>
+                <searchi>Any</searchi>
+                <searchi>OS</searchi>
+                <summary><b id="DAUB">DAUB</b></summary>
+                <p class="small-text">Might not work
+                <br>
+                Prevents your Chromebook from automatically updating by deleting the update partitions. Also blocks kernver updates.
+                <br>
+                OS-based exploit.</p>
+                <details>
+                    <summary>DAUB.mp4</summary>
+                    <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+                </details>
+                <br>
+                1: Access a shell (via methods such as SH1MMER or BadApple).
+                <br>
+                2: Run the following (3rd will open a prompt):
+                <br>
+                cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1
+                <br>
+                yes | mkfs.ext4 /dev/mmcblk0p1
+                <br>
+                fdisk /dev/mmcblk0
+                <br>
+                d
+                <br>
+                4
+                <br>
+                {just press enter}
+                <br>
+                d
+                <br>
+                5
+                <br>
+                {just press enter}
+                <br>
+                w
+            </details>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
         <details>
             <searchi>119</searchi>
             <searchi>OS;Unenrollment</searchi>
@@ -1759,46 +1833,6 @@
             8: Use the Cryptosmite payload, this is "S" on Legacy. The decryption key is "Info-58-immense!NickName_Arabia-710" on older Legacy shims.
             <br>
             9: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
-        </details>
-        <p style="display: none"><a href="#ToC">back to top</a></p>
-        <br>
-        <details>
-            <searchi>Any</searchi>
-            <searchi>OS</searchi>
-            <summary><b id="DAUB">DAUB</b></summary>
-            <p class="small-text">Might not work
-            <br>
-            Prevents your Chromebook from automatically updating by deleting the update partitions. Also blocks kernver updates.
-            <br>
-            OS-based exploit.</p>
-            <details>
-                <summary>DAUB.mp4</summary>
-                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
-            </details>
-            <br>
-            1: Access a shell (via methods such as SH1MMER or BadApple):
-            <br>
-            2: Run the following (3rd will open a prompt):
-            <br>
-            cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1
-            <br>
-            yes | mkfs.ext4 /dev/mmcblk0p1
-            <br>
-            fdisk /dev/mmcblk0
-            <br>
-            d
-            <br>
-            4
-            <br>
-            {just press enter}
-            <br>
-            d
-            <br>
-            5
-            <br>
-            {just press enter}
-            <br>
-            w
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
