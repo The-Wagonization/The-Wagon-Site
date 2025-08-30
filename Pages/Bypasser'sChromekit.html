@@ -166,6 +166,8 @@
             <br>
             <a id="ND" href="#ADWB">App Diagnose Wi-Fi Bypass</a>
             <br>
+            <a id="ND" href="#Appleboot">Appleboot</a>
+            <br>
             <a id="ND" href="#Aurora">Aurora</a>
             <br>
             <a id="ND" href="#BackAge">BackAge</a>
@@ -1369,6 +1371,44 @@
         <hr>
         <br>
         <details>
+            <searchi>131</searchi>
+            <searchi>OS</searchi>
+            <searchi>miniOS</searchi>
+            <summary><b id="Appleboot">Appleboot</b></summary>
+            <p class="small-text">Patched on Chrome OS v132+
+            <br>
+            <a id="ND" href="#Shimboot">Shimboot</a> via <a id="ND" href="#BadApple">BadApple</a>.
+            <br>
+            Chrome OS-based exploit.</p>
+            <br>
+            1: Enter Recovery Mode (Esc+Power+Refresh), then Dev Mode (Ctrl+D), then Recovery Mode again, & finally miniOS (Internet Recovery).
+            <br>
+            <details>
+                <summary>External storage device method:</summary>
+                2: Flash an Appleboot shim on an external storage device & when miniOS loads plug it in.
+                <br>
+                3: Open the VT3 shell (Ctrl+Alt+F3) & find the external storage device identifier with "<i>fdisk -l</i>".
+                <br>
+                4: Once you've found it, run the payload with "<i>mount /dev/sdX1 /usb && /usb/main.sh</i>".
+                <br>
+                5: Select a disk & you'll boot into Linux.
+            </details>
+            <details>
+                <summary>Wireless method:</summary>
+                2: Click "Next", then on the "Connect to a network to begin recovery" connect to a network.
+                <br>
+                3: Once you see a "Start recovery" page, open the VT3 shell (Ctrl+Alt+F3).
+                <br>
+                4: Run "<i>cd / && curl -LOk appleboot.appleflyer.xyz/usbless.sh && sh usbless.sh</i>" to start the bootloader.
+                <br>
+                5: If this is your first time performing the exploit, install an Appleboot ROOTFS onto the stateful partition or an external storage device (not /dev/mmcblk0).
+                <br>
+                6: Select a disk & you'll boot into Linux.
+            </details>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
             <searchi>Any</searchi>
             <summary><b id="Aurora">Aurora</b></summary>
             <p class="small-text">N/A
@@ -1387,11 +1427,11 @@
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
         <details>
-            <searchi>132</searchi>
+            <searchi>131</searchi>
             <searchi>OS;Unenrollment</searchi>
             <searchi>miniOS</searchi>
             <summary><b id="BadApple">BadApple</b></summary>
-            <p class="small-text">Requires miniOS; patched on Chrome OS 133+
+            <p class="small-text">Requires miniOS; patched on Chrome OS 132+
             <br>
             Chrome OS-based exploit.</p>
             <details>
@@ -2440,6 +2480,8 @@
             <p class="small-text">Requires a storage device, Dev Mode; patched on keyrolled devices
             <br>
             Allows you to boot Linux or Chrome OS from an external storage device without modifying your Chromebook.
+            <br>
+            Use <a id="ND" href="#Appleboot">Appleboot</a> on keyrolled devices.
             <br>
             Chrome OS-based exploit.</p>
             <details>
