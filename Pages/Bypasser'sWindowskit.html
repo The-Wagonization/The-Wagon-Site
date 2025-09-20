@@ -35,6 +35,18 @@
             }
         </style>
         <style>
+            .paradented {
+                font-size: 13px;
+                margin-left: 20px;
+            }
+        </style>
+        <style>
+            .paradented2 {
+                font-size: 13px;
+                margin-left: 40px;
+            }
+        </style>
+        <style>
             .indented {
                 margin-left: 20px;
             }
@@ -176,7 +188,7 @@
             3: Run “C:\Windows\Temp\exefilename”.
         </details>
         <br>
-        <details>
+        <j>
             <searchi>7;8;8.1;10;11</searchi>
             <searchi>Software</searchi>
             <searchi>CDrive;WindowsPE</searchi>
@@ -195,19 +207,23 @@
             <br>
             1: Access an elevated Command Prompt/Powershell instance. You can do this by booting into Windows PE, selecting "Advanced Options", then "Command Prompt", or by using a Windows installation media on an external storage device & selecting Next > Repair Your Computer > Troubleshoot > Command Prompt.
             <br> 
-            2: Run “C:”. Note that Windows can be installed on any drive, C is just the most common one.
+            2: Run “C:”
+            <br>
+                <j class="paradented">Note that Windows can be installed on any drive, C is just the most common one.</j>
             <br>
             3: Run “dir”. Keep going until you find a drive with the Windows directory (1).
             <br>
             4: Create a backup by running “copy sethc.exe sethc.bak” for Sticky Keys or "copy utilman.exe utilman.bak" for Utilman.
             <br>
-            5: Swap the respective file with another file. In order to replace Sticky Keys/Utilman with another file, change the former's filename. For Command Prompt, run “copy cmd.exe sethc.exe” for Sticky Keys or "copy cmd.exe utilman.exe" for Utilman.
+            5: Swap the respective file with another file. Note this can be any file swapped with another file.
+            <br>
+                <j class="paradented">For Command Prompt, run “copy cmd.exe sethc.exe” for Sticky Keys or "copy cmd.exe utilman.exe" for Utilman.</j>
             <br>
             6: Type "Y" to proceed.
             <br>
             7: Activate Sticky Keys (press Shift 5 times) or click the Ease of Access button (on the login screen as well as Ctrl+Alt+Delete).
             <br>
-            8: Perform CMaDmin.
+            8: Run any commands, such as the ones in CMaDmin.
             <br>
             <br>
             <details>
