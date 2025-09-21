@@ -1350,6 +1350,56 @@
         <br>
         <details>
             <searchi>Any</searchi>
+            <searchi>OS</searchi>
+            <summary><b id="UpDAUB">UpDAUB</b></summary>
+            <p class="small-text">Might not work
+            <br>
+            Prevents your Chromebook from automatically updating by deleting the update partitions.
+            <br>
+            Updated version <a id="ND" href="#DAUB">DAUB</a>/<a href="#CKAUB">CKAUB</a>.
+            <br>
+            OS-based exploit.</p>
+            <details>
+                <summary>UpDAUB.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Access a shell (via methods such as SH1MMER or BadApple).
+            <br>
+            2: Run the following (3rd will open a prompt):
+            <br>
+            <i>cgpt add /dev/mmcblk0 -i 2 -P 10 -T 5 -S 1</i>
+            <br>
+            <i>fdisk /dev/mmcblk0</i>
+            <br>
+            <i>d</i>
+            <br>
+            <i>4</i>
+            <br>
+            {<i>just press enter</i>}
+            <br>
+            <i>d</i>
+            <br>
+            <i>5</i>
+            <br>
+            {<i>just press enter</i>}
+            <br>
+            <i>w</i>
+            <br>
+            <i>mkdir /stateful</i>
+            <br>
+            <i>vgchange -ay</i>
+            <br>
+            <i>mount /dev/{output of vgchange -ay}/unencrypted /stateful</i>
+            <br>
+            <i>rm -rf /stateful/*</i>
+            <br>
+            <i>umount /stateful</i>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
             <searchi>Web</searchi>
             <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
             <summary><b id="URLUnblocker">URL Unblocker</b></summary>
