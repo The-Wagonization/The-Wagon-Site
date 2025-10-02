@@ -255,7 +255,7 @@
             <br>
             <a id="ND" href="#Fakemurk">Fakemurk</a>
             <br>
-            <a id="ND" href="#FWWP">Firmware Write Protection</a>
+            <a id="ND" href="#SWWP">Software Write Protection</a>
             <br>
             <a id="ND" href="#Firmware2">Firmware2</a>
             <br>
@@ -2086,24 +2086,24 @@
         <details>
             <searchi>Any</searchi>
             <searchi>Hardware</searchi>
-            <summary><b id="FWWP">Firmware Write Protection</b></summary>
-            Disabling FWWP allows you to do many things, including flashing custom firmware (allowing for installation of Windows, etc.) & setting GBB flags.
+            <summary><b id="SWWP">Software Write Protection</b></summary>
+            Disabling SWWP allows you to do many things, including flashing custom firmware (allowing for installation of Windows, etc.) & setting GBB flags.
             <br>
             <br>
-            The method to disable FWWP depends on your Chromebook, however if you're on v114+ you must use the Pencil method while enrolled. History of FWWP:
+            The method to disable SWWP depends on your Chromebook, however if you're on v114+ you must use the Pencil method while enrolled. History of SWWP:
             <br>
             PreCr50: these old boards used either a screw, a jumper, or a switch on the motherboard & are some of the simplest out there. If you happen to be lucky enough, I recommend trying this.
             <br>
-            Cr50: following this, a new chip was added known as the Cr50. Cr50 Chromebooks set FWWP to the battery sense line (requires Dev Mode on to v115+), while there's also everybody's favorite Pencil method. Additionally, you can use Closed Case Debugging/SuzyQable, as long as you're unenrolled.
+            Cr50: following this, a new chip was added known as the Cr50. Cr50 Chromebooks set SWWP to the battery sense line (requires Dev Mode on to v115+), while there's also everybody's favorite Pencil method. Additionally, you can use Closed Case Debugging/SuzyQable, as long as you're unenrolled.
             <br>
-            Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled), Ti50 FWWP Reoval (VT2), or Pencil Sharpener (patched on v136).
+            Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled), Ti50 SWWP Reoval (VT2), or Pencil Sharpener (patched on v136).
             <br>
             <br>
             <details>
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="FWWP:Screw">Screw; doesn't work with FWMP on v114+</b></summary>
+                <summary><b id="SWWP:Screw">Screw; doesn't work with FWMP on v114+</b></summary>
                 <p class="small-text">Requires screwdriver</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
@@ -2116,7 +2116,7 @@
                 <searchi>113</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="FWWP:Jumper">Jumper</b></summary>
+                <summary><b id="SWWP:Jumper">Jumper</b></summary>
                 <p class="small-text">Requires screwdriver, bridger; doesn't work with FWMP on v114+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
@@ -2131,7 +2131,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="FWWP:Battery">Battery</b></summary>
+                <summary><b id="SWWP:Battery">Battery</b></summary>
                 <p class="small-text">Requires screwdriver; requires Dev Mode on v115+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
@@ -2149,7 +2149,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="FWWP:Pencil">Pencil</b></summary>
+                <summary><b id="SWWP:Pencil">Pencil</b></summary>
                 <p class="small-text">Requires Cr50, screwdriver, bridger, external storage device</p>
                 1: oh fuck no not yet
                 <br>
@@ -2162,7 +2162,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Dev Mode; Debug Cable/Ti50</searchi>
-                <summary><b id="FWWP:CCD">CCD</b></summary>
+                <summary><b id="SWWP:CCD">CCD</b></summary>
                 <p class="small-text">Requires Dev Mode; doesn't work with active FWMP; debug cable required on nonTi50</p>
                 1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
                 <br>
@@ -2186,8 +2186,8 @@
             </details> 
             <br>
             <details>
-                <summary><b id="FWWP:GBBFlags">GBB flags</b></summary>
-                <p class="small-text">Requires disabled FWWP</p>
+                <summary><b id="SWWP:GBBFlags">GBB flags</b></summary>
+                <p class="small-text">Requires SWWP being disabled</p>
                 These allow you to edit certain things, such as the Dev Mode wait timer, disable FWMP (unenroll), force enable certain things such as USB booting, & more.
                 <br>
                 1: Go to the <a href="https://binbashbanana.github.io/gbbflaginator/">GBB Flaginator</a> to easily set select flags to set.
@@ -2200,9 +2200,9 @@
         <details>
             <searchi>Any</searchi>
             <searchi>OS</searchi>
-            <searchi>Dev Mode;dFWWP</searchi>
+            <searchi>Dev Mode;SWWP</searchi>
             <summary><b id="Firmware2">Firmware2</b></summary>
-            <p class="small-text">Requires Dev Mode, FWWP disabled
+            <p class="small-text">Requires Dev Mode, SWWP disabled
             <br>
             Dekeyrolls your device. Not the same as firmware 2, the updated version of Chromebook firmware included in v114+
             <br>
