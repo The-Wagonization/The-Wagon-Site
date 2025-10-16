@@ -2751,6 +2751,8 @@
             <br>
             Updated version <a id="ND" href="#DAUB">DAUB</a>/<a href="#CKAUB">CKAUB</a>.
             <br>
+            Created by the <a href="https://github.com/crosbreaker">crosbreaker</a> team.
+            <br>
             OS-based exploit.</p>
             <details>
                 <summary>UpDAUB.mp4</summary>
@@ -2783,11 +2785,7 @@
             <br>
             <i>vgchange -ay</i>
             <br>
-            <i>mount /dev/{output of vgchange -ay}/unencrypted /stateful</i>
-            <br>
-            <i>rm -rf /stateful/*</i>
-            <br>
-            <i>umount /stateful</i>
+            <i>mkfs.ext4 -f /dev/{output of vgchange -ay}/unencrypted /stateful</i>
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
