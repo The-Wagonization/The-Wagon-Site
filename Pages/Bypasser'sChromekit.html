@@ -241,6 +241,8 @@
             <br>
             <a id="ND" href="#Dextensify">Dextensify</a>
             <br>
+            <a id="ND" href="#DevlessAPKs">Devless APKs</a>
+            <br>
             <a id="ND" href="#DisableManager">Disable Manager</a>
             <br>
             <a id="ND" href="#Downgration">Downgration</a>
@@ -342,6 +344,7 @@
                 <summary><a id="ND" href="#SKIOVOX">SKIOVOX</a></summary>
                     <ul>
                         <li><a id="ND" href="#SKIOVOX125-6Method">v125-6 Method</a></li>
+                        <li><a id="ND" href="#SKIOVOX141Method">v141 Method</a></li>
                     </ul>
             </details>
             <a id="ND" href="#S&R">Snap&Run</a>
@@ -1231,7 +1234,7 @@
                 <searchi>OS</searchi>
                 <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
                 <searchi>Kiosk</searchi>
-                <summary><b id="SKIOVOX125-6Method">125-126 Method</b></summary>
+                <summary><b id="SKIOVOX125-6Method">v125-6 Method</b></summary>
                 1: Do the main methods steps 1-4.
                 <br>
                 2: Click the cog in the brightness settings instead.
@@ -1248,6 +1251,28 @@
                 <br>
                 <br>
                 Note that any Incognito window is still monitored by your school.
+            </details>
+            <br>
+            <details>
+                <searchi>OS</searchi>
+                <searchi>Blocksi;GoGuardian;Hapara;iBoss;Securely</searchi>
+                <searchi>Kiosk</searchi>
+                <summary><b id="SKIOVOX141Method">v141 Method</b></summary>
+                <p class="small-text">Created by <a href="https://github.com/crosbreaker/skiovox-141">crosbreaker</a>.</p>
+                1: Find a website kiosk (one that shows the URL while it's loading.)
+                <br>
+                2: Find some way to navigate to a search engine, such as a webview exploit.
+                <br>
+                3: Copy this HTML code to your clipboard: <i>&lt;script&gt;window.open("javascript:alert();");&lt;/script&gt;</i>
+                <br>
+                4: Now go <a href="https://htmledit.squarefree.com/">here</a> & paste the code in.
+                <br>
+                <br>
+                Common webview exploits:
+                <br>
+                <i>Google Privacy & Terms</i>: Scroll all the way down & click the grey Google hyperlink. Google captchas have a hyperlink to this page.
+                <br>
+                <i>Cross Site Scripting</i>: a lot of school shit is badly designed, so it may be open to XSS.
             </details>
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
@@ -1917,6 +1942,37 @@
             {<i>just press enter</i>}
             <br>
             <i>w</i>
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
+            <searchi>OS</searchi>
+            <searchi>LinuxDevelopmentEnviroment</searchi>
+            <summary><b id="DevlessAPKs">Devless APKs</b></summary>
+            <p class="small-text">Requires the Linux Development Enviroment
+            <br>
+            Sideload APK files without Dev Mode.
+            <br>
+            Chrome OS-based exploit.</p>
+            <details>
+                <summary>DevlessAPKs.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: In Settings, enable the Linux Development Enviroment.
+            <br>
+            2: Go to <i>Apps</i> > <i>Manage Google Play preferences</i> > <i>Android Settings</i>, then <i>About</i> & click the build number 7 times.
+            <br>
+            3: Go back to Chrome OS Settings & once Linux is finished installing open the submenu & enable “<i>Develop Android apps</i>”.
+            <br>
+            4: On reboot, click Confirm & log back in, then open Android Settings & Terminal.
+            <br>
+            5: In Android Settings, go to <i>System</i> > <i>Developer options</i> > <i>Enable ADB debugging & Wireless debugging</i>. Note down the IP address & port listed here.
+            <br>
+            6: In Linux, install the android-tools-adb package after performing a repository sync (<i>sudo apt update</i>). Run the command <i>adb connect &lt;ip:port&gt;</i>, then allow USB debugging when you get the prompt. Rerun the command.
+            <br>
+            7: List all devices with adb devices & take note of the one that starts with “emulator”. Copy any APK files you want to install to Linux with the Files app, & run <i>adb -s emulator-XXXX install &lt;filename.apk&gt;</i>.
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
