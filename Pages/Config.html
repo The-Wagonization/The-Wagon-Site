@@ -158,16 +158,29 @@
         </form>
         <details>
             <summary>Text Settings</summary>
-            <form id="TextColor-Form" style="float: none">
-                <input type="text" id="TColor" placeholder="Text Color" type="text">
+            <form id="Font-Form" style="float: none">
+                <input type="text" id="PFont" placeholder="Font (Primary)" type="text">
                 <button type="submit">Enter</button>
                 <script>
-                    document.getElementById("TextColor-Form").addEventListener("submit", function(event) {
+                    document.getElementById("Font-Form").addEventListener("submit", function(event) {
                         event.preventDefault();
-                        const inputValue = document.getElementById("TColor").value.trim();
-                        const FontColor = inputValue;
-                        localStorage.setItem("TColor", FontColor);
-                        document.documentElement.style.setProperty('--FontColor', FontColor);
+                        const inputValue = document.getElementById("PFont").value.trim();
+                        const PFont = inputValue;
+                        localStorage.setItem("PFont", PFont);
+                        document.documentElement.style.setProperty('--Font', PFont);
+                    });
+                </script>
+            </form>
+            <form id="Font2-Form" style="float: none">
+                <input type="text" id="SFont" placeholder="Font (Secondary)" type="text">
+                <button type="submit">Enter</button>
+                <script>
+                    document.getElementById("Font2-Form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const inputValue = document.getElementById("SFont").value.trim();
+                        const SFont = inputValue;
+                        localStorage.setItem("SFont", SFont);
+                        document.documentElement.style.setProperty('--Font2', SFont);
                     });
                 </script>
             </form>

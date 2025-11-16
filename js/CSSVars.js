@@ -1,5 +1,9 @@
 function initCSSVars() {
     try {
+        const SavedFont = localStorage.getItem("PFont") || "Yatra One";
+        document.documentElement.style.setProperty('--Font', SavedFont);
+        onst SavedFont2 = localStorage.getItem("SFont") || "Eagle Lake";
+        document.documentElement.style.setProperty('--Font2', SavedFont2);
         const SavedFontColor = localStorage.getItem("TColor") || "white";
         document.documentElement.style.setProperty('--FontColor', SavedFontColor);
         const SavedLinkColor = localStorage.getItem("LColor") || "grey";
@@ -17,7 +21,7 @@ function initCSSVars() {
         const SavedGradStop4Color = localStorage.getItem("GradStop4Color") || "black";
         document.documentElement.style.setProperty('--GradStop4', SavedGradStop4Color);
     } catch (error) {
-        console.error("CSSVars.js encountered an error:", error);
+        console.error("e ", error);
     }
 }
 document.addEventListener('DOMContentLoaded', initCSSVars);
