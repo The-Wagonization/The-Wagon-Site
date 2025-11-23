@@ -259,7 +259,7 @@
             <br>
             <a id="ND" href="#Fakemurk">Fakemurk</a>
             <br>
-            <a id="ND" href="#SWWP">Software Write Protection</a>
+            <a id="ND" href="#FiCEiB">FiCEiB</a>
             <br>
             <a id="ND" href="#Firmware2">Firmware2</a>
             <br>
@@ -270,6 +270,8 @@
             <a id="ND" href="#HPFSB">Hapara Focus Session Bypass</a>
             <br>
             <a id="ND" href="#Hartools">Hartools</a>
+            <br>
+            <a id="ND" href="#HWWP">Hardware Write Protection</a>
             <br>
             <a id="ND" href="#HSTS">HSTS</a>
             <br>
@@ -2114,29 +2116,69 @@
         <br>
         <details>
             <searchi>Any</searchi>
+            <searchi>OS</searchi>
+            <searchi>Android</searchi>
+            <summary><b id="FiCEiB">FiCEiB</b></summary>
+            <p class="small-text">Requires Android support (common)
+            <br>
+            Bypasses opening files in Chrome being blocked.
+            <br>
+            OS-based exploit.</p>
+            <details>
+                <summary>FiCEiB.mp4</summary>
+                <video width="640" height="480" controls> <source src="video.mp4" type="video/mp4">Looks like your browser is a shit of piece.</video>
+            </details>
+            <br>
+            1: Move the file to a local folder, such as <i>Downloads</i>.
+            <br>
+            2: Open Settings & go to <i>Apps</i> > <i>Manage Google Play Preferences</i> > <i>Open Android Settings</i>.
+            <br>
+            3: In the Android Settings app, go to <i>Apps</i> > <i>All Apps</i> > <i>Files</i>, & then click <i>open</i>.
+            <br>
+            4: Right-click the file & open with Google Chrome. Extensions shouldn't have permission to access the file.
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
+            <searchi>OS</searchi>
+            <searchi>Dev Mode;HWWP</searchi>
+            <summary><b id="Firmware2">Firmware2</b></summary>
+            <p class="small-text">Requires Dev Mode, HWWP disabled
+            <br>
+            Dekeyrolls your device. Not the same as firmware 2, the updated version of Chromebook firmware included in v114+
+            <br>
+            Chrome OS-based exploit.</p>
+            <br>
+            1: Enter the VT2 shell (Ctrl+Alt+F2), then sign in as chronos & run "<i>curl -LO https://raw.githubusercontent.com/Cruzy22k/Firmware2/main/firmware.sh && sudo bash firmware.sh</i>".
+        </details>
+        <p style="display: none"><a href="#ToC">back to top</a></p>
+        <br>
+        <details>
+            <searchi>Any</searchi>
             <searchi>Hardware</searchi>
-            <summary><b id="SWWP">Software Write Protection</b></summary>
-            Disabling SWWP allows you to do many things, including flashing custom firmware (allowing for installation of Windows, etc.) & setting GBB flags.
+            <summary><b id="HWWP">Hardware Write Protection</b></summary>
+            Disabling HWWP allows you to do many things, including flashing custom firmware (allowing for installation of Windows, etc.) & setting GBB flags.
             <br>
             <br>
-            The method to disable SWWP depends on your Chromebook, however if you're on v114+ you must use the Pencil method while enrolled. History of SWWP:
+            The method to disable HWWP depends on your Chromebook, however if you're on v114+ you must use the Pencil method while enrolled. History of HWWP:
             <br>
             PreCr50: these old boards used either a screw, a jumper, or a switch on the motherboard & are some of the simplest out there. If you happen to be lucky enough, I recommend trying this.
             <br>
-            Cr50: following this, a new chip was added known as the Cr50. Cr50 Chromebooks set SWWP to the battery sense line (requires Dev Mode on to v115+), while there's also everybody's favorite Pencil method. Additionally, you can use Closed Case Debugging/SuzyQable, as long as you're unenrolled.
+            Cr50: following this, a new chip was added known as the Cr50. Cr50 Chromebooks set HWWP to the battery sense line (requires Dev Mode on to v115+), while there's also everybody's favorite Pencil method. Additionally, you can use Closed Case Debugging/SuzyQable, as long as you're unenrolled.
             <br>
-            Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled), Ti50 SWWP Reoval (VT2), or Pencil Sharpener (patched on v136).
+            Ti50: the generation 2 Cr50 chip, better known as the Ti50, now verifies the RO portion of the fimware at boot, meaning you need to run a few commands to prevent bricking. Regardless of wether a Ti50 device supports another method, you must use CCD/SuztQable (unenrolled), Ti50 HWWP Reoval (VT2), or Pencil Sharpener (patched on v136).
             <br>
             <br>
             <details>
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="SWWP:Screw">Screw; doesn't work with FWMP on v114+</b></summary>
+                <summary><b id="HWWP:Screw">Screw; doesn't work with FWMP on v114+</b></summary>
                 <p class="small-text">Requires screwdriver</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
-                2: Locate & use unscrew on the WP screw.
+                2: Locate & use unscrew on the HWWP screw.
                 <br>
                 3: Screw the back cover back on.
             </details>
@@ -2145,13 +2187,13 @@
                 <searchi>113</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="SWWP:Jumper">Jumper</b></summary>
+                <summary><b id="HWWP:Jumper">Jumper</b></summary>
                 <p class="small-text">Requires screwdriver, bridger; doesn't work with FWMP on v114+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
                 2: Disconnect the internal battery cover.
                 <br>
-                3: Locate & bridge the area with for the WP jumper.
+                3: Locate & bridge the area with for the HWWP jumper.
                 <br>
                 4: Reassemble the device.
             </details>
@@ -2160,7 +2202,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="SWWP:Battery">Battery</b></summary>
+                <summary><b id="HWWP:Battery">Battery</b></summary>
                 <p class="small-text">Requires screwdriver; requires Dev Mode on v115+</p>
                 1: Turn your Chromebook off & unscrew the back cover.
                 <br>
@@ -2178,7 +2220,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Screwdriver</searchi>
-                <summary><b id="SWWP:Pencil">Pencil</b></summary>
+                <summary><b id="HWWP:Pencil">Pencil</b></summary>
                 <p class="small-text">Requires Cr50, screwdriver, bridger, external storage device</p>
                 1: oh fuck no not yet
                 <br>
@@ -2191,7 +2233,7 @@
                 <searchi>Any</searchi>
                 <searchi>Hardware</searchi>
                 <searchi>Dev Mode; Debug Cable/Ti50</searchi>
-                <summary><b id="SWWP:CCD">CCD</b></summary>
+                <summary><b id="HWWP:CCD">CCD</b></summary>
                 <p class="small-text">Requires Dev Mode; doesn't work with active FWMP; debug cable required on nonTi50</p>
                 1: Enter Dev Mode, then open the VT2 Shell (Ctrl+Alt+F2 on login screen).
                 <br>
@@ -2215,7 +2257,7 @@
             </details> 
             <br>
             <details>
-                <summary><b id="SWWP:GBBFlags">GBB flags</b></summary>
+                <summary><b id="HWWP:GBBFlags">GBB flags</b></summary>
                 <p class="small-text">Requires SWWP being disabled</p>
                 These allow you to edit certain things, such as the Dev Mode wait timer, disable FWMP (unenroll), force enable certain things such as USB booting, & more.
                 <br>
@@ -2223,21 +2265,6 @@
                 <br>
                 2: Run "<i>futility gbb -s --flash --flags=0x120b7</i>" on newer devices & "<i>/usr/share/vboot/bin/set_gbb_flags.sh 0x120b7</i>" on older ones to set flags. You can read them with "<i>futility gbb -g --flash --flags"/"/usr/share/vboot/bin/get_gbb_flags.sh</i>" respectively.
             </details> 
-        </details>
-        <p style="display: none"><a href="#ToC">back to top</a></p>
-        <br>
-        <details>
-            <searchi>Any</searchi>
-            <searchi>OS</searchi>
-            <searchi>Dev Mode;SWWP</searchi>
-            <summary><b id="Firmware2">Firmware2</b></summary>
-            <p class="small-text">Requires Dev Mode, SWWP disabled
-            <br>
-            Dekeyrolls your device. Not the same as firmware 2, the updated version of Chromebook firmware included in v114+
-            <br>
-            Chrome OS-based exploit.</p>
-            <br>
-            1: Enter the VT2 shell (Ctrl+Alt+F2), then sign in as chronos & run "<i>curl -LO https://raw.githubusercontent.com/Cruzy22k/Firmware2/main/firmware.sh && sudo bash firmware.sh</i>".
         </details>
         <p style="display: none"><a href="#ToC">back to top</a></p>
         <br>
