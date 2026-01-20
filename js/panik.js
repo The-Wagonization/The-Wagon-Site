@@ -6,3 +6,4 @@ document.addEventListener("keydown", function(event) {
         window.top.close();
     }
 });
+// stupid github copilot auto generated commit names :whale:
