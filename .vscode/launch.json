@@ -5,7 +5,7 @@
             "request": "launch",
             "type": "msedge",
             "url": "http://localhost:5500",
-            "webRoot": "${C:/Users/jek/Documents/HTMLs/The Wagon Site}"
+            "webRoot": "${C:/Users/jek/Documents/HTMLs/The Wagon Site}",
             "file": "${file}"
         },
     {
