@@ -1,4 +1,4 @@
-import DOMPurify from 'https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js';
+const DOMPurify = await import('https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js');
 function autoSanitizeInputs() {
   const inputs = document.querySelectorAll('input[type="text"], textarea');
   inputs.forEach(input => {
