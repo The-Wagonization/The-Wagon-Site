@@ -19,7 +19,7 @@ document.querySelectorAll('form').forEach((form) => {
     });
 });
 window.addEventListener('beforeunload', (event) => {
-    if (!event.key === '`') {
+    if (event.key !== '`') {
         console.log("I don't feel so good...");
         document.body.classList.add('fade-out');
     }
