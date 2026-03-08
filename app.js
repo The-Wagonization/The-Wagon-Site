@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 app.use((req, res, next)=>{
-    if(req.path.startsWith("/.git")||req.path.startsWith("/node_modules"))return;
+    if(req.path.startsWith("/.git")||req.path.startsWith("/node_modules")){
+        return res.status(403).send("Forbidden");
+    }
     next()
 })
 app.get("/", (req, res)=>{
